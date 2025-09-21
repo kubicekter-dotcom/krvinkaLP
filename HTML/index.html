@@ -1,0 +1,908 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <title>Krvinka - Creative Shop Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+
+        <!-- Revolution Slider -->
+        <link rel="stylesheet" href="assets/js/plugins/revolution/css/settings.css">
+        <link rel="stylesheet" href="assets/js/plugins/revolution/css/layers.css">
+        <link rel="stylesheet" href="assets/js/plugins/revolution/css/navigation.css">
+
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">
+
+        <!-- Google Web Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300,700,900&subset=latin-ext' rel='stylesheet' type='text/css'>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Krvinka Header Styles -->
+        <style>
+          /* Krvinka Header Styling */
+          .ws-header-krvinka {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 0;
+          }
+
+          .ws-header-krvinka .navbar {
+            margin-bottom: 0;
+            border: none;
+            background: transparent;
+          }
+
+          /* Desktop Layout */
+          .krvinka-nav-desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-desktop .nav-left,
+          .krvinka-nav-desktop .nav-right {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+          }
+
+          .krvinka-nav-desktop .nav-left {
+            flex: 1;
+            justify-content: flex-end;
+            margin-right: 50px;
+          }
+
+          .krvinka-nav-desktop .nav-right {
+            flex: 1;
+            justify-content: flex-start;
+            margin-left: 50px;
+          }
+
+          .krvinka-nav-desktop .logo-center {
+            flex: 0 0 auto;
+            text-align: center;
+          }
+
+          .logo-link {
+            display: inline-block;
+            text-decoration: none;
+          }
+
+          .logo-link:hover {
+            text-decoration: none;
+          }
+
+          .logo-img {
+            max-height: 40px;
+            width: auto;
+            transition: opacity 0.3s ease;
+          }
+
+          .logo-link:hover .logo-img {
+            opacity: 0.8;
+          }
+
+          /* Navigation Links */
+          .krvinka-nav-desktop a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-desktop a:hover {
+            color: #ff8eb5;
+            text-decoration: none;
+          }
+
+          /* Mobile Navigation */
+          .krvinka-nav-mobile {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-mobile .logo-mobile {
+            margin-bottom: 20px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          .krvinka-nav-mobile .nav-mobile li {
+            margin-bottom: 15px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a:hover {
+            color: #ff8eb5;
+            text-decoration: none;
+          }
+
+          /* Mobile Responsive */
+          @media (max-width: 768px) {
+            .krvinka-nav-desktop {
+              display: none;
+            }
+
+            .navbar-collapse.in .krvinka-nav-mobile {
+              display: block;
+            }
+
+            .navbar-toggle {
+              border: 1px solid #333;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+
+            .navbar-toggle .icon-bar {
+              background-color: #333;
+            }
+          }
+
+          /* Hide mobile menu by default */
+          .navbar-collapse {
+            border: none;
+            box-shadow: none;
+          }
+
+          /* Ensure proper spacing */
+          .container {
+            position: relative;
+          }
+
+          /* Banner Title Overlay */
+          .page-title {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px 0;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+          }
+
+          .banner-title-overlay {
+            color: #000000 !important;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+          }
+
+          .page-title .banner-title-overlay {
+            color: #000000 !important;
+          }
+
+          @media (max-width: 768px) {
+            .banner-title-overlay {
+              font-size: 22px;
+            }
+
+            .page-title {
+              padding: 15px 0;
+            }
+          }
+
+          /* Author Section */
+          .section.author-section {
+            margin: 70px 0 60px;
+          }
+
+          .section-title {
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            font-size: 28px;
+            margin: 0 0 18px;
+            text-align: center;
+          }
+
+          .section-title::after{
+            content:"";
+            display:block;
+            width:60px;
+            height:3px;
+            margin:12px auto 0;
+            background:#f4a7b9;
+            border-radius:2px;
+          }
+
+          .author-card{
+            max-width: 980px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 24px;
+            padding: 28px;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid rgba(244,167,185,.35);
+            box-shadow: 0 8px 24px rgba(0,0,0,.06);
+          }
+
+          .author-photo{
+            width:140px;
+            height:140px;
+            border-radius:50%;
+            overflow:hidden;
+            border:3px solid #f4a7b9;
+          }
+
+          .author-photo img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+          }
+
+          .author-name{
+            margin:0 0 6px;
+            font-size:22px;
+            font-weight:700;
+          }
+
+          .author-role{
+            margin:0 0 14px;
+            font-size:12px;
+            letter-spacing:.04em;
+            text-transform:uppercase;
+            color:#b37f91;
+          }
+
+          .author-text{
+            margin:0 0 10px;
+            line-height:1.7;
+            color:#444;
+          }
+
+          @media (max-width: 768px){
+            .author-card{
+              grid-template-columns: 1fr;
+              text-align:center;
+            }
+            .author-photo{
+              margin:0 auto 8px;
+            }
+          }
+
+          /* Preloader Styles */
+          #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .preloader-img {
+            width: 120px;
+            height: auto;
+            animation: pulse 1.6s infinite ease-in-out;
+          }
+
+          @keyframes pulse {
+            0% {
+              transform: scale(1);
+              opacity: 1;
+            }
+            50% {
+              transform: scale(1.1);
+              opacity: 0.8;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+
+          /* Footer Dark Pink Background */
+          .ws-footer {
+            background-color: #b8457d !important;
+          }
+
+          .ws-footer h3,
+          .ws-footer p,
+          .ws-footer li a {
+            color: #fff !important;
+          }
+
+          .ws-footer-bar {
+            background-color: #a03d70 !important;
+          }
+
+          .ws-footer-bar p {
+            color: #fff !important;
+          }
+
+          /* Footer List Styling */
+          .ws-footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          .ws-footer-list li {
+            margin-bottom: 8px;
+          }
+
+          .ws-footer-list li a {
+            color: #fff !important;
+            text-decoration: none;
+          }
+
+          .ws-footer-list li a:hover {
+            color: #ffcce6 !important;
+            text-decoration: none;
+          }
+
+          .ws-footer-separator {
+            width: 30px;
+            height: 2px;
+            background: #ffcce6;
+            margin: 15px 0;
+          }
+
+          /* CTA container */
+          .cta-container {
+            text-align: center;
+            margin: 80px 0 50px 0;
+            clear: both;
+          }
+
+          /* CTA button */
+          .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #f4a7b9;
+            color: #fff !important;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          .cta-button:hover {
+            background-color: #e38aa0;
+            color: #fff !important;
+            text-decoration: none;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+          }
+        </style>
+    </head>
+    <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Loader Start -->
+    <div id="preloader">
+        <img src="assets/img/logo-black.png" alt="Načítání..." class="preloader-img">
+    </div>
+    <!-- End Loader Start -->
+
+    <!-- Header Start -->
+    <header class="ws-header-krvinka">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Mobile toggle button -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Desktop Layout: Left - Logo - Right -->
+                <div class="krvinka-nav-desktop">
+                    <!-- Left Menu -->
+                    <ul class="nav-left">
+                        <li><a href="index.html">Domov</a></li>
+                        <li><a href="shop.html">Obchod</a></li>
+                    </ul>
+
+                    <!-- Logo -->
+                    <div class="logo-center">
+                        <a href="index.html" class="logo-link">
+                            <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Right Menu -->
+                    <ul class="nav-right">
+                        <li><a href="about.html">O autorce</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Collapsed Menu -->
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <div class="krvinka-nav-mobile">
+                        <!-- Logo first on mobile -->
+                        <div class="logo-mobile">
+                            <a href="index.html" class="logo-link">
+                                <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                            </a>
+                        </div>
+                        <!-- Menu items below logo -->
+                        <ul class="nav-mobile">
+                            <li><a href="index.html">Domov</a></li>
+                            <li><a href="shop.html">Obchod</a></li>
+                            <li><a href="about.html">O autorce</a></li>
+                            <li><a href="contact.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Page Parallax Header -->
+    <div class="ws-parallax-header parallax-window" data-parallax="scroll" data-image-src="assets/img/backgrounds/shop-header-bg.jpg">
+        <div class="ws-overlay">
+            <div class="ws-parallax-caption">
+                <div class="ws-parallax-holder">
+                    <div class="page-title">
+                        <h1 class="banner-title-overlay">Poznání lidského těla začíná s krvinkou</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Parallax Header -->
+
+    <!-- Page Content -->
+    <div class="container ws-page-container">
+        <div class="row">
+            <div class="ws-shop-page">
+                <!-- Categories Nav -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#all" aria-controls="all" role="tab" data-toggle="tab">All (4)</a></li>
+                    <li role="presentation"><a href="#digital" aria-controls="digital" role="tab" data-toggle="tab">Digitálne produkty (1)</a></li>
+                    <li role="presentation"><a href="#books" aria-controls="books" role="tab" data-toggle="tab">Knihy (1)</a></li>
+                    <li role="presentation"><a href="#apps" aria-controls="apps" role="tab" data-toggle="tab">Aplikácie (1)</a></li>
+                    <li role="presentation"><a href="#bundles" aria-controls="bundles" role="tab" data-toggle="tab">Balíky (1)</a></li>
+                </ul>
+
+                <!-- Categories Content -->
+                <div class="tab-content">
+                    <!-- All -->
+                    <div role="tabpanel" class="tab-pane fade in active" id="all">
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/">
+                                <div class="ws-item-offer">
+                                    <!-- Image -->
+                                    <figure>
+                                        <img src="assets/img/works/journals/1.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)" class="img-responsive">
+                                    </figure>
+                                </div>
+
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Digitální produkty</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">350 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
+                                <!-- Image -->
+                                <figure>
+                                    <img src="assets/img/works/journals/3.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální aplikace)" class="img-responsive">
+                                </figure>
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Aplikace</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální aplikace)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">450 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
+                                <!-- Image -->
+                                <figure>
+                                    <img src="assets/img/works/journals/2.jpg" alt="Dobrodružství červené krvinky – Gamebook (kniha)" class="img-responsive">
+                                </figure>
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Knihy</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">DOBRODRUŽSTVÍ ČERVENÉ KRVINKY – GAMEBOOK (KNIHA)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">950 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item top-product">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
+                                <div class="ws-item-offer">
+                                    <!-- Image -->
+                                    <figure>
+                                        <img src="assets/img/works/journals/4.jpg" alt="Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)" class="img-responsive">
+                                    </figure>
+                                </div>
+
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Balíky</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">1250 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Digitálne produkty -->
+                    <div role="tabpanel" class="tab-pane fade" id="digital">
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/">
+                                <div class="ws-item-offer">
+                                    <!-- Image -->
+                                    <figure>
+                                        <img src="assets/img/works/journals/1.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)" class="img-responsive">
+                                    </figure>
+                                </div>
+
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Digitální produkty</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">350 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Knihy -->
+                    <div role="tabpanel" class="tab-pane fade" id="books">
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
+                                <!-- Image -->
+                                <figure>
+                                    <img src="assets/img/works/journals/2.jpg" alt="Dobrodružství červené krvinky – Gamebook (kniha)" class="img-responsive">
+                                </figure>
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Knihy</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">DOBRODRUŽSTVÍ ČERVENÉ KRVINKY – GAMEBOOK (KNIHA)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">950 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Aplikácie -->
+                    <div role="tabpanel" class="tab-pane fade" id="apps">
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
+                                <!-- Image -->
+                                <figure>
+                                    <img src="assets/img/works/journals/3.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální aplikace)" class="img-responsive">
+                                </figure>
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Aplikace</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální aplikace)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">450 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Balíky -->
+                    <div role="tabpanel" class="tab-pane fade" id="bundles">
+
+                        <!-- Item -->
+                        <div class="col-sm-6 col-md-4 ws-works-item top-product">
+                            <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
+                                <div class="ws-item-offer">
+                                    <!-- Image -->
+                                    <figure>
+                                        <img src="assets/img/works/journals/4.jpg" alt="Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)" class="img-responsive">
+                                    </figure>
+                                </div>
+
+                                <div class="ws-works-caption text-center">
+                                    <!-- Item Category -->
+                                    <div class="ws-item-category">Balíky</div>
+
+                                    <!-- Title -->
+                                    <h3 class="ws-item-title">Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)</h3>
+
+                                    <div class="ws-item-separator"></div>
+
+                                    <!-- Price -->
+                                    <div class="ws-item-price">1250 Kč</div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- End Categories Content -->
+
+                <!-- CTA pod produkty -->
+                <div class="cta-container">
+                    <a href="#" class="cta-button">Vyzkoušet aplikaci zdarma</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- End Page Content -->
+
+    <!-- Reviews Content -->
+    <section id="ws-reviews-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="reviews-title">RECENZE</h2>
+                    <div class="reviews-separator"></div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Review 1 -->
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h4 class="review-name">PETRA</h4>
+                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                            <p class="review-verified">Ověřený nákup • Věk dítěte: 5 a 7 let</p>
+                            <h5 class="review-subtitle">"Konečně něco, co neděsí!"</h5>
+                        </div>
+                        <div class="review-content">
+                            <p>Dlouho jsem hledala způsob, jak dětem vysvětlit, co se děje v jejich tělíčku, aniž by se vyděsily. Krvinka je přesně to, co jsem potřebovala! Postavička červené krvinky je roztomilá a děti si s ní hned vytvořily vztah. Oceňujem "rodičovský režim", kde si můžu obsah předem prohlédnout.</p>
+                            <p>Už se nemusím bát dětských otázek o těle - mám konečně odpovědi, které je neděsí. Michal už zvládá číst sám a je pyšný, že "chápe vědu". Doporučuji všem rodičům, kteří se bojí, že dítě vyděsí.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h4 class="review-name">TOMÁŠ</h4>
+                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                            <p class="review-verified">Ověřený nákup • Věk dítěte: 9 let</p>
+                            <h5 class="review-subtitle">"Zachránce víkendů u táty!"</h5>
+                        </div>
+                        <div class="review-content">
+                            <p>Jako rozvedený táta potřebuji aktivity, které Jakuba zabaví, poučí a nepotřebují mou stálou přítomnost. Krvinka je přesně to! Jakub si to spustí sám, každá "mise" trvá 15-20 minut, offline režim funguje skvěle na cesty. Automaticky ukládá pokrok a už si to prošel 3x - pořád ho to baví.</p>
+                            <p>Za cenu jedné návštěvy kina mám vzdělávací zábavu na měsíce. Koupil bych znovu, ideálně celou sérii o dalších orgánech.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h4 class="review-name">MARIE</h4>
+                            <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                            <p class="review-verified">Ověřený nákup • Věk dítěte: 8 let</p>
+                            <h5 class="review-subtitle">"Vědecky správné, konečně!"</h5>
+                        </div>
+                        <div class="review-content">
+                            <p>Jako biochemička jsem skeptická na "vzdělávací" aplikace - většinou jsou plné nepřesností. Krvinka mě mile překvapila! Terminologie je správná, procesy vysvětlené přesně ale přístupně. Tomáš se naučil pojmy jako hemoglobin, erytrocyty a chápe základní principy oxygenace.</p>
+                            <p>Teď v přírodopise vyniká a začal číst popularizační knihy o biologii - Krvinka mu otevřela cestu k vědě! Jako vědec můžu s klidem doporučit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Reviews Content -->
+
+    <!-- Author Section -->
+    <section class="section author-section" id="autorka">
+        <div class="container">
+            <h2 class="section-title text-center">O autorce</h2>
+            <div class="author-card">
+                <div class="author-photo">
+                    <img src="assets/img/author/author.jpg" alt="Autorka – Tereza Kubíčková">
+                </div>
+                <div class="author-info">
+                    <h3 class="author-name">Tereza Kubíčková</h3>
+                    <p class="author-role">Autorka projektu Krvinka</p>
+
+                    <p class="author-text">
+                        Jmenuji se Tereza a zjistila jsem, že mě nejvíc baví hledat způsoby, jak vědu dětem přiblížit srozumitelně a hravě. Jsem absolventkou molekulární biologie a genetiky, několik let jsem pracovala ve výzkumné laboratoři a už během studií jsem vedla vzdělávací programy pro základní školy.
+                    </p>
+                    <p class="author-text">
+                        Stejně jako mnoho rodičů i já často hledám odpovědi na zvídavé otázky svých dvou dětí.
+                    </p>
+                    <p class="author-text">
+                        Lidské tělo mě nepřestává fascinovat a chci, aby děti objevovaly jeho tajemství se stejným nadšením. Proto do svých knih vkládám nejen odborné znalosti, ale i vlastní ilustrace, které mé příběhy oživují.
+                    </p>
+                    <p class="author-text">
+                        Ve volném čase ráda cestuji, chodím po horách s batohem na zádech a jako vášnivá čtenářka fantasy nikdy neusínám bez knihy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Author Section -->
+
+    <!-- Footer Start -->
+    <footer class="ws-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>O projektu</h3>
+                    <div class="ws-footer-separator"></div>
+                    <p>
+                        Krvinka je hravý způsob, jak dětem přiblížit lidské tělo – formou gamebooku,
+                        aplikace a pracovních materiálů. Autorka: Tereza Kubíčková.
+                    </p>
+                    <p>Kontakt: <a href="mailto:hello@krvinka.cz">hello@krvinka.cz</a></p>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>Podpora</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="#">Jak nakupovat</a></li>
+                        <li><a href="#">Časté dotazy (FAQ)</a></li>
+                        <li><a href="#">Podmínky používání</a></li>
+                        <li><a href="#">Ochrana soukromí</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>Sociální sítě</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Pinterest</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>Obchod</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="#">Digitální produkty</a></li>
+                        <li><a href="#">Knihy</a></li>
+                        <li><a href="#">Aplikace</a></li>
+                        <li><a href="#">Balíčky</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ws-footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12" style="text-align:center;">
+                        © 2025 Krvinka • Vytvořeno s radostí pro zvídavé děti
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Sricpts -->
+    <script src="assets/js/plugins/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="assets/js/plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/js/plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/plugins/parallax.min.js"></script>
+    <script src="assets/js/plugins/scrollReveal.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-dropdownhover.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    </body>
+</html>
