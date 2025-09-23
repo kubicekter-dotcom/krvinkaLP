@@ -7,6 +7,15 @@
 	* Website: http://krvinka.wossthemes.com
 ========================================================================== */
 
+/* CSS Variables */
+:root {
+  --pink: #FF2A8B;
+  --pink-hover: #E5257D;
+  --pink-soft: #FFE6F1;
+  --ink: #2A2A2A;
+  --meta: #B39AA7;
+}
+
 /*
 ---------------
 
@@ -756,9 +765,9 @@ a.ws-instagram-link{
 .ws-works-caption{
 	margin-top: 15px;
 }
-h3.ws-item-title{	
-	font-size: 20px;			
-	text-transform: uppercase;
+h3.ws-item-title{
+	font-size: 20px;
+	text-transform: none;
 	margin-top: 5px;
 }
 .ws-item-category{
@@ -2396,4 +2405,112 @@ ul.ws-footer-payments li{
   .review-content p {
     font-size: 13px;
   }
+}
+
+/* CTA Free Trial Button */
+.cta-free-trial {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #ff4da6;
+  color: #fff;
+  border-radius: 25px;
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Product Card Styles */
+.ws-works-caption {
+  margin-top: 16px;
+  padding: 20px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ws-works-caption:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ws-item-category {
+  color: var(--meta);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.ws-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.ws-item-price {
+  font-size: 20px !important;
+  font-weight: 700;
+  color: var(--pink) !important;
+  margin: 12px 0 16px 0;
+  font-style: normal !important;
+}
+
+.ws-item-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.btn-buy {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--pink);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.btn-buy:hover,
+.btn-buy:focus {
+  background-color: var(--pink-hover);
+  text-decoration: none;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.cta-free-trial {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--pink-soft);
+  border: 1px solid var(--pink);
+  border-radius: 8px;
+  color: var(--pink);
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.cta-free-trial:hover,
+.cta-free-trial:focus {
+  background-color: var(--pink);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
 }

@@ -114,7 +114,7 @@
           }
 
           .krvinka-nav-desktop a:hover {
-            color: #ff8eb5;
+            color: var(--pink);
             text-decoration: none;
           }
 
@@ -150,7 +150,7 @@
           }
 
           .krvinka-nav-mobile .nav-mobile a:hover {
-            color: #ff8eb5;
+            color: var(--pink);
             text-decoration: none;
           }
 
@@ -237,7 +237,7 @@
             width:60px;
             height:3px;
             margin:12px auto 0;
-            background:#f4a7b9;
+            background: var(--pink);
             border-radius:2px;
           }
 
@@ -259,7 +259,7 @@
             height:140px;
             border-radius:50%;
             overflow:hidden;
-            border:3px solid #f4a7b9;
+            border: 3px solid var(--pink);
           }
 
           .author-photo img{
@@ -280,7 +280,7 @@
             font-size:12px;
             letter-spacing:.04em;
             text-transform:uppercase;
-            color:#b37f91;
+            color: var(--meta);
           }
 
           .author-text{
@@ -370,14 +370,14 @@
           }
 
           .ws-footer-list li a:hover {
-            color: #ffcce6 !important;
+            color: var(--pink-soft) !important;
             text-decoration: none;
           }
 
           .ws-footer-separator {
             width: 30px;
             height: 2px;
-            background: #ffcce6;
+            background: var(--pink-soft);
             margin: 15px 0;
           }
 
@@ -409,6 +409,18 @@
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
             transform: translateY(-2px);
           }
+
+          /* Dočasne skryť navigačné položky, ponechať logo */
+          .krvinka-nav-desktop .nav-left,
+          .krvinka-nav-desktop .nav-right {
+            display: none;
+          }
+
+          /* Vycentrovať logo po skrytí navigácie */
+          .krvinka-nav-desktop {
+            justify-content: center;
+          }
+
         </style>
     </head>
     <body>
@@ -519,7 +531,7 @@
                                 <div class="ws-item-offer">
                                     <!-- Image -->
                                     <figure>
-                                        <img src="assets/img/works/journals/1.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)" class="img-responsive">
+                                        <img src="assets/img/works/journals/1.jpg" alt="Červená krvinka - Gamebook (digitální produkt k tisku)" class="img-responsive">
                                     </figure>
                                 </div>
 
@@ -528,12 +540,16 @@
                                     <div class="ws-item-category">Digitální produkty</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (digitální produkt k tisku)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">350 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -543,19 +559,24 @@
                             <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
                                 <!-- Image -->
                                 <figure>
-                                    <img src="assets/img/works/journals/3.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální aplikace)" class="img-responsive">
+                                    <img src="assets/img/works/journals/3.jpg" alt="Červená krvinka - Gamebook (digitální aplikace)" class="img-responsive">
                                 </figure>
                                 <div class="ws-works-caption text-center">
                                     <!-- Item Category -->
                                     <div class="ws-item-category">Aplikace</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální aplikace)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (digitální aplikace)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">450 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -565,30 +586,34 @@
                             <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
                                 <!-- Image -->
                                 <figure>
-                                    <img src="assets/img/works/journals/2.jpg" alt="Dobrodružství červené krvinky – Gamebook (kniha)" class="img-responsive">
+                                    <img src="assets/img/works/journals/2.jpg" alt="Červená krvinka - Gamebook (kniha)" class="img-responsive">
                                 </figure>
                                 <div class="ws-works-caption text-center">
                                     <!-- Item Category -->
                                     <div class="ws-item-category">Knihy</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">DOBRODRUŽSTVÍ ČERVENÉ KRVINKY – GAMEBOOK (KNIHA)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (kniha)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">950 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
 
                         <!-- Item -->
-                        <div class="col-sm-6 col-md-4 ws-works-item top-product">
+                        <div class="col-sm-6 col-md-4 col-md-offset-4 ws-works-item top-product">
                             <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
                                 <div class="ws-item-offer">
                                     <!-- Image -->
                                     <figure>
-                                        <img src="assets/img/works/journals/4.jpg" alt="Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)" class="img-responsive">
+                                        <img src="assets/img/works/journals/4.jpg" alt="Červená krvinka - Gamebook (kniha + aplikace + hra)" class="img-responsive">
                                     </figure>
                                 </div>
 
@@ -597,12 +622,17 @@
                                     <div class="ws-item-category">Balíky</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (kniha + aplikace + hra)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">1250 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -618,7 +648,7 @@
                                 <div class="ws-item-offer">
                                     <!-- Image -->
                                     <figure>
-                                        <img src="assets/img/works/journals/1.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)" class="img-responsive">
+                                        <img src="assets/img/works/journals/1.jpg" alt="Červená krvinka - Gamebook (digitální produkt k tisku)" class="img-responsive">
                                     </figure>
                                 </div>
 
@@ -627,12 +657,16 @@
                                     <div class="ws-item-category">Digitální produkty</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální produkt k tisku)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (digitální produkt k tisku)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">350 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -647,19 +681,23 @@
                             <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
                                 <!-- Image -->
                                 <figure>
-                                    <img src="assets/img/works/journals/2.jpg" alt="Dobrodružství červené krvinky – Gamebook (kniha)" class="img-responsive">
+                                    <img src="assets/img/works/journals/2.jpg" alt="Červená krvinka - Gamebook (kniha)" class="img-responsive">
                                 </figure>
                                 <div class="ws-works-caption text-center">
                                     <!-- Item Category -->
                                     <div class="ws-item-category">Knihy</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">DOBRODRUŽSTVÍ ČERVENÉ KRVINKY – GAMEBOOK (KNIHA)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (kniha)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">950 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -674,19 +712,24 @@
                             <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank">
                                 <!-- Image -->
                                 <figure>
-                                    <img src="assets/img/works/journals/3.jpg" alt="Dobrodružství červené krvinky – Gamebook (Digitální aplikace)" class="img-responsive">
+                                    <img src="assets/img/works/journals/3.jpg" alt="Červená krvinka - Gamebook (digitální aplikace)" class="img-responsive">
                                 </figure>
                                 <div class="ws-works-caption text-center">
                                     <!-- Item Category -->
                                     <div class="ws-item-category">Aplikace</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">Dobrodružství červené krvinky – Gamebook (Digitální aplikace)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (digitální aplikace)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">450 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -702,7 +745,7 @@
                                 <div class="ws-item-offer">
                                     <!-- Image -->
                                     <figure>
-                                        <img src="assets/img/works/journals/4.jpg" alt="Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)" class="img-responsive">
+                                        <img src="assets/img/works/journals/4.jpg" alt="Červená krvinka - Gamebook (kniha + aplikace + hra)" class="img-responsive">
                                     </figure>
                                 </div>
 
@@ -711,12 +754,17 @@
                                     <div class="ws-item-category">Balíky</div>
 
                                     <!-- Title -->
-                                    <h3 class="ws-item-title">Dobrodružství červené krvinky - Gamebook (Kniha + Aplikace + Hra)</h3>
+                                    <h3 class="ws-item-title">Červená krvinka - Gamebook (kniha + aplikace + hra)</h3>
 
-                                    <div class="ws-item-separator"></div>
 
                                     <!-- Price -->
                                     <div class="ws-item-price">1250 Kč</div>
+
+                                    <!-- Actions -->
+                                    <div class="ws-item-actions">
+                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -726,10 +774,6 @@
                 </div>
                 <!-- End Categories Content -->
 
-                <!-- CTA pod produkty -->
-                <div class="cta-container">
-                    <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-button">Vyzkoušet aplikaci zdarma</a>
-                </div>
 
             </div>
         </div>
