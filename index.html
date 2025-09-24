@@ -30,6 +30,7 @@
         <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">
 
         <!-- Google Web Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300,700,900&subset=latin-ext' rel='stylesheet' type='text/css'>
@@ -421,6 +422,66 @@
             justify-content: center;
           }
 
+          /* Dočasne skryť kategórie navigáciu */
+          .nav.nav-tabs {
+            display: none;
+          }
+
+          /* Hero title section medzi bannerom a produktmi */
+          .hero-title-section {
+            margin: 8px 0;
+            padding: 0;
+            text-align: center;
+          }
+
+          /* Motto */
+          .hero-title-section h1 {
+            color: #2a2a2a;                  /* tmavšia sivá namiesto čiernej */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;                 /* polotučné, menej tvrdé ako 700 */
+            font-size: clamp(16px, 3vw, 28px);/* fluidná typografia */
+            line-height: 1.2;
+            max-width: 760px;
+            margin: 12px auto 16px;           /* malé medzery hore/dole */
+            text-align: center;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+
+            /* pastelové podčiarknutie */
+            background: linear-gradient(
+              transparent 60%,
+              rgba(255, 161, 194, 0.35) 0
+            ) no-repeat;
+            background-size: 100% 1.1em;      /* výška zvýraznenia */
+            background-position: 0 70%;       /* posun podčiarknutia */
+          }
+
+          /* Odstránenie nadbytočných medzier v produktovej sekcii */
+          .ws-page-container {
+            padding-top: 0;
+          }
+
+          .ws-page-container .row {
+            margin-top: 0;
+            padding-top: 0;
+          }
+
+          .ws-shop-page {
+            padding-top: 0;
+            margin-top: 0;
+          }
+
+          /* Bežný text */
+          body, p, .product-card {
+            font-family: 'Nunito Sans', sans-serif;
+          }
+
+          @media (max-width: 768px) {
+            .hero-title-section {
+              margin: 40px 0 30px 0;
+            }
+          }
+
         </style>
     </head>
     <body>
@@ -498,9 +559,6 @@
         <div class="ws-overlay">
             <div class="ws-parallax-caption">
                 <div class="ws-parallax-holder">
-                    <div class="page-title">
-                        <h1 class="banner-title-overlay">Poznání lidského těla začíná s krvinkou</h1>
-                    </div>
                 </div>
             </div>
         </div>
@@ -509,6 +567,11 @@
 
     <!-- Page Content -->
     <div class="container ws-page-container">
+        <!-- Hero Title Section -->
+        <div class="hero-title-section">
+            <h1>Poznání lidského těla začíná s Krvinkou</h1>
+        </div>
+
         <div class="row">
             <div class="ws-shop-page">
                 <!-- Categories Nav -->
@@ -548,7 +611,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                     </div>
                                 </div>
                             </a>
@@ -574,7 +637,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                         <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
                                     </div>
                                 </div>
@@ -601,7 +664,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                     </div>
                                 </div>
                             </a>
@@ -630,7 +693,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                         <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
                                     </div>
                                 </div>
@@ -665,7 +728,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                     </div>
                                 </div>
                             </a>
@@ -696,7 +759,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                     </div>
                                 </div>
                             </a>
@@ -727,7 +790,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                         <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
                                     </div>
                                 </div>
@@ -762,7 +825,7 @@
 
                                     <!-- Actions -->
                                     <div class="ws-item-actions">
-                                        <a href="#" class="btn-buy">Koupit</a>
+                                        <a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky/" target="_blank" class="btn-buy">Koupit</a>
                                         <a href="https://krvinkaapp.vercel.app" target="_blank" rel="noopener noreferrer" class="cta-free-trial">Vyzkoušet aplikaci zdarma</a>
                                     </div>
                                 </div>

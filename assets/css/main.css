@@ -2514,3 +2514,71 @@ ul.ws-footer-payments li{
   text-decoration: none;
   transform: translateY(-1px);
 }
+
+/* Hero kontajner musí byť ukotvený kvôli overlayu */
+.hero { position: relative; }
+
+/* Overlay cez celé hero, centrovanie gridom */
+.hero-heading {
+  position: absolute;
+  inset: 0;                     /* top/right/bottom/left = 0 */
+  display: grid;
+  place-items: center;
+  padding: clamp(10px, 2vw, 24px) 0;
+  pointer-events: none;         /* kliky prejdú na banner */
+  z-index: 2;
+}
+
+/* Sklenený badge s rozumnou max-šírkou */
+.hero-heading .hero-badge {
+  pointer-events: auto;
+  display: inline-block;
+  margin: 0 auto;
+  padding: clamp(6px, 1vw, 14px) clamp(12px, 2vw, 28px);
+  max-width: min(92vw, 1000px);
+  box-sizing: border-box;
+
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Text – fluidná typografia, bez clampu na boxe, s prirodzeným zalomením */
+.hero-heading h1 {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: clamp(18px, 6vw, 44px);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,.45);
+
+  /* DÔLEŽITÉ: odstráň všetky predchádzajúce line-clamp hacky
+     (ak existujú, prebijeme ich tu) */
+  display: block !important;
+  -webkit-line-clamp: unset !important;
+  -webkit-box-orient: unset !important;
+  overflow: visible !important;
+
+  /* Pekné zalomenie bez presahov */
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-wrap: balance; /* OK ak prehliadač podporuje */
+}
+
+/* Mobilný tuning – menej letter-spacing + poistka na šírku badgu */
+@media (max-width: 480px) {
+  .hero-heading h1 {
+    letter-spacing: 0.01em;
+    font-size: clamp(18px, 7vw, 28px);
+  }
+  .hero-heading .hero-badge {
+    max-width: calc(100% - 24px);
+  }
+}
