@@ -82,13 +82,14 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 /* Buttons */
-.btn{	
+.btn{
 	background: transparent;
 	border-radius: 0;
 	border: none;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	font-weight: 700;
+	font-size: 18px;
 	-ms-transition: .3s ease-in-out;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
@@ -2474,8 +2475,8 @@ ul.ws-footer-payments li{
   border: none;
   border-radius: 8px;
   color: #fff;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 18px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
