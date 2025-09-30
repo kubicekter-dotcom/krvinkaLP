@@ -44,11 +44,12 @@ Table of Contents:
 /*--------------------------------------
 	1) GENERAL STYLES
 ---------------------------------------*/
-body{		
-	font-family: 'Merriweather', serif;		
-	color: #999;	    
+body{
+	font-family: 'Merriweather', serif;
+	color: #999;
+	background-color: #FFE6F1;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;	
+    -moz-osx-font-smoothing: grayscale;
 }
 h1, h2, h3, h4, h5, h6{		
 	letter-spacing: 1.5px;
