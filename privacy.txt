@@ -1,0 +1,94 @@
+<h1>Ochrana soukromí</h1>
+
+<p><strong>OCHRANA SOUKROMÍ (ZÁSADY ZPRACOVÁNÍ OSOBNÍCH ÚDAJŮ)</strong><br>
+web krvinka.cz</p>
+
+<h2>Kdo je správcem osobních údajů</h2>
+<p>
+Správcem osobních údajů je:<br>
+<strong>Tereza Kubíčková</strong><br>
+IČ: 21847916<br>
+Sídlo: Příční 17, Brno, 60200<br>
+Zapsaná u Magistrátu města Brna, spisová značka č.: 370200
+</p>
+
+<p>
+<strong>Kontaktní údaje:</strong><br>
+E-mail: <a href="mailto:info@kidventure.cz">info@kidventure.cz</a><br>
+Telefon: +420 777 963 851<br>
+Web: <a href="https://www.kidventure.cz">www.kidventure.cz</a>
+</p>
+
+<p>Správce nejmenoval pověřence pro ochranu osobních údajů.</p>
+
+<h2>Jaké osobní údaje zpracováváme</h2>
+<p>Zpracováváme jen údaje, které potřebujeme pro komunikaci, newsletter a měření webu.</p>
+
+<h3>A) Kontaktní formulář</h3>
+<ul>
+  <li>jméno</li>
+  <li>e-mail</li>
+  <li>zpráva (obsah vaší komunikace)</li>
+</ul>
+
+<h3>B) Newsletter</h3>
+<ul>
+  <li>e-mail (případně jméno, pokud jej vyplníte)</li>
+  <li>technické údaje o doručování a práci s e-maily (např. otevření e-mailu, proklik)</li>
+</ul>
+
+<h3>C) Analytika a marketingové měření</h3>
+<ul>
+  <li>cookies a obdobné identifikátory</li>
+  <li>informace o zařízení a prohlížeči</li>
+  <li>údaje o návštěvě a interakcích na webu</li>
+</ul>
+
+<p>Používané nástroje: Google Analytics, Meta Pixel.</p>
+
+<h2>Právní základ zpracování</h2>
+<ul>
+  <li>kontaktní formulář: oprávněný zájem správce</li>
+  <li>newsletter: váš souhlas</li>
+  <li>analytika a marketing: váš souhlas přes cookies lištu</li>
+</ul>
+
+<h2>Cookies</h2>
+<p>
+Na webu používáme cookies. Některé jsou nezbytné, další slouží k analytice a marketingu.
+Souhlas lze kdykoli změnit nebo odvolat.
+</p>
+
+<h2>Nákupy</h2>
+<p>
+Web krvinka.cz slouží jako informační stránka. Nákupy probíhají na e-shopu
+<a href="https://www.kidventure.cz">kidventure.cz</a>, kde se řídí samostatnými zásadami ochrany soukromí.
+</p>
+
+<h2>Vaše práva</h2>
+<ul>
+  <li>právo na přístup k údajům</li>
+  <li>právo na opravu</li>
+  <li>právo na výmaz</li>
+  <li>právo na omezení zpracování</li>
+  <li>právo na přenositelnost</li>
+  <li>právo odvolat souhlas</li>
+</ul>
+
+<h2>Dozorový úřad</h2>
+<p>
+Úřad pro ochranu osobních údajů<br>
+<a href="https://www.uoou.cz">www.uoou.cz</a>
+</p>
+
+<h2>Děti</h2>
+<p>
+Web je určen rodičům. Údaje dětí cíleně neshromažďujeme.
+</p>
+
+<h2>Změny zásad</h2>
+<p>
+Tyto zásady mohou být aktualizovány. Aktuální verze je vždy dostupná na webu krvinka.cz.
+</p>
+
+<p><strong>Účinnost: 3. 1. 2026</strong></p>
