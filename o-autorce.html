@@ -150,71 +150,63 @@
     <!-- Top Bar End -->
 
     <!-- Header Start -->
-    <header class="ws-header-static">                                    
-                    
-        <!-- Navbar -->       
-        <nav class="navbar ws-navbar navbar-default">
-            <div class="container">                
+    
+    <header class="ws-header-krvinka">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Mobile toggle button -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>                    
+                    </button>
                 </div>
 
-                <!-- Logo -->        
-                <div class="ws-logo ws-center">
-                    <a href="index.html">
-                        <img src="assets/img/logo-black.png" alt="Alternative Text" class="img-responsive">
-                    </a>
-                </div>
-               
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Home <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Parallax Image</a></li>                                
-                                <li><a href="slider-fullwidth.html">Slider FullWidth</a></li>
-                                <li><a href="slider-fullscreen.html">Slider FullScreen</a></li>
-                                <li><a href="3d-parallax.html">3D Parallax Hero</a></li>                                                              
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Shop <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="shop.html">Default Shop Page</a></li>
-                                <li><a href="single-product.html">Single Product</a></li>
-                                <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                <li><a href="my-account.html">My Account / Register</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                            </ul>
-                        </li>
+                <!-- Desktop Layout: Left - Logo - Right -->
+                <div class="krvinka-nav-desktop">
+                    <!-- Left Menu -->
+                    <ul class="nav-left">
+                        <li><a href="index.html">Domov</a></li>
+                        <li><a href="shopping-cart.html">Obchod</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">                            
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Pages <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Header Style 1</a></li>                                                            
-                                <li><a href="second-header.html">Header Style 2</a></li>                            
-                                <li><a href="third-header.html">Header Style 3</a></li>                            
-                                <li><a href="faq.html#shipping">Shipping &amp; Return</a></li>
-                                <li><a href="faq.html#privacy">Privacy Policy</a></li>
-                                <li><a href="faq.html">F.A.Q</a></li>                            
-                            </ul>
-                        </li>   
-                        <li><a href="journal.html">Journal</a></li>        
-                        <li><a href="contact.html">Contact</a></li>                      
-                    </ul>            
+                    <!-- Logo -->
+                    <div class="logo-center">
+                        <a href="index.html" class="logo-link">
+                            <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Right Menu -->
+                    <ul class="nav-right">
+                        <li><a href="o-autorce.html">O autorce</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Collapsed Menu -->
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <div class="krvinka-nav-mobile">
+                        <!-- Logo first on mobile -->
+                        <div class="logo-mobile">
+                            <a href="index.html" class="logo-link">
+                                <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                            </a>
+                        </div>
+                        <!-- Menu items below logo -->
+                        <ul class="nav-mobile">
+                            <li><a href="index.html">Domov</a></li>
+                            <li><a href="shopping-cart.html">Obchod</a></li>
+                            <li><a href="o-autorce.html">O autorce</a></li>
+                            <li><a href="contact.html">Kontakt</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav> 
-    </header>
-    <!-- End Header -->    
+        </nav>
+    </header><!-- End Header -->    
 
     <!-- Page Parallax Header -->
     <div class="ws-parallax-header parallax-window" data-parallax="scroll" data-image-src="assets/img/backgrounds/banner-about.jpg">        
