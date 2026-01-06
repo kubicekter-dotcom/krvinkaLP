@@ -1,0 +1,59 @@
+
+/* About author video */
+.about-video {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.about-video a {
+    position: relative;
+    display: block;
+}
+
+.about-video img {
+    width: 100%;
+    border-radius: 8px;
+    filter: brightness(0.6);
+    transition: filter 0.3s ease;
+}
+
+.about-video a:hover img {
+    filter: brightness(0.8);
+}
+
+.about-video .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+}
+
+.about-video .play-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 14px 0 14px 22px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Contact page header overlay for better text readability */
+.ws-parallax-header .ws-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-parallax-header h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
