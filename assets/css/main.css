@@ -2584,3 +2584,9 @@ ul.ws-footer-payments li{
     max-width: calc(100% - 24px);
   }
 }
+/* Mobile fix: move pink underline below hero title */
+@media (max-width: 767px) {
+  .ws-hero-title h1 {
+    padding-bottom: 90px;
+  }
+}
