@@ -1,1 +1,6 @@
-index.backup.html
+*.bak
+*.bak*
+*.backup*
+*.afpub
+*.afdesign
+*.afphoto
