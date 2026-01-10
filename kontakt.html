@@ -589,28 +589,29 @@
 
                 <!-- Contact Form -->
                 <div class="col-sm-6">
-                    <form class="form-horizontal ws-contact-form">
+<form class="form-horizontal ws-contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<!-- Hidden fields for Formspree -->                        <input type="hidden" name="_subject" value="Nová zpráva z kontaktního formuláře Krvinka">                        <input type="hidden" name="_replyto" value="">
                         <!-- Name -->
                         <div class="form-group">
                             <label class="control-label">Jméno <span>*</span></label>
-                            <input type="text" class="form-control">                        
+                            <input type="text" name="name" class="form-control" required>                        
                         </div>
 
                         <!-- Email -->
                         <div class="form-group">
                             <label class="control-label">E-mail <span>*</span></label>                        
-                            <input type="email" class="form-control">                        
+                            <input type="email" name="email" class="form-control" required>                        
                         </div>
 
                         <!-- Message -->
                         <div class="form-group">
                             <label class="control-label">Zpráva <span>*</span></label>      
-                            <textarea class="form-control" rows="7"></textarea>
+                            <textarea name="message" class="form-control" rows="7" required></textarea>
                         </div>
 
                         <!-- Submit Button -->
                         <div class="form-group">                        
-                            <a href="#x" class="btn ws-big-btn">Odeslat</a>                        
+                            <button type="submit" class="btn ws-big-btn">Odeslat</button>                        
                         </div>
                     </form>
                 </div>

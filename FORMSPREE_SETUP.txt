@@ -1,0 +1,52 @@
+NÁVOD: Jak aktivovat kontaktní formulář s Formspree
+====================================================
+
+Kontaktní formulář je připraven, ale potřebujete získat Formspree Form ID.
+
+KROK 1: Registrace na Formspree
+--------------------------------
+1. Jděte na: https://formspree.io/
+2. Klikněte na "Get Started" nebo "Sign Up"
+3. Zaregistrujte se s emailem: info@kidventure.cz (nebo jiným)
+4. Potvrďte email
+
+KROK 2: Vytvoření formuláře
+----------------------------
+1. Po přihlášení klikněte na "+ New Form"
+2. Pojmenujte formulář: "Krvinka Kontakt"
+3. Zkopírujte Form ID (vypadá jako: xyzabc123)
+
+KROK 3: Nahrazení placeholderu v kódu
+--------------------------------------
+V souboru kontakt.html najděte řádek:
+   action="https://formspree.io/f/YOUR_FORM_ID"
+
+Nahraďte YOUR_FORM_ID svým skutečným Form ID:
+   action="https://formspree.io/f/xyzabc123"
+
+KROK 4: Commit a push
+---------------------
+git add kontakt.html
+git commit -m "Add Formspree form ID"
+git push
+
+HOTOVO!
+-------
+Formulář nyní bude odesílat emaily na email zadaný při registraci Formspree.
+
+CO FORMULÁŘ ODESÍLÁ:
+- Jméno (name)
+- E-mail (email)
+- Zpráva (message)
+- Předmět emailu: "Nová zpráva z kontaktního formuláře Krvinka"
+
+FREE TIER LIMIT:
+- 50 odeslaných formulářů/měsíc zdarma
+- Pro více je potřeba placený plán
+
+ALTERNATIVA (bez registrace, ale deprecated):
+---------------------------------------------
+Můžete použít starší metodu (ale není doporučená):
+action="https://formspree.io/info@kidventure.cz"
+
+Při prvním odeslání budete muset potvrdit email.
