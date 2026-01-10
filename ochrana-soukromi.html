@@ -35,6 +35,160 @@
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!-- Additional Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <!-- Krvinka Header Styles -->
+        <style>
+          /* Krvinka Header Styling */
+          .ws-header-krvinka {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 0;
+          }
+
+          .ws-header-krvinka .navbar {
+            margin-bottom: 0;
+            border: none;
+            background: transparent;
+          }
+
+          /* Desktop Layout */
+          .krvinka-nav-desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-desktop .nav-left,
+          .krvinka-nav-desktop .nav-right {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+          }
+
+          .krvinka-nav-desktop .nav-left {
+            flex: 1;
+            justify-content: flex-end;
+            margin-right: 50px;
+          }
+
+          .krvinka-nav-desktop .nav-right {
+            flex: 1;
+            justify-content: flex-start;
+            margin-left: 50px;
+          }
+
+          .krvinka-nav-desktop .logo-center {
+            flex: 0 0 auto;
+            text-align: center;
+          }
+
+          .logo-link {
+            display: inline-block;
+            text-decoration: none;
+          }
+
+          .logo-link:hover {
+            text-decoration: none;
+          }
+
+          .logo-img {
+            max-height: 40px;
+            width: auto;
+            transition: opacity 0.3s ease;
+          }
+
+          .logo-link:hover .logo-img {
+            opacity: 0.8;
+          }
+
+          /* Navigation Links */
+          .krvinka-nav-desktop a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-desktop a:hover {
+            color: #b8457d;
+            text-decoration: none;
+          }
+
+          /* Mobile Navigation */
+          .krvinka-nav-mobile {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-mobile .logo-mobile {
+            margin-bottom: 20px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          .krvinka-nav-mobile .nav-mobile li {
+            margin-bottom: 15px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a:hover {
+            color: #b8457d;
+            text-decoration: none;
+          }
+
+          /* Mobile Responsive */
+          @media (max-width: 768px) {
+            .krvinka-nav-desktop {
+              display: none;
+            }
+
+            .navbar-collapse.in .krvinka-nav-mobile {
+              display: block;
+            }
+
+            .navbar-toggle {
+              border: 1px solid #333;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+
+            .navbar-toggle .icon-bar {
+              background-color: #333;
+            }
+          }
+
+          /* Hide mobile menu by default */
+          .navbar-collapse {
+            border: none;
+            box-shadow: none;
+          }
+
+          /* Ensure proper spacing */
+          .container {
+            position: relative;
+          }
+        </style>
     </head>
     <body>
     <!--[if lt IE 8]>
@@ -54,165 +208,62 @@
     </div>
     <!-- End Loader Start -->
 
-    <!-- Top Bar Start -->
-    <div class="ws-topbar">
-        <div class="pull-left">
-            <div class="ws-topbar-message hidden-xs">
-                <p>Free Shipping on orders over <span>50$ in USA</span></p> 
-            </div>
-        </div>
-
-        <div class="pull-right">   
-
-            <!-- Shop Menu -->   
-            <ul class="ws-shop-menu">
-
-                <!-- Account -->
-                <li class="ws-shop-account">
-                    <a href="my-account.html" class="btn btn-sm">My Account</a>
-                </li>
-                            
-                <!-- Cart -->
-                <li class="ws-shop-cart">
-                    <a href="#x" class="btn btn-sm">Cart (2)</a>                            
-
-                    <!-- Cart Popover -->
-                    <div class="ws-shop-minicart">                
-                        <div class="minicart-content">
-
-                            <!-- Added Items -->
-                            <ul class="minicart-content-items clearfix">
-                                <!-- Item -->                                
-                                <li class="media">
-                                    <div class="media-left">
-                                        <!-- Image -->
-                                        <a href="#">
-                                            <img src="assets/img/works/abstract/5.jpg" class="media-object" alt="Alternative Text">
-                                        </a>
-                                    </div>
-                                    
-                                    <div class="minicart-content-details media-body">
-                                        <!-- Title -->
-                                        <h3><a href="#">Pinning Moon</a></h3>                        
-
-                                        <!-- Price -->                                
-                                        <span class="minicart-content-price">$25.00</span>                                                     
-                                    </div>
-
-                                    <!-- Remove -->                  
-                                    <span class="minicart-content-remove"><a href="#"><i class="fa fa-times"></i></a></span> 
-                                </li>                                 
-
-                                <!-- Item -->                                
-                                <li class="media">
-                                    <div class="media-left">
-                                        <!-- Image -->
-                                        <a href="#">
-                                            <img src="assets/img/works/illustrated/4.jpg" class="media-object" alt="Alternative Text">
-                                        </a>
-                                    </div>
-                                    
-                                    <div class="minicart-content-details media-body">
-                                        <!-- Title -->
-                                        <h3><a href="#">Arkose Factor</a></h3>                        
-
-                                        <!-- Price -->                                
-                                        <span class="minicart-content-price">$25.00</span>                                                                     
-                                    </div>
-
-                                    <!-- Remove -->                  
-                                    <span class="minicart-content-remove"><a href="#"><i class="fa fa-times"></i></a></span>
-                                </li>                                 
-                            </ul>                                                                
-
-                            <!-- Subtotal -->
-                            <div class="minicart-content-total">
-                                <h3>Subtotal: $50.00</h3>
-                            </div>
-
-                            <!-- Checkout -->
-                            <div class="ws-shop-menu-checkout">                    
-                                <div class="ws-shop-viewcart pull-left">
-                                    <a href="#x" class="btn btn-sm">View Cart</a>    
-                                </div>
-                                <div class="ws-shop-checkout pull-right">
-                                    <a href="#x" class="btn btn-sm">Checkout</a>   
-                                </div>
-                            </div>                    
-                        </div>
-                    </div>    
-                    <!-- End Cart Popover -->
-
-                </li>    
-            </ul>     
-        </div>
-    </div> 
-    <!-- Top Bar End -->
-
     <!-- Header Start -->
-    <header class="ws-header-static">                                    
-                    
-        <!-- Navbar -->       
-        <nav class="navbar ws-navbar navbar-default">
-            <div class="container">                
+    <header class="ws-header-krvinka">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Mobile toggle button -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>                    
+                    </button>
                 </div>
 
-                <!-- Logo -->        
-                <div class="ws-logo ws-center">
-                    <a href="index.html">
-                        <img src="assets/img/logo-black.png" alt="Alternative Text" class="img-responsive">
-                    </a>
-                </div>
-               
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Home <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Parallax Image</a></li>                                
-                                <li><a href="slider-fullwidth.html">Slider FullWidth</a></li>
-                                <li><a href="slider-fullscreen.html">Slider FullScreen</a></li>
-                                <li><a href="3d-parallax.html">3D Parallax Hero</a></li>                                                          
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Shop <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="shop.html">Default Shop Page</a></li>
-                                <li><a href="single-product.html">Single Product</a></li>
-                                <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                <li><a href="my-account.html">My Account / Register</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                            </ul>
-                        </li>
+                <!-- Desktop Layout: Left - Logo - Right -->
+                <div class="krvinka-nav-desktop">
+                    <!-- Left Menu -->
+                    <ul class="nav-left">
+                        <li><a href="index.html">Domů</a></li>
+                        <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">                            
-                        <li class="dropdown">
-                            <a href="#x" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn">Pages <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                               <li><a href="index.html">Header Style 1</a></li>                                                            
-                                <li><a href="second-header.html">Header Style 2</a></li>                            
-                                <li><a href="third-header.html">Header Style 3</a></li>                        
-                                <li><a href="faq.html#shipping">Shipping &amp; Return</a></li>
-                                <li><a href="faq.html#privacy">Privacy Policy</a></li>
-                                <li><a href="faq.html">F.A.Q</a></li>                            
-                            </ul>
-                        </li>   
-                        <li><a href="journal.html">Journal</a></li>        
-                        <li><a href="kontakt.html">Contact</a></li>                      
-                    </ul>            
+                    <!-- Logo -->
+                    <div class="logo-center">
+                        <a href="index.html" class="logo-link">
+                            <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Right Menu -->
+                    <ul class="nav-right">
+                        <li><a href="o-autorce.html">O autorce</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Collapsed Menu -->
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <div class="krvinka-nav-mobile">
+                        <!-- Logo first on mobile -->
+                        <div class="logo-mobile">
+                            <a href="index.html" class="logo-link">
+                                <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                            </a>
+                        </div>
+                        <!-- Menu items below logo -->
+                        <ul class="nav-mobile">
+                            <li><a href="index.html">Domů</a></li>
+                            <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
+                            <li><a href="o-autorce.html">O autorce</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </nav> 
+        </nav>
     </header>
     <!-- End Header -->    
 
