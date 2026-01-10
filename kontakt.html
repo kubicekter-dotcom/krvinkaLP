@@ -7,7 +7,7 @@
         <!-- Meta -->
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-        <title>Krvinka - Creative Shop Template</title>
+        <title>Krvinka</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,26 +15,477 @@
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
         <!-- CSS Styles -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">          
-        <link rel="stylesheet" href="assets/css/main.css">  
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
 
         <!-- Animate CSS -->
-        <link rel="stylesheet" href="assets/css/animate.min.css"> 
+        <link rel="stylesheet" href="assets/css/animate.min.css">
 
         <!-- Revolution Slider -->
-        <link rel="stylesheet" href="assets/js/plugins/revolution/css/settings.css">        
-        <link rel="stylesheet" href="assets/js/plugins/revolution/css/layers.css">                
-        <link rel="stylesheet" href="assets/js/plugins/revolution/css/navigation.css">   
+        <link rel="stylesheet" href="assets/js/plugins/revolution/css/settings.css">
+        <link rel="stylesheet" href="assets/js/plugins/revolution/css/layers.css">
+        <link rel="stylesheet" href="assets/js/plugins/revolution/css/navigation.css">
 
         <!-- Owl Carousel -->
-        <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">   
+        <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">
 
-        <!-- Google Web Fonts -->           
+        <!-- Google Web Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300,700,900&subset=latin-ext' rel='stylesheet' type='text/css'>
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Krvinka Header Styles -->
+        <style>
+          /* Krvinka Header Styling */
+          .ws-header-krvinka {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 0;
+          }
+
+          .ws-header-krvinka .navbar {
+            margin-bottom: 0;
+            border: none;
+            background: transparent;
+          }
+
+          /* Desktop Layout */
+          .krvinka-nav-desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-desktop .nav-left,
+          .krvinka-nav-desktop .nav-right {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+          }
+
+          .krvinka-nav-desktop .nav-left {
+            flex: 1;
+            justify-content: flex-end;
+            margin-right: 50px;
+          }
+
+          .krvinka-nav-desktop .nav-right {
+            flex: 1;
+            justify-content: flex-start;
+            margin-left: 50px;
+          }
+
+          .krvinka-nav-desktop .logo-center {
+            flex: 0 0 auto;
+            text-align: center;
+          }
+
+          .logo-link {
+            display: inline-block;
+            text-decoration: none;
+          }
+
+          .logo-link:hover {
+            text-decoration: none;
+          }
+
+          .logo-img {
+            max-height: 40px;
+            width: auto;
+            transition: opacity 0.3s ease;
+          }
+
+          .logo-link:hover .logo-img {
+            opacity: 0.8;
+          }
+
+          /* Navigation Links */
+          .krvinka-nav-desktop a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-desktop a:hover {
+            color: var(--pink);
+            text-decoration: none;
+          }
+
+          /* Mobile Navigation */
+          .krvinka-nav-mobile {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-mobile .logo-mobile {
+            margin-bottom: 20px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          .krvinka-nav-mobile .nav-mobile li {
+            margin-bottom: 15px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a:hover {
+            color: var(--pink);
+            text-decoration: none;
+          }
+
+          /* Mobile Responsive */
+          @media (max-width: 768px) {
+            .krvinka-nav-desktop {
+              display: none;
+            }
+
+            .navbar-collapse.in .krvinka-nav-mobile {
+              display: block;
+            }
+
+            .navbar-toggle {
+              border: 1px solid #333;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+
+            .navbar-toggle .icon-bar {
+              background-color: #333;
+            }
+          }
+
+          /* Hide mobile menu by default */
+          .navbar-collapse {
+            border: none;
+            box-shadow: none;
+          }
+
+          /* Ensure proper spacing */
+          .container {
+            position: relative;
+          }
+
+          /* Banner Title Overlay */
+          .page-title {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px 0;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+          }
+
+          .banner-title-overlay {
+            color: #000000 !important;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+          }
+
+          .page-title .banner-title-overlay {
+            color: #000000 !important;
+          }
+
+          @media (max-width: 768px) {
+            .banner-title-overlay {
+              font-size: 22px;
+            }
+
+            .page-title {
+              padding: 15px 0;
+            }
+          }
+
+          /* Author Section */
+          .section.author-section {
+            margin: 70px 0 60px;
+          }
+
+          .section-title {
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            font-size: 28px;
+            margin: 0 0 18px;
+            text-align: center;
+          }
+
+          .section-title::after{
+            content:"";
+            display:block;
+            width:60px;
+            height:3px;
+            margin:12px auto 0;
+            background: var(--pink);
+            border-radius:2px;
+          }
+
+          .author-card{
+            max-width: 980px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 24px;
+            padding: 28px;
+            border-radius: 12px;
+            background: #fff;
+            border: 1px solid rgba(244,167,185,.35);
+            box-shadow: 0 8px 24px rgba(0,0,0,.06);
+          }
+
+          .author-photo{
+            width:140px;
+            height:140px;
+            border-radius:50%;
+            overflow:hidden;
+            border: 3px solid var(--pink);
+          }
+
+          .author-photo img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            display:block;
+          }
+
+          .author-name{
+            margin:0 0 6px;
+            font-size:22px;
+            font-weight:700;
+          }
+
+          .author-role{
+            margin:0 0 14px;
+            font-size:12px;
+            letter-spacing:.04em;
+            text-transform:uppercase;
+            color: var(--meta);
+          }
+
+          .author-text{
+            margin:0 0 10px;
+            line-height:1.7;
+            color:#444;
+          }
+
+          @media (max-width: 768px){
+            .author-card{
+              grid-template-columns: 1fr;
+              text-align:center;
+            }
+            .author-photo{
+              margin:0 auto 8px;
+            }
+          }
+
+          /* Preloader Styles */
+          #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .preloader-img {
+            width: 120px;
+            height: auto;
+            animation: pulse 1.6s infinite ease-in-out;
+          }
+
+          @keyframes pulse {
+            0% {
+              transform: scale(1);
+              opacity: 1;
+            }
+            50% {
+              transform: scale(1.1);
+              opacity: 0.8;
+            }
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+
+          /* Footer Dark Pink Background */
+          .ws-footer {
+            background-color: #b8457d !important;
+          }
+
+          .ws-footer h3,
+          .ws-footer p,
+          .ws-footer li a {
+            color: #fff !important;
+          }
+
+          .ws-footer-bar {
+            background-color: #a03d70 !important;
+          }
+
+          .ws-footer-bar p {
+            color: #fff !important;
+          }
+
+          /* Footer List Styling */
+          .ws-footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          .ws-footer-list li {
+            margin-bottom: 8px;
+          }
+
+          .ws-footer-list li a {
+            color: #fff !important;
+            text-decoration: none;
+          }
+
+          .ws-footer-list li a:hover {
+            color: var(--pink-soft) !important;
+            text-decoration: none;
+          }
+
+          .ws-footer-separator {
+            width: 30px;
+            height: 2px;
+            background: var(--pink-soft);
+            margin: 15px 0;
+          }
+
+          /* CTA container */
+          .cta-container {
+            text-align: center;
+            margin: 80px 0 50px 0;
+            clear: both;
+          }
+
+          /* CTA button */
+          .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #e74c3c;
+            color: #fff !important;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+
+          .cta-button:hover {
+            background-color: #c0392b;
+            color: #fff !important;
+            text-decoration: none;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+          }
+
+/*           /* Dočasne skryť navigačné položky, ponechať logo */ */
+/*           .krvinka-nav-desktop .nav-left, */
+/*           .krvinka-nav-desktop .nav-right { */
+/*             display: none; */
+/*           } */
+/*  */
+/*           /* Vycentrovať logo po skrytí navigácie */ */
+/*           .krvinka-nav-desktop { */
+/*             justify-content: center; */
+/*           } */
+/*  */
+/*           /* Dočasne skryť kategórie navigáciu */ */
+/*           .nav.nav-tabs { */
+/*             display: none; */
+          }
+
+          /* Hero title section medzi bannerom a produktmi */
+          .hero-title-section {
+            margin: 8px 0;
+            padding: 0;
+            text-align: center;
+          }
+
+          /* Motto */
+          .hero-title-section h1 {
+            color: #2a2a2a;                  /* tmavšia sivá namiesto čiernej */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;                 /* polotučné, menej tvrdé ako 700 */
+            font-size: clamp(16px, 3vw, 28px);/* fluidná typografia */
+            line-height: 1.2;
+            max-width: 760px;
+            margin: 12px auto 16px;           /* malé medzery hore/dole */
+            text-align: center;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+
+            /* pastelové podčiarknutie */
+            background: linear-gradient(
+              transparent 60%,
+              rgba(255, 161, 194, 0.35) 0
+            ) no-repeat;
+            background-size: 100% 1.1em;      /* výška zvýraznenia */
+            background-position: 0 70%;       /* posun podčiarknutia */
+          }
+
+          /* Odstránenie nadbytočných medzier v produktovej sekcii */
+          .ws-page-container {
+            padding-top: 0;
+          }
+
+          .ws-page-container .row {
+            margin-top: 0;
+            padding-top: 0;
+          }
+
+          .ws-shop-page {
+            padding-top: 0;
+            margin-top: 0;
+          }
+
+          /* Bežný text */
+          body, p, .product-card {
+            font-family: 'Nunito Sans', sans-serif;
+          }
+
+          @media (max-width: 768px) {
+            .hero-title-section {
+              margin: 40px 0 30px 0;
+            }
+          }
+
+.product-badge {  display: inline-block;  margin: 8px 0 4px;  padding: 4px 10px;  font-size: 12px;  font-weight: 600;  color: #b8457d;  background: rgba(184, 69, 125, 0.12);  border-radius: 12px;}
+/* Skryto do budoucna */.hidden-product {  display: none !important;}
+.btn-buy { color: #ffffff !important; }
+        </style>
     </head>
     <body>
     <!--[if lt IE 8]>
