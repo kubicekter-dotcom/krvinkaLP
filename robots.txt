@@ -1,0 +1,28 @@
+# robots.txt for krvinka.cz
+# Generated: 2026-01-13
+
+User-agent: *
+Allow: /
+
+# Disallow backup and template files
+Disallow: /*.backup.html$
+Disallow: /*.bak$
+Disallow: /*backup*.html$
+Disallow: /tmpclaude-*
+
+# Disallow admin and sensitive areas
+Disallow: /Documentation/
+Disallow: /PSD/
+Disallow: /Plugins/
+Disallow: /HTML/
+
+# Allow CSS, JS and images
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+
+# Sitemap location
+Sitemap: https://krvinka.cz/sitemap.xml
+
+# Crawl-delay (optional - removes this if causing issues)
+# Crawl-delay: 1
