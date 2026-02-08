@@ -1,0 +1,1622 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="cs"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="cs"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="cs"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="cs"> <!--<![endif]-->
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <title>Kalkulačka: Kolik červených krvinek vyrobilo moje tělo? - Krvinka</title>
+        <meta name="description" content="Spočítejte si, kolik červených krvinek vaše tělo vyrobilo od narození. Zábavná a poučná kalkulačka pro děti i dospělé.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Tereza Kubíčková">
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Kalkulačka: Kolik červených krvinek vyrobilo moje tělo?">
+        <meta property="og:description" content="Spočítejte si, kolik červených krvinek vaše tělo vyrobilo od narození. Zábavná a poučná kalkulačka pro děti i dospělé.">
+        <meta property="og:image" content="assets/img/Kalkulačky/01_1000x1000_pocet_cervenych_krvinek.jpg">
+        <meta property="og:url" content="https://krvinka.cz/blog-kalkulacka-poctu-cervenych-krvinek.html">
+        <meta property="og:site_name" content="Krvinka">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Kalkulačka: Kolik červených krvinek vyrobilo moje tělo?">
+        <meta name="twitter:description" content="Spočítejte si, kolik červených krvinek vaše tělo vyrobilo od narození.">
+        <meta name="twitter:image" content="assets/img/Kalkulačky/01_1000x1000_pocet_cervenych_krvinek.jpg">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://krvinka.cz/blog-kalkulacka-poctu-cervenych-krvinek.html">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">
+
+        <!-- Google Web Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!-- Schema.org Article Markup -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Kalkulačka počtu červených krvinek",
+          "description": "Spočítejte si, kolik červených krvinek vaše tělo vyrobilo od narození.",
+          "url": "https://krvinka.cz/blog-kalkulacka-poctu-cervenych-krvinek.html",
+          "applicationCategory": "EducationalApplication",
+          "operatingSystem": "Any",
+          "author": {
+            "@type": "Person",
+            "name": "Tereza Kubíčková"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Krvinka",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://krvinka.cz/assets/img/logo-black.png"
+            }
+          }
+        }
+        </script>
+
+        <!-- Krvinka Styles -->
+        <style>
+          /* Krvinka Header Styling */
+          .ws-header-krvinka {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 0;
+          }
+
+          .ws-header-krvinka .navbar {
+            margin-bottom: 0;
+            border: none;
+            background: transparent;
+          }
+
+          /* Desktop Layout */
+          .krvinka-nav-desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-desktop .nav-left,
+          .krvinka-nav-desktop .nav-right {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+          }
+
+          .krvinka-nav-desktop .nav-left {
+            flex: 1;
+            justify-content: flex-end;
+            margin-right: 50px;
+          }
+
+          .krvinka-nav-desktop .nav-right {
+            flex: 1;
+            justify-content: flex-start;
+            margin-left: 50px;
+          }
+
+          .krvinka-nav-desktop .logo-center {
+            flex: 0 0 auto;
+            text-align: center;
+          }
+
+          .logo-link {
+            display: inline-block;
+            text-decoration: none;
+          }
+
+          .logo-link:hover {
+            text-decoration: none;
+          }
+
+          .logo-img {
+            max-height: 40px;
+            width: auto;
+            transition: opacity 0.3s ease;
+          }
+
+          .logo-link:hover .logo-img {
+            opacity: 0.8;
+          }
+
+          /* Navigation Links */
+          .krvinka-nav-desktop a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-desktop a:hover {
+            color: #b8457d;
+            text-decoration: none;
+          }
+
+          /* Mobile Navigation */
+          .krvinka-nav-mobile {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-mobile .logo-mobile {
+            margin-bottom: 20px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          .krvinka-nav-mobile .nav-mobile li {
+            margin-bottom: 15px;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a:hover {
+            color: #b8457d;
+            text-decoration: none;
+          }
+
+          /* Mobile Responsive */
+          @media (max-width: 768px) {
+            .krvinka-nav-desktop {
+              display: none;
+            }
+
+            .navbar-collapse.in .krvinka-nav-mobile {
+              display: block;
+            }
+
+            .navbar-toggle {
+              border: 1px solid #333;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+
+            .navbar-toggle .icon-bar {
+              background-color: #333;
+            }
+          }
+
+          /* Hide mobile menu by default */
+          .navbar-collapse {
+            border: none;
+            box-shadow: none;
+          }
+
+          /* Footer Dark Pink Background */
+          .ws-footer {
+            background-color: #b8457d !important;
+          }
+
+          .ws-footer h3,
+          .ws-footer p,
+          .ws-footer li a {
+            color: #fff !important;
+          }
+
+          .ws-footer-bar {
+            background-color: #a03d70 !important;
+          }
+
+          .ws-footer-bar p {
+            color: #fff !important;
+          }
+
+          .ws-footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+
+          .ws-footer-list li {
+            margin-bottom: 8px;
+          }
+
+          .ws-footer-list li a {
+            color: #fff !important;
+            text-decoration: none;
+          }
+
+          .ws-footer-list li a:hover {
+            color: #ffa1c2 !important;
+            text-decoration: none;
+          }
+
+          .ws-footer-separator {
+            width: 30px;
+            height: 2px;
+            background: #ffa1c2;
+            margin: 15px 0;
+          }
+
+          /* Blog Article Specific Styles */
+          .blog-article-meta {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+          }
+
+          .blog-article-meta .meta-item {
+            display: inline-block;
+            margin-right: 20px;
+            color: #888;
+            font-size: 14px;
+          }
+
+          .blog-article-meta .meta-item i {
+            margin-right: 5px;
+            color: #b8457d;
+          }
+
+          .blog-featured-image {
+            margin-bottom: 40px;
+          }
+
+          .blog-featured-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          }
+
+          .blog-content {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+          }
+
+          .blog-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #2a2a2a;
+          }
+
+          .blog-content p {
+            margin-bottom: 20px;
+          }
+
+          .blog-tags {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+          }
+
+          .blog-tags h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 15px;
+          }
+
+          .blog-tag {
+            display: inline-block;
+            padding: 6px 14px;
+            margin: 0 5px 10px 0;
+            background: rgba(184, 69, 125, 0.1);
+            color: #b8457d;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          }
+
+          .blog-tag:hover {
+            background: #b8457d;
+            color: #fff;
+            text-decoration: none;
+          }
+
+          /* ========================================
+             CALCULATOR STYLES
+             ======================================== */
+
+          .calculator-wrapper {
+            background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(184, 69, 125, 0.1);
+            border: 1px solid rgba(184, 69, 125, 0.1);
+          }
+
+          .calculator-intro {
+            text-align: center;
+            margin-bottom: 30px;
+          }
+
+          .calculator-intro p {
+            color: #666;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+          }
+
+          .calculator-form {
+            max-width: 400px;
+            margin: 0 auto;
+          }
+
+          .form-group-calc {
+            margin-bottom: 24px;
+          }
+
+          .form-group-calc label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 15px;
+          }
+
+          .form-group-calc .hint {
+            display: block;
+            font-size: 13px;
+            color: #888;
+            font-weight: 400;
+            margin-top: 2px;
+          }
+
+          .form-group-calc input[type="date"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Nunito Sans', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+          }
+
+          .form-group-calc input[type="date"]:focus {
+            outline: none;
+            border-color: #b8457d;
+            box-shadow: 0 0 0 3px rgba(184, 69, 125, 0.15);
+          }
+
+          .form-group-calc input[type="date"]:invalid {
+            border-color: #e0e0e0;
+          }
+
+          .btn-calculate {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #b8457d 0%, #d4699b 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+
+          .btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 69, 125, 0.3);
+          }
+
+          .btn-calculate:active {
+            transform: translateY(0);
+          }
+
+          .btn-calculate:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(184, 69, 125, 0.3);
+          }
+
+          /* Error message */
+          .error-message {
+            background: #fff5f5;
+            border: 1px solid #ffcdd2;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 20px;
+            color: #c62828;
+            font-size: 15px;
+            display: none;
+          }
+
+          .error-message.visible {
+            display: block;
+          }
+
+          /* Results */
+          .calculator-results {
+            display: none;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(184, 69, 125, 0.2);
+          }
+
+          .calculator-results.visible {
+            display: block;
+          }
+
+          .result-main {
+            text-align: center;
+            margin-bottom: 40px;
+          }
+
+          .result-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 10px;
+          }
+
+          .result-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #b8457d;
+            margin-bottom: 8px;
+            word-break: break-word;
+          }
+
+          .result-readable {
+            font-size: 20px;
+            color: #333;
+            font-weight: 600;
+          }
+
+          .result-scientific {
+            font-size: 16px;
+            color: #666;
+            margin-top: 8px;
+          }
+
+          .result-scientific sup {
+            font-size: 12px;
+          }
+
+          /* Breakdown */
+          .result-breakdown {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+          }
+
+          .result-breakdown h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            margin-top: 0;
+          }
+
+          .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+          }
+
+          .breakdown-item:last-child {
+            border-bottom: none;
+          }
+
+          .breakdown-label {
+            color: #666;
+            font-size: 15px;
+          }
+
+          .breakdown-value {
+            font-weight: 600;
+            color: #333;
+            font-size: 15px;
+            text-align: right;
+          }
+
+          .breakdown-value small {
+            display: block;
+            font-weight: 400;
+            color: #888;
+            font-size: 13px;
+          }
+
+          /* Stats */
+          .result-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 30px;
+          }
+
+          .stat-box {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+          }
+
+          .stat-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #b8457d;
+            margin-bottom: 4px;
+          }
+
+          .stat-label {
+            font-size: 13px;
+            color: #888;
+          }
+
+          /* Disclaimer */
+          .disclaimer {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+          }
+
+          .disclaimer h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+            margin-top: 0;
+          }
+
+          .disclaimer ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #888;
+            line-height: 1.7;
+          }
+
+          .disclaimer li {
+            margin-bottom: 6px;
+          }
+
+          /* Current RBC Section */
+          .current-rbc-section {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 3px solid rgba(184, 69, 125, 0.2);
+          }
+
+          .current-rbc-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #2a2a2a;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 0;
+          }
+
+          .current-rbc-intro {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 30px;
+          }
+
+          .form-group-calc input[type="number"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Nunito Sans', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+          }
+
+          .form-group-calc input[type="number"]:focus {
+            outline: none;
+            border-color: #b8457d;
+            box-shadow: 0 0 0 3px rgba(184, 69, 125, 0.15);
+          }
+
+          .current-rbc-results {
+            display: none;
+            margin-top: 30px;
+          }
+
+          .current-rbc-results.visible {
+            display: block;
+          }
+
+          .current-result-box {
+            background: linear-gradient(135deg, #b8457d 0%, #d4699b 100%);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+          }
+
+          .current-result-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+          }
+
+          .current-result-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+          }
+
+          .current-result-scientific {
+            font-size: 16px;
+            opacity: 0.9;
+          }
+
+          .current-result-scientific sup {
+            font-size: 12px;
+          }
+
+          .comparison-box {
+            background: #fff;
+            border: 2px solid #b8457d;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          .comparison-text {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+          }
+
+          .comparison-percent {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #b8457d;
+          }
+
+          .didactic-box {
+            background: #f0f7ff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+          }
+
+          .didactic-box p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+          }
+
+          .current-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+          }
+
+          /* Responsive */
+          @media (max-width: 576px) {
+            .calculator-wrapper {
+              padding: 24px 20px;
+              margin: 20px -15px;
+              border-radius: 0;
+            }
+
+            .result-number {
+              font-size: 22px;
+            }
+
+            .result-readable {
+              font-size: 18px;
+            }
+
+            .result-stats {
+              grid-template-columns: 1fr;
+            }
+
+            .current-stats {
+              grid-template-columns: 1fr;
+            }
+
+            .breakdown-item {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 6px;
+            }
+
+            .breakdown-value {
+              text-align: left;
+            }
+
+            .current-result-number {
+              font-size: 22px;
+            }
+
+            .current-rbc-section h2 {
+              font-size: 20px;
+            }
+          }
+        </style>
+    </head>
+    <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Loader Start -->
+    <div id="preloader">
+        <div class="preloader-container">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Loader Start -->
+
+    <!-- Header Start -->
+    <header class="ws-header-krvinka">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Mobile toggle button -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Desktop Layout: Left - Logo - Right -->
+                <div class="krvinka-nav-desktop">
+                    <!-- Left Menu -->
+                    <ul class="nav-left">
+                        <li><a href="index.html">Domů</a></li>
+                        <li><a href="journal.html">Blog</a></li>
+                    </ul>
+
+                    <!-- Logo -->
+                    <div class="logo-center">
+                        <a href="index.html" class="logo-link">
+                            <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Right Menu -->
+                    <ul class="nav-right">
+                        <li><a href="o-autorce.html">O autorce</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Collapsed Menu -->
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <div class="krvinka-nav-mobile">
+                        <!-- Logo first on mobile -->
+                        <div class="logo-mobile">
+                            <a href="index.html" class="logo-link">
+                                <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                            </a>
+                        </div>
+                        <!-- Menu items below logo -->
+                        <ul class="nav-mobile">
+                            <li><a href="index.html">Domů</a></li>
+                            <li><a href="journal.html">Blog</a></li>
+                            <li><a href="o-autorce.html">O autorce</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Breadcrumb -->
+    <div class="ws-breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="journal.html">Blog</a></li>
+                <li><a href="#">Kalkulačky</a></li>
+                <li class="active">Počet červených krvinek</li>
+            </ol>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Article Content -->
+    <div class="container ws-page-container">
+        <div class="row">
+
+            <!-- Article Main Content -->
+            <div class="col-sm-8 col-sm-offset-2">
+
+                <!-- Article Header -->
+                <div class="ws-product-content">
+                    <header>
+                        <!-- Item Category -->
+                        <div class="ws-item-category">Kalkulačka</div>
+
+                        <!-- Title -->
+                        <h1 class="ws-item-title">Kalkulačka: Kolik červených krvinek vyrobilo moje tělo?</h1>
+
+                        <div class="ws-separator"></div>
+
+                        <!-- Article Meta -->
+                        <div class="blog-article-meta">
+                            <span class="meta-item">
+                                <i class="fa fa-user"></i>
+                                <a href="o-autorce.html">Tereza Kubíčková</a>
+                            </span>
+                            <span class="meta-item">
+                                <i class="fa fa-calendar"></i>
+                                8. února 2025
+                            </span>
+                        </div>
+                    </header>
+
+                    <!-- Featured Image -->
+                    <div class="blog-featured-image">
+                        <img src="assets/img/Kalkulačky/01_1000x1000_pocet_cervenych_krvinek.jpg" class="img-responsive" alt="Kalkulačka počtu červených krvinek">
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="blog-content">
+                        <p>Vaše tělo je neuvěřitelná továrna. Každou sekundu v kostní dřeni vznikají miliony nových červených krvinek, které pak putují krevním řečištěm a rozvážejí kyslík do všech buněk. Kolik jich už vaše tělo stihlo vyrobit od narození?</p>
+
+                        <!-- Calculator -->
+                        <div class="calculator-wrapper">
+                            <div class="calculator-intro">
+                                <p>Zadejte datum narození a zjistěte, kolik červených krvinek vaše tělo vyrobilo za celý váš život.</p>
+                            </div>
+
+                            <form class="calculator-form" id="rbcCalculator" novalidate>
+                                <div class="form-group-calc">
+                                    <label for="birthDate">
+                                        Datum narození
+                                        <span class="hint">Kdy jste se narodili?</span>
+                                    </label>
+                                    <input
+                                        type="date"
+                                        id="birthDate"
+                                        name="birthDate"
+                                        required
+                                        aria-describedby="birthDateError"
+                                    >
+                                </div>
+
+                                <div class="form-group-calc">
+                                    <label for="calcDate">
+                                        Datum výpočtu
+                                        <span class="hint">Ponechte prázdné pro dnešní den</span>
+                                    </label>
+                                    <input
+                                        type="date"
+                                        id="calcDate"
+                                        name="calcDate"
+                                        aria-describedby="calcDateError"
+                                    >
+                                </div>
+
+                                <div class="form-group-calc">
+                                    <label for="bodyWeight">
+                                        Tělesná hmotnost (kg)
+                                        <span class="hint">Pro výpočet aktuálního počtu krvinek v těle (volitelné)</span>
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id="bodyWeight"
+                                        name="bodyWeight"
+                                        min="1"
+                                        max="300"
+                                        step="0.1"
+                                        placeholder="např. 70"
+                                        aria-describedby="weightHint"
+                                    >
+                                </div>
+
+                                <button type="submit" class="btn-calculate">
+                                    Spočítat moje krvinky
+                                </button>
+
+                                <div class="error-message" id="errorMessage" role="alert" aria-live="polite">
+                                </div>
+                            </form>
+
+                            <!-- Results -->
+                            <div class="calculator-results" id="results" aria-live="polite">
+                                <div class="result-main">
+                                    <div class="result-label">Celkový počet vyrobených červených krvinek</div>
+                                    <div class="result-number" id="resultNumber"></div>
+                                    <div class="result-readable" id="resultReadable"></div>
+                                    <div class="result-scientific" id="resultScientific"></div>
+                                </div>
+
+                                <div class="result-breakdown">
+                                    <h3>Rozdělení podle věku</h3>
+                                    <div class="breakdown-item">
+                                        <span class="breakdown-label">Do 12 let (dětství)</span>
+                                        <span class="breakdown-value" id="breakdownChild">
+                                            <span id="childCount"></span>
+                                            <small id="childDays"></small>
+                                        </span>
+                                    </div>
+                                    <div class="breakdown-item" id="adultRow">
+                                        <span class="breakdown-label">Od 12 let (dospívání a dospělost)</span>
+                                        <span class="breakdown-value">
+                                            <span id="adultCount"></span>
+                                            <small id="adultDays"></small>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="result-stats">
+                                    <div class="stat-box">
+                                        <div class="stat-value" id="statAge"></div>
+                                        <div class="stat-label">Váš věk</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value" id="statDaily"></div>
+                                        <div class="stat-label">Průměrně za den</div>
+                                    </div>
+                                </div>
+
+                                <!-- Current RBC Section -->
+                                <div class="current-rbc-section" id="currentRbcSection">
+                                    <h2>Kolik krvinek máš teď?</h2>
+                                    <p class="current-rbc-intro">Krvinky se v těle nehromadí. Neustále vznikají a zanikají. Tady vidíš, kolik jich máš právě teď.</p>
+
+                                    <div class="current-rbc-results" id="currentResults" aria-live="polite">
+                                        <div class="current-result-box">
+                                            <div class="current-result-label">Teď máš v těle přibližně</div>
+                                            <div class="current-result-number" id="currentNumber"></div>
+                                            <div class="current-result-scientific" id="currentScientific"></div>
+                                        </div>
+
+                                        <div class="comparison-box">
+                                            <p class="comparison-text">
+                                                To je jen asi <span class="comparison-percent" id="comparisonPercent"></span> z celkového počtu krvinek, které tvoje tělo vyrobilo za celý život.
+                                            </p>
+                                        </div>
+
+                                        <div class="didactic-box">
+                                            <p>Červené krvinky žijí asi 120 dní. Každý den proto část z nich zaniká a je nahrazena novými. Tvoje tělo tak krvinky neustále recykluje. Aktuální počet je jen momentální stav, ne součet za celý život.</p>
+                                        </div>
+
+                                        <div class="current-stats">
+                                            <div class="stat-box">
+                                                <div class="stat-value" id="bloodVolume"></div>
+                                                <div class="stat-label">Objem krve</div>
+                                            </div>
+                                            <div class="stat-box">
+                                                <div class="stat-value" id="bodyWeightDisplay"></div>
+                                                <div class="stat-label">Tělesná hmotnost</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="disclaimer" style="margin-top: 20px;">
+                                        <h4>K aktuálnímu počtu krvinek</h4>
+                                        <ul>
+                                            <li>Výpočet používá průměrné hodnoty: 70 ml krve na kg a 5 bilionů krvinek na litr.</li>
+                                            <li>Skutečné hodnoty se liší podle věku, pohlaví, zdraví, těhotenství a sportovní zátěže.</li>
+                                            <li>Nejde o medicínský údaj.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Disclaimer -->
+                            <div class="disclaimer">
+                                <h4>Důležité upozornění</h4>
+                                <ul>
+                                    <li>Tato kalkulačka poskytuje biologický odhad založený na typických fyziologických hodnotách.</li>
+                                    <li>Skutečná produkce se liší podle zdravotního stavu, růstu, těhotenství, tělesné výšky, sportovní aktivity a dalších faktorů.</li>
+                                    <li>Kalkulačka slouží pouze k vzdělávacím účelům a neslouží k medicínskému rozhodování.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2>Jak kalkulačka počítá?</h2>
+
+                        <p>Červené krvinky (erytrocyty) vznikají v kostní dřeni. U dospělého člověka se odhaduje produkce na 2 až 3 miliony nových krvinek každou sekundu. U dětí je produkce nižší, protože mají menší objem krve.</p>
+
+                        <p><strong>Celoživotní produkce</strong> používá tyto hodnoty:</p>
+                        <ul>
+                            <li><strong>0 až 12 let:</strong> 1,5 milionu krvinek za sekundu (konzervativní odhad pro rostoucí tělo)</li>
+                            <li><strong>12 let a více:</strong> 2,5 milionu krvinek za sekundu (střední hodnota pro dospělé)</li>
+                        </ul>
+
+                        <p>Výpočet přesně počítá dny v každém období včetně přestupných roků a převádí je na sekundy (86 400 sekund za den).</p>
+
+                        <p><strong>Aktuální počet krvinek v těle</strong> se počítá takto:</p>
+                        <ul>
+                            <li><strong>Objem krve:</strong> přibližně 70 ml na každý kilogram tělesné hmotnosti</li>
+                            <li><strong>Koncentrace krvinek:</strong> asi 5 bilionů (5 × 10<sup>12</sup>) červených krvinek v jednom litru krve</li>
+                        </ul>
+                        <p>Když vynásobíme objem krve koncentrací, dostaneme odhad aktuálního počtu krvinek v těle. Například člověk o hmotnosti 70 kg má přibližně 4,9 litru krve a v ní asi 25 bilionů červených krvinek.</p>
+
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="blog-tags">
+                        <h4>Štítky:</h4>
+                        <a href="#" class="blog-tag">Kalkulačka</a>
+                        <a href="#" class="blog-tag">Červené krvinky</a>
+                        <a href="#" class="blog-tag">Biologie</a>
+                        <a href="#" class="blog-tag">Lidské tělo</a>
+                        <a href="#" class="blog-tag">Pro děti</a>
+                    </div>
+
+                    <!-- Social Share -->
+                    <div class="ws-product-description text-center" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
+                        <h3>Sdílejte tuto kalkulačku</h3>
+                        <div class="ws-product-social-icon">
+                            <a href="#" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-twitter"></i></a>
+                            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-facebook"></i></a>
+                            <a href="#" onclick="window.open('https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&description=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Article Content -->
+
+    <!-- Instagram Content -->
+    <section id="ws-instagram-section">
+        <div class="container">
+            <div class="row vertical-align">
+
+                <!-- Instagram Information -->
+                <div class="col-sm-3">
+                    <div class="ws-instagram-header">
+                        <h3>Instagram</h3>
+                        <br>
+                        <a href="https://www.instagram.com/krvinkabyterka" target="_blank" class="ws-instagram-link">@krvinkabyterka</a>
+                        <p>Sledujte Krvinku a vydejte se na výpravu do lidského těla.</p>
+                    </div>
+                </div>
+
+                <!-- Instagram Item -->
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.1s, ease-in 20px'>
+                    <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
+                        <img src="assets/img/journal/1.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    </a>
+                </div>
+
+                <!-- Instagram Item -->
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.3s, ease-in 20px'>
+                    <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
+                        <img src="assets/img/journal/4.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    </a>
+                </div>
+
+                <!-- Instagram Item -->
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.5s, ease-in 20px'>
+                    <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
+                        <img src="assets/img/journal/8.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Instagram Content -->
+
+    <!-- Subscribe Section -->
+    <section class="ws-subscribe-section">
+        <div class="container">
+            <div class="row">
+                <!-- Subscribe Content -->
+                <div class="ws-subscribe-content text-center clearfix">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h3>Zůstaňte s Krvinkou v kontaktu</h3>
+                        <div class="ws-separator"></div>
+                        <p>Přihlaste se k odběru novinek a nezmeškejte žádný nový článek!</p>
+                        <!-- Form -->
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Zadejte váš email">
+                            </div>
+                            <!-- Button -->
+                            <a class="btn ws-btn-subscribe">Odebírat</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Subscribe Section -->
+
+    <!-- Footer Start -->
+    <footer class="ws-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>O projektu</h3>
+                    <div class="ws-footer-separator"></div>
+                    <p>
+                        Krvinka je hravý způsob, jak dětem přiblížit lidské tělo – formou gamebooku,
+                        aplikace a pracovních materiálů. Autorka: Tereza Kubíčková.
+                    </p>
+                    <p>Kontakt: <a href="mailto:info@kidventure.cz">info@kidventure.cz</a></p>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>Podpora</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="#">Jak nakupovat</a></li>
+                        <li><a href="#">Časté dotazy (FAQ)</a></li>
+                        <li><a href="#">Podmínky používání</a></li>
+                        <li><a href="ochrana-soukromi.html">Ochrana soukromí</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>Sociální sítě</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="https://www.instagram.com/krvinkabyterka" target="_blank">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h3>Obchod</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="index.html#digital">Digitální produkty</a></li>
+                        <li><a href="index.html#books">Knihy</a></li>
+                        <li><a href="index.html#apps">Aplikace</a></li>
+                        <li><a href="index.html#bundles">Balíčky</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ws-footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12" style="text-align:center;">
+                        © 2025 Krvinka • Vytvořeno s radostí pro zvídavé děti
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Scripts -->
+    <script src="assets/js/plugins/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/plugins/parallax.min.js"></script>
+    <script src="assets/js/plugins/scrollReveal.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-dropdownhover.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- RBC Calculator Script -->
+    <script>
+    (function() {
+        'use strict';
+
+        // =============================================
+        // CONFIGURATION - Edit these values as needed
+        // =============================================
+        var CONFIG = {
+            // Age threshold in years (when production rate changes)
+            AGE_THRESHOLD_YEARS: 12,
+
+            // RBC production rates (cells per second)
+            CHILD_RATE: 1.5e6,      // 0 to AGE_THRESHOLD years
+            ADULT_RATE: 2.5e6,      // AGE_THRESHOLD+ years
+
+            // Seconds per day
+            SECONDS_PER_DAY: 86400,
+
+            // =========================================
+            // CURRENT RBC COUNT CONFIGURATION
+            // =========================================
+            // Blood volume: ml of blood per kg of body weight
+            BLOOD_ML_PER_KG: 70,
+
+            // RBC concentration: cells per liter of blood
+            // Normal range: 4.5-5.5 × 10^12, using middle value
+            RBC_PER_LITER: 5.0e12,
+
+            // Default body weight in kg (used when not provided)
+            DEFAULT_WEIGHT_KG: 70,
+
+            // RBC lifespan in days (for educational info)
+            RBC_LIFESPAN_DAYS: 120
+        };
+        // =============================================
+
+        // Czech number scale names with declension (1, 2-4, 5+)
+        var SCALE_NAMES = [
+            { value: 1e24, one: 'kvadrilion', few: 'kvadriliony', many: 'kvadrilionů' },
+            { value: 1e15, one: 'biliarda', few: 'biliardy', many: 'biliard' },
+            { value: 1e12, one: 'bilion', few: 'biliony', many: 'bilionů' },
+            { value: 1e9, one: 'miliarda', few: 'miliardy', many: 'miliard' },
+            { value: 1e6, one: 'milion', few: 'miliony', many: 'milionů' },
+            { value: 1e3, one: 'tisíc', few: 'tisíce', many: 'tisíc' }
+        ];
+
+        // Get correct Czech declension based on number
+        function getCzechDeclension(num, scale) {
+            // Get the integer part for declension rules
+            var intPart = Math.floor(num);
+
+            if (intPart === 1) {
+                return scale.one;
+            } else if (intPart >= 2 && intPart <= 4) {
+                return scale.few;
+            } else {
+                return scale.many;
+            }
+        }
+
+        // Format number with Czech locale (spaces as thousand separators)
+        function formatNumber(num) {
+            return Math.round(num).toLocaleString('cs-CZ');
+        }
+
+        // Format large number to readable Czech format
+        function formatReadable(num) {
+            for (var i = 0; i < SCALE_NAMES.length; i++) {
+                var scale = SCALE_NAMES[i];
+                if (num >= scale.value) {
+                    var value = num / scale.value;
+                    // Round to 1-2 decimal places
+                    var rounded = Math.round(value * 100) / 100;
+                    var declension = getCzechDeclension(rounded, scale);
+                    return formatNumber(rounded).replace(',', ',') + ' ' + declension;
+                }
+            }
+            return formatNumber(num);
+        }
+
+        // Format to scientific notation
+        function formatScientific(num) {
+            if (num === 0) return '0';
+            var exponent = Math.floor(Math.log10(num));
+            var mantissa = num / Math.pow(10, exponent);
+            var roundedMantissa = Math.round(mantissa * 100) / 100;
+            return roundedMantissa.toString().replace('.', ',') + ' × 10<sup>' + exponent + '</sup>';
+        }
+
+        // Calculate days between two dates
+        function daysBetween(startDate, endDate) {
+            var msPerDay = 24 * 60 * 60 * 1000;
+            return Math.floor((endDate - startDate) / msPerDay);
+        }
+
+        // Add years to a date
+        function addYears(date, years) {
+            var result = new Date(date);
+            result.setFullYear(result.getFullYear() + years);
+            return result;
+        }
+
+        // Calculate age in years and days
+        function calculateAge(birthDate, calcDate) {
+            var years = calcDate.getFullYear() - birthDate.getFullYear();
+            var monthDiff = calcDate.getMonth() - birthDate.getMonth();
+            var dayDiff = calcDate.getDate() - birthDate.getDate();
+
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                years--;
+            }
+
+            var lastBirthday = addYears(birthDate, years);
+            var days = daysBetween(lastBirthday, calcDate);
+
+            return { years: years, days: days };
+        }
+
+        // Format age for display
+        function formatAge(age) {
+            var yearWord = 'let';
+            if (age.years === 1) yearWord = 'rok';
+            else if (age.years >= 2 && age.years <= 4) yearWord = 'roky';
+
+            var dayWord = 'dní';
+            if (age.days === 1) dayWord = 'den';
+            else if (age.days >= 2 && age.days <= 4) dayWord = 'dny';
+
+            if (age.years === 0) {
+                return age.days + ' ' + dayWord;
+            }
+            return age.years + ' ' + yearWord + ' a ' + age.days + ' ' + dayWord;
+        }
+
+        // Calculate current RBC count in body
+        function calculateCurrentRBC(weightKg) {
+            // Blood volume in liters = weight × ml per kg / 1000
+            var bloodVolumeLiters = (weightKg * CONFIG.BLOOD_ML_PER_KG) / 1000;
+
+            // Current RBC count = blood volume × concentration
+            var currentRBC = bloodVolumeLiters * CONFIG.RBC_PER_LITER;
+
+            return {
+                currentRBC: currentRBC,
+                bloodVolumeLiters: bloodVolumeLiters,
+                weightKg: weightKg
+            };
+        }
+
+        // Main calculation
+        function calculateRBC(birthDate, calcDate) {
+            var thresholdDate = addYears(birthDate, CONFIG.AGE_THRESHOLD_YEARS);
+
+            var childDays = 0;
+            var adultDays = 0;
+
+            if (calcDate <= thresholdDate) {
+                // Person is younger than threshold
+                childDays = daysBetween(birthDate, calcDate);
+            } else {
+                // Person is older than threshold
+                childDays = daysBetween(birthDate, thresholdDate);
+                adultDays = daysBetween(thresholdDate, calcDate);
+            }
+
+            var childSeconds = childDays * CONFIG.SECONDS_PER_DAY;
+            var adultSeconds = adultDays * CONFIG.SECONDS_PER_DAY;
+
+            var childRBC = childSeconds * CONFIG.CHILD_RATE;
+            var adultRBC = adultSeconds * CONFIG.ADULT_RATE;
+            var totalRBC = childRBC + adultRBC;
+
+            var totalDays = childDays + adultDays;
+            var dailyAverage = totalDays > 0 ? totalRBC / totalDays : 0;
+
+            return {
+                total: totalRBC,
+                childRBC: childRBC,
+                adultRBC: adultRBC,
+                childDays: childDays,
+                adultDays: adultDays,
+                totalDays: totalDays,
+                dailyAverage: dailyAverage,
+                age: calculateAge(birthDate, calcDate)
+            };
+        }
+
+        // Show error message
+        function showError(message) {
+            var errorEl = document.getElementById('errorMessage');
+            errorEl.textContent = message;
+            errorEl.classList.add('visible');
+            document.getElementById('results').classList.remove('visible');
+        }
+
+        // Hide error message
+        function hideError() {
+            document.getElementById('errorMessage').classList.remove('visible');
+        }
+
+        // Display results
+        function displayResults(result, currentResult) {
+            hideError();
+
+            // Main result
+            document.getElementById('resultNumber').textContent = formatNumber(result.total);
+            document.getElementById('resultReadable').textContent = formatReadable(result.total);
+            document.getElementById('resultScientific').innerHTML = formatScientific(result.total);
+
+            // Child phase
+            document.getElementById('childCount').textContent = formatReadable(result.childRBC);
+            document.getElementById('childDays').textContent = formatNumber(result.childDays) + ' dní';
+
+            // Adult phase
+            var adultRow = document.getElementById('adultRow');
+            if (result.adultDays > 0) {
+                adultRow.style.display = 'flex';
+                document.getElementById('adultCount').textContent = formatReadable(result.adultRBC);
+                document.getElementById('adultDays').textContent = formatNumber(result.adultDays) + ' dní';
+            } else {
+                adultRow.style.display = 'none';
+            }
+
+            // Stats
+            document.getElementById('statAge').textContent = formatAge(result.age);
+            document.getElementById('statDaily').textContent = formatReadable(result.dailyAverage);
+
+            // Show results
+            document.getElementById('results').classList.add('visible');
+
+            // Current RBC section
+            if (currentResult) {
+                // Current count
+                document.getElementById('currentNumber').textContent = formatReadable(currentResult.currentRBC);
+                document.getElementById('currentScientific').innerHTML = formatScientific(currentResult.currentRBC);
+
+                // Comparison percentage
+                var percentage = (currentResult.currentRBC / result.total) * 100;
+                var percentageFormatted;
+                if (percentage < 0.01) {
+                    percentageFormatted = '< 0,01 %';
+                } else if (percentage < 1) {
+                    percentageFormatted = (Math.round(percentage * 100) / 100).toString().replace('.', ',') + ' %';
+                } else {
+                    percentageFormatted = Math.round(percentage * 10) / 10 + ' %';
+                    percentageFormatted = percentageFormatted.toString().replace('.', ',');
+                }
+                document.getElementById('comparisonPercent').textContent = percentageFormatted;
+
+                // Stats
+                var bloodVolumeFormatted = (Math.round(currentResult.bloodVolumeLiters * 10) / 10).toString().replace('.', ',') + ' l';
+                document.getElementById('bloodVolume').textContent = bloodVolumeFormatted;
+                document.getElementById('bodyWeightDisplay').textContent = currentResult.weightKg + ' kg';
+
+                // Show current results
+                document.getElementById('currentResults').classList.add('visible');
+                document.getElementById('currentRbcSection').style.display = 'block';
+            }
+
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Parse date from input
+        function parseDate(dateString) {
+            if (!dateString) return null;
+            var parts = dateString.split('-');
+            if (parts.length !== 3) return null;
+            var date = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+            if (isNaN(date.getTime())) return null;
+            return date;
+        }
+
+        // Form submit handler
+        function handleSubmit(e) {
+            e.preventDefault();
+
+            var birthDateInput = document.getElementById('birthDate').value;
+            var calcDateInput = document.getElementById('calcDate').value;
+            var weightInput = document.getElementById('bodyWeight').value;
+
+            // Parse birth date
+            var birthDate = parseDate(birthDateInput);
+            if (!birthDate) {
+                showError('Prosím zadejte platné datum narození.');
+                return;
+            }
+
+            // Parse calculation date (default to today)
+            var calcDate;
+            if (calcDateInput) {
+                calcDate = parseDate(calcDateInput);
+                if (!calcDate) {
+                    showError('Prosím zadejte platné datum výpočtu.');
+                    return;
+                }
+            } else {
+                calcDate = new Date();
+                calcDate.setHours(0, 0, 0, 0);
+            }
+
+            // Validate dates
+            var today = new Date();
+            today.setHours(23, 59, 59, 999);
+
+            if (birthDate > today) {
+                showError('Datum narození nemůže být v budoucnosti.');
+                return;
+            }
+
+            if (calcDate > today) {
+                showError('Datum výpočtu nemůže být v budoucnosti.');
+                return;
+            }
+
+            if (calcDate < birthDate) {
+                showError('Datum výpočtu musí být po datu narození.');
+                return;
+            }
+
+            // Parse weight (use default if not provided)
+            var weight = CONFIG.DEFAULT_WEIGHT_KG;
+            if (weightInput) {
+                weight = parseFloat(weightInput);
+                if (isNaN(weight) || weight < 1 || weight > 300) {
+                    showError('Prosím zadejte platnou hmotnost (1 až 300 kg).');
+                    return;
+                }
+            }
+
+            // Calculate lifetime production
+            var result = calculateRBC(birthDate, calcDate);
+
+            // Calculate current RBC count
+            var currentResult = calculateCurrentRBC(weight);
+
+            // Display results
+            displayResults(result, currentResult);
+        }
+
+        // Initialize
+        function init() {
+            var form = document.getElementById('rbcCalculator');
+            if (form) {
+                form.addEventListener('submit', handleSubmit);
+
+                // Set max date to today
+                var today = new Date().toISOString().split('T')[0];
+                document.getElementById('birthDate').setAttribute('max', today);
+                document.getElementById('calcDate').setAttribute('max', today);
+            }
+        }
+
+        // Run on DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+    </script>
+    </body>
+</html>
