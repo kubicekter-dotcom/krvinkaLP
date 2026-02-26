@@ -27,95 +27,79 @@
   }
 
   function showPopup() {
-    // Overlay
-    var overlay = document.createElement('div');
-    overlay.id = 'cc-overlay';
-    overlay.style.cssText =
-      'position:fixed;inset:0;z-index:99998;' +
-      'background:rgba(42,42,42,0.55);backdrop-filter:blur(3px);' +
-      'opacity:0;transition:opacity .35s ease;';
-
-    // Modal
-    var modal = document.createElement('div');
-    modal.id = 'cc-modal';
-    modal.style.cssText =
-      'position:fixed;z-index:99999;' +
-      'top:50%;left:50%;transform:translate(-50%,-48%);' +
+    var popup = document.createElement('div');
+    popup.id = 'cc-popup';
+    popup.style.cssText =
+      'position:fixed;bottom:24px;right:24px;z-index:99999;' +
       'background:#fff;border-radius:16px;' +
-      'box-shadow:0 8px 48px rgba(0,0,0,0.22);' +
-      'padding:40px 36px 32px;max-width:420px;width:calc(100vw - 40px);' +
-      'text-align:center;font-family:inherit;' +
-      'opacity:0;transition:opacity .35s ease, transform .35s ease;';
+      'box-shadow:0 4px 32px rgba(0,0,0,0.18);' +
+      'padding:24px;max-width:320px;width:calc(100vw - 48px);' +
+      'font-family:inherit;' +
+      'opacity:0;transform:translateY(16px);' +
+      'transition:opacity .35s ease,transform .35s ease;';
 
-    modal.innerHTML =
-      '<div style="font-size:52px;line-height:1;margin-bottom:16px;">🍪</div>' +
-      '<h2 style="margin:0 0 14px;font-size:20px;color:#2A2A2A;line-height:1.3;">' +
-        'Máme tu skvělé krvinky…<br>teda sušenky.' +
-      '</h2>' +
-      '<p style="margin:0 0 10px;font-size:15px;color:#555;line-height:1.6;">' +
-        'Pomáhají nám zjistit, co vás na dobrodružství s Krvinkou baví nejvíc.' +
+    popup.innerHTML =
+      '<div style="font-size:36px;line-height:1;margin-bottom:12px;">🍪</div>' +
+      '<p style="margin:0 0 8px;font-size:16px;font-weight:700;color:#2A2A2A;line-height:1.4;">' +
+        'Máme tu skvělé krvinky…&nbsp;teda sušenky.' +
       '</p>' +
-      '<p style="margin:0 0 28px;font-size:15px;color:#555;line-height:1.6;">' +
+      '<p style="margin:0 0 18px;font-size:13px;color:#555;line-height:1.6;">' +
+        'Pomáhají nám zjistit, co vás na dobrodružství s Krvinkou baví nejvíc.' +
+        '<br><br>' +
         'Dáte jim svolení plout dál? ' +
         '<a href="ochrana-soukromi.html" style="color:#FF2A8B;text-decoration:underline;">Více informací.</a>' +
       '</p>' +
-      '<div style="display:flex;flex-direction:column;gap:10px;">' +
+      '<div style="display:flex;flex-direction:column;gap:8px;">' +
         '<button id="cc-btn-accept" style="' +
           'background:#FF2A8B;color:#fff;border:none;border-radius:8px;' +
-          'padding:14px 24px;font-size:15px;font-weight:700;cursor:pointer;' +
-          'text-transform:uppercase;letter-spacing:1px;transition:background .2s,transform .1s;">'+
+          'padding:12px 20px;font-size:13px;font-weight:700;cursor:pointer;' +
+          'text-transform:uppercase;letter-spacing:1px;transition:background .2s,transform .1s;">' +
           'Ano, svolení dávám!' +
         '</button>' +
         '<button id="cc-btn-decline" style="' +
-          'background:transparent;color:#B39AA7;border:none;border-radius:8px;' +
-          'padding:10px 24px;font-size:13px;font-weight:600;cursor:pointer;' +
+          'background:transparent;color:#B39AA7;border:none;' +
+          'padding:6px;font-size:12px;font-weight:600;cursor:pointer;' +
           'text-decoration:underline;transition:color .2s;">' +
           'Ne, raději odmítám' +
         '</button>' +
       '</div>';
 
-    document.body.appendChild(overlay);
-    document.body.appendChild(modal);
+    document.body.appendChild(popup);
 
     // Animate in
     requestAnimationFrame(function () {
       requestAnimationFrame(function () {
-        overlay.style.opacity = '1';
-        modal.style.opacity = '1';
-        modal.style.transform = 'translate(-50%,-50%)';
+        popup.style.opacity = '1';
+        popup.style.transform = 'translateY(0)';
       });
     });
 
-    // Button hover effects
-    var btnAccept = modal.querySelector('#cc-btn-accept');
+    var btnAccept = popup.querySelector('#cc-btn-accept');
     btnAccept.onmouseover = function () { this.style.background = '#E5257D'; this.style.transform = 'translateY(-1px)'; };
     btnAccept.onmouseout  = function () { this.style.background = '#FF2A8B'; this.style.transform = 'translateY(0)'; };
 
-    var btnDecline = modal.querySelector('#cc-btn-decline');
+    var btnDecline = popup.querySelector('#cc-btn-decline');
     btnDecline.onmouseover = function () { this.style.color = '#2A2A2A'; };
     btnDecline.onmouseout  = function () { this.style.color = '#B39AA7'; };
 
-    // Events
     btnAccept.addEventListener('click', function () {
       setConsent('granted');
       grantAnalytics();
-      hidePopup(overlay, modal);
+      hidePopup(popup);
     });
 
     btnDecline.addEventListener('click', function () {
       setConsent('denied');
       denyAnalytics();
-      hidePopup(overlay, modal);
+      hidePopup(popup);
     });
   }
 
-  function hidePopup(overlay, modal) {
-    overlay.style.opacity = '0';
-    modal.style.opacity = '0';
-    modal.style.transform = 'translate(-50%,-48%)';
+  function hidePopup(popup) {
+    popup.style.opacity = '0';
+    popup.style.transform = 'translateY(16px)';
     setTimeout(function () {
-      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
-      if (modal.parentNode) modal.parentNode.removeChild(modal);
+      if (popup.parentNode) popup.parentNode.removeChild(popup);
     }, 350);
   }
 
