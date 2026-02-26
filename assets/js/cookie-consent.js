@@ -5,9 +5,7 @@
 
 (function () {
   var STORAGE_KEY = 'krvinka_cookie_consent';
-  var GA_ID = 'G-R512VVXLSY';
 
-  // --- Helper: read stored decision ---
   function getConsent() {
     try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
   }
@@ -16,117 +14,120 @@
     try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
   }
 
-  // --- Update Google Consent Mode ---
   function grantAnalytics() {
     if (typeof gtag === 'function') {
-      gtag('consent', 'update', {
-        'analytics_storage': 'granted'
-      });
+      gtag('consent', 'update', { 'analytics_storage': 'granted' });
     }
   }
 
   function denyAnalytics() {
     if (typeof gtag === 'function') {
-      gtag('consent', 'update', {
-        'analytics_storage': 'denied'
-      });
+      gtag('consent', 'update', { 'analytics_storage': 'denied' });
     }
   }
 
-  // --- Build and show the banner ---
-  function showBanner() {
-    var banner = document.createElement('div');
-    banner.id = 'cookie-consent-banner';
-    banner.innerHTML =
-      '<div id="cookie-consent-inner">' +
-        '<p id="cookie-consent-text">' +
-          'Používáme analytické cookies (Google Analytics), abychom zjistili, jak stránky používáte, ' +
-          'a mohli je zlepšovat. Data se neshromažďují bez vašeho souhlasu. ' +
-          '<a href="ochrana-soukromi.html">Více informací</a>.' +
-        '</p>' +
-        '<div id="cookie-consent-buttons">' +
-          '<button id="cookie-btn-accept">Souhlasím</button>' +
-          '<button id="cookie-btn-decline">Odmítnout</button>' +
-        '</div>' +
+  function showPopup() {
+    // Overlay
+    var overlay = document.createElement('div');
+    overlay.id = 'cc-overlay';
+    overlay.style.cssText =
+      'position:fixed;inset:0;z-index:99998;' +
+      'background:rgba(42,42,42,0.55);backdrop-filter:blur(3px);' +
+      'opacity:0;transition:opacity .35s ease;';
+
+    // Modal
+    var modal = document.createElement('div');
+    modal.id = 'cc-modal';
+    modal.style.cssText =
+      'position:fixed;z-index:99999;' +
+      'top:50%;left:50%;transform:translate(-50%,-48%);' +
+      'background:#fff;border-radius:16px;' +
+      'box-shadow:0 8px 48px rgba(0,0,0,0.22);' +
+      'padding:40px 36px 32px;max-width:420px;width:calc(100vw - 40px);' +
+      'text-align:center;font-family:inherit;' +
+      'opacity:0;transition:opacity .35s ease, transform .35s ease;';
+
+    modal.innerHTML =
+      '<div style="font-size:52px;line-height:1;margin-bottom:16px;">🍪</div>' +
+      '<h2 style="margin:0 0 14px;font-size:20px;color:#2A2A2A;line-height:1.3;">' +
+        'Máme tu skvělé krvinky…<br>teda sušenky.' +
+      '</h2>' +
+      '<p style="margin:0 0 10px;font-size:15px;color:#555;line-height:1.6;">' +
+        'Pomáhají nám zjistit, co vás na dobrodružství s Krvinkou baví nejvíc.' +
+      '</p>' +
+      '<p style="margin:0 0 28px;font-size:15px;color:#555;line-height:1.6;">' +
+        'Dáte jim svolení plout dál? ' +
+        '<a href="ochrana-soukromi.html" style="color:#FF2A8B;text-decoration:underline;">Více informací.</a>' +
+      '</p>' +
+      '<div style="display:flex;flex-direction:column;gap:10px;">' +
+        '<button id="cc-btn-accept" style="' +
+          'background:#FF2A8B;color:#fff;border:none;border-radius:8px;' +
+          'padding:14px 24px;font-size:15px;font-weight:700;cursor:pointer;' +
+          'text-transform:uppercase;letter-spacing:1px;transition:background .2s,transform .1s;">'+
+          'Ano, svolení dávám!' +
+        '</button>' +
+        '<button id="cc-btn-decline" style="' +
+          'background:transparent;color:#B39AA7;border:none;border-radius:8px;' +
+          'padding:10px 24px;font-size:13px;font-weight:600;cursor:pointer;' +
+          'text-decoration:underline;transition:color .2s;">' +
+          'Ne, raději odmítám' +
+        '</button>' +
       '</div>';
 
-    // Styles
-    banner.style.cssText =
-      'position:fixed;bottom:0;left:0;right:0;z-index:99999;' +
-      'background:#fff;border-top:3px solid #FF2A8B;' +
-      'box-shadow:0 -2px 16px rgba(0,0,0,0.10);' +
-      'font-family:inherit;';
+    document.body.appendChild(overlay);
+    document.body.appendChild(modal);
 
-    var inner = banner.querySelector('#cookie-consent-inner');
-    inner.style.cssText =
-      'max-width:1140px;margin:0 auto;padding:16px 24px;' +
-      'display:flex;align-items:center;gap:24px;flex-wrap:wrap;';
+    // Animate in
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        overlay.style.opacity = '1';
+        modal.style.opacity = '1';
+        modal.style.transform = 'translate(-50%,-50%)';
+      });
+    });
 
-    var text = banner.querySelector('#cookie-consent-text');
-    text.style.cssText =
-      'flex:1;margin:0;font-size:14px;color:#2A2A2A;line-height:1.5;min-width:200px;';
+    // Button hover effects
+    var btnAccept = modal.querySelector('#cc-btn-accept');
+    btnAccept.onmouseover = function () { this.style.background = '#E5257D'; this.style.transform = 'translateY(-1px)'; };
+    btnAccept.onmouseout  = function () { this.style.background = '#FF2A8B'; this.style.transform = 'translateY(0)'; };
 
-    var link = text.querySelector('a');
-    link.style.cssText = 'color:#FF2A8B;text-decoration:underline;';
-
-    var btnWrap = banner.querySelector('#cookie-consent-buttons');
-    btnWrap.style.cssText = 'display:flex;gap:10px;flex-shrink:0;';
-
-    var btnAccept = banner.querySelector('#cookie-btn-accept');
-    btnAccept.style.cssText =
-      'background:#FF2A8B;color:#fff;border:none;border-radius:6px;' +
-      'padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;' +
-      'text-transform:uppercase;letter-spacing:1px;transition:background .2s;';
-    btnAccept.onmouseover = function () { this.style.background = '#E5257D'; };
-    btnAccept.onmouseout  = function () { this.style.background = '#FF2A8B'; };
-
-    var btnDecline = banner.querySelector('#cookie-btn-decline');
-    btnDecline.style.cssText =
-      'background:transparent;color:#2A2A2A;border:2px solid #B39AA7;border-radius:6px;' +
-      'padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;' +
-      'text-transform:uppercase;letter-spacing:1px;transition:all .2s;';
-    btnDecline.onmouseover = function () { this.style.borderColor = '#2A2A2A'; };
-    btnDecline.onmouseout  = function () { this.style.borderColor = '#B39AA7'; };
+    var btnDecline = modal.querySelector('#cc-btn-decline');
+    btnDecline.onmouseover = function () { this.style.color = '#2A2A2A'; };
+    btnDecline.onmouseout  = function () { this.style.color = '#B39AA7'; };
 
     // Events
     btnAccept.addEventListener('click', function () {
       setConsent('granted');
       grantAnalytics();
-      hideBanner(banner);
+      hidePopup(overlay, modal);
     });
 
     btnDecline.addEventListener('click', function () {
       setConsent('denied');
       denyAnalytics();
-      hideBanner(banner);
+      hidePopup(overlay, modal);
     });
-
-    document.body.appendChild(banner);
   }
 
-  function hideBanner(banner) {
-    banner.style.transition = 'opacity .3s';
-    banner.style.opacity = '0';
+  function hidePopup(overlay, modal) {
+    overlay.style.opacity = '0';
+    modal.style.opacity = '0';
+    modal.style.transform = 'translate(-50%,-48%)';
     setTimeout(function () {
-      if (banner.parentNode) banner.parentNode.removeChild(banner);
-    }, 300);
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      if (modal.parentNode) modal.parentNode.removeChild(modal);
+    }, 350);
   }
 
-  // --- Init ---
   function init() {
     var consent = getConsent();
-
     if (consent === 'granted') {
-      // User already accepted → grant immediately
       grantAnalytics();
-    } else if (consent === 'denied') {
-      // User already declined → nothing to do (default is denied)
-    } else {
-      // No decision yet → show banner
+    } else if (consent !== 'denied') {
       if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function () { showBanner(); });
+        document.addEventListener('DOMContentLoaded', showPopup);
       } else {
-        showBanner();
+        showPopup();
       }
     }
   }
