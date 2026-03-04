@@ -4,6 +4,22 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="cs"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="cs"> <!--<![endif]-->
     <head>
+    <!-- Google tag (gtag.js) - Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // Výchozí stav: analytická cookies zakázána (GDPR)
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R512VVXLSY"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-R512VVXLSY');
+    </script>
         <!-- Meta -->
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -16,18 +32,18 @@
         <meta property="og:type" content="article">
         <meta property="og:title" content="Krvinka a kyslíkový žrout neuron">
         <meta property="og:description" content="Krvinka a kyslíkový žrout neuron? Vydejte se s Krvinkou a Hemou na návštěvu neuronu a zjistěte, proč je mozek tak náročný energetický žrout.">
-        <meta property="og:image" content="assets/img/blog/circulatory-system.jpg">
-        <meta property="og:url" content="https://krvinka.cz/blog/jak-funguje-obehova-soustava">
-        <meta property="og:site_name" content="Krvinka Blog">
+        <meta property="og:image" content="assets/img/Pohádky z krevního řečiště/03_energetický žrout neuron/1000x1000 energeticky zrout neuron.jpg">
+        <meta property="og:url" content="https://krvinka.cz/pohadka-krvinka-a-kyslíkový-žrout-neuron">
+        <meta property="og:site_name" content="Krvinka - Pohádky">
 
         <!-- Twitter Card Meta Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Krvinka a kyslíkový žrout neuron">
         <meta name="twitter:description" content="Krvinka a kyslíkový žrout neuron? Vydejte se s Krvinkou a Hemou na návštěvu neuronu a zjistěte, proč je mozek tak náročný energetický žrout.">
-        <meta name="twitter:image" content="assets/img/blog/circulatory-system.jpg">
+        <meta name="twitter:image" content="assets/img/Pohádky z krevního řečiště/03_energetický žrout neuron/1000x1000 energeticky zrout neuron.jpg">
 
         <!-- Canonical URL -->
-        <link rel="canonical" href="https://krvinka.cz/blog/jak-funguje-obehova-soustava">
+        <link rel="canonical" href="https://krvinka.cz/pohadka-krvinka-a-kyslíkový-žrout-neuron">
 
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -40,7 +56,6 @@
         <link rel="stylesheet" href="assets/css/animate.min.css">
 
         <!-- Owl Carousel -->
-        <link rel="stylesheet" href="assets/css/owl.carousel.css">
         <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">
 
         <!-- Google Web Fonts -->
@@ -73,8 +88,7 @@
               "url": "https://krvinka.cz/assets/img/logo-black.png"
             }
           },
-          "description": "Prozkoumejte s námi úžasný svět oběhové soustavy. Zjistěte, jak srdce pumpuje krev a jak červené krvinky putují tělem.",
-          "articleBody": "Oběhová soustava je jedním z nejdůležitějších systémů v lidském těle..."
+          "description": "Vydejte se s Krvinkou a Hemou na návštěvu neuronu a zjistěte, proč je mozek tak náročný energetický žrout."
         }
         </script>
 
@@ -432,7 +446,80 @@
             margin-right: 5px;
             color: #b8457d;
           }
+
+          /* Story Navigation */
+          .story-navigation {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+          }
+
+          .story-navigation .row {
+            display: flex;
+            align-items: stretch;
+          }
+
+          .story-nav-item {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .story-nav-item:hover {
+            background: rgba(184, 69, 125, 0.1);
+          }
+
+          .story-nav-item a {
+            text-decoration: none;
+            color: #333;
+          }
+
+          .story-nav-item a:hover {
+            text-decoration: none;
+          }
+
+          .story-nav-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 8px;
+          }
+
+          .story-nav-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: #b8457d;
+            margin: 0;
+          }
+
+          .story-nav-item.prev { text-align: left; }
+          .story-nav-item.next { text-align: right; }
+          .story-nav-item.center { text-align: center; }
+
+          .story-nav-item .fa {
+            color: #b8457d;
+            margin: 0 5px;
+          }
+
+          @media (max-width: 768px) {
+            .story-navigation .row {
+              flex-direction: column;
+            }
+            .story-nav-item {
+              margin-bottom: 10px;
+              text-align: center !important;
+            }
+          }
         </style>
+
+    <script src="assets/js/cookie-consent.js"></script>
     </head>
     <body>
     <!--[if lt IE 8]>
@@ -471,7 +558,8 @@
                     <!-- Left Menu -->
                     <ul class="nav-left">
                         <li><a href="index.html">Domů</a></li>
-                        <li><a href="journal.html">Blog</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
                     </ul>
 
                     <!-- Logo -->
@@ -500,7 +588,8 @@
                         <!-- Menu items below logo -->
                         <ul class="nav-mobile">
                             <li><a href="index.html">Domů</a></li>
-                            <li><a href="journal.html">Blog</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
                             <li><a href="o-autorce.html">O autorce</a></li>
                             <li><a href="kontakt.html">Kontakt</a></li>
                         </ul>
@@ -515,8 +604,8 @@
     <div class="ws-breadcrumb">
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="journal.html">Blog</a></li>
-                <li><a href="#">Biologie</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">Pohádky</a></li>
                 <li class="active">Krvinka a kyslíkový žrout neuron</li>
             </ol>
         </div>
@@ -534,7 +623,7 @@
                 <div class="ws-product-content">
                     <header>
                         <!-- Item Category -->
-                        <div class="ws-item-category">Biologie</div>
+                        <div class="ws-item-category">Pohádky</div>
 
                         <!-- Title -->
                         <h1 class="ws-item-title">Krvinka a kyslíkový žrout neuron</h1>
@@ -643,6 +732,36 @@
                         <a href="#" class="blog-tag">Vzdělávání</a>
                     </div>
 
+                    <!-- Story Navigation -->
+                    <div class="story-navigation">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="story-nav-item prev">
+                                    <a href="pohadka-zavod-krvinek.html">
+                                        <div class="story-nav-label"><i class="fa fa-arrow-left"></i> Předchozí pohádka</div>
+                                        <p class="story-nav-title">Závod krvinek</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="story-nav-item center">
+                                    <a href="blog.html">
+                                        <div class="story-nav-label"><i class="fa fa-th-large"></i> Všechny pohádky</div>
+                                        <p class="story-nav-title">Zpět na blog</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="story-nav-item next">
+                                    <a href="blog.html">
+                                        <div class="story-nav-label">Další pohádka <i class="fa fa-arrow-right"></i></div>
+                                        <p class="story-nav-title">Již brzy...</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Social Share -->
                     <div class="ws-product-description text-center" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
                         <h3>Sdílejte tento článek</h3>
@@ -658,91 +777,6 @@
         </div>
     </div>
     <!-- End Article Content -->
-
-    <!-- Related Articles -->
-    <div class="ws-related-section">
-        <div class="container">
-
-            <!-- Title -->
-            <div class="ws-related-articles-title">
-                <h3>Související články</h3>
-            </div>
-
-            <div class="col-sm-4">
-                <!-- Blog Item -->
-                <div class="ws-blog-item">
-                    <a href="blog-detail.html">
-                        <!-- Image -->
-                        <figure>
-                            <img src="assets/img/works/illustrated/2.jpg" alt="Jak fungují plíce" class="img-responsive">
-                        </figure>
-                        <div class="ws-blog-caption">
-                            <!-- Date -->
-                            <div class="ws-blog-date">
-                                <i class="fa fa-calendar"></i> 8. ledna 2025
-                            </div>
-
-                            <!-- Category -->
-                            <div class="ws-item-category">Biologie</div>
-
-                            <!-- Title -->
-                            <h3 class="ws-item-title">Jak fungují plíce: Dýchání jednoduše vysvětleno</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <!-- Blog Item -->
-                <div class="ws-blog-item">
-                    <a href="blog-detail.html">
-                        <!-- Image -->
-                        <figure>
-                            <img src="assets/img/works/abstract/1.jpg" alt="Co dělají bílé krvinky" class="img-responsive">
-                        </figure>
-                        <div class="ws-blog-caption">
-                            <!-- Date -->
-                            <div class="ws-blog-date">
-                                <i class="fa fa-calendar"></i> 5. ledna 2025
-                            </div>
-
-                            <!-- Category -->
-                            <div class="ws-item-category">Imunita</div>
-
-                            <!-- Title -->
-                            <h3 class="ws-item-title">Bílé krvinky: Strážci našeho zdraví</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-4">
-                <!-- Blog Item -->
-                <div class="ws-blog-item">
-                    <a href="blog-detail.html">
-                        <!-- Image -->
-                        <figure>
-                            <img src="assets/img/works/journals/7.jpg" alt="Zajímavosti o lidském těle" class="img-responsive">
-                        </figure>
-                        <div class="ws-blog-caption">
-                            <!-- Date -->
-                            <div class="ws-blog-date">
-                                <i class="fa fa-calendar"></i> 3. ledna 2025
-                            </div>
-
-                            <!-- Category -->
-                            <div class="ws-item-category">Zajímavosti</div>
-
-                            <!-- Title -->
-                            <h3 class="ws-item-title">10 úžasných faktů o lidském těle</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- End Related Articles -->
 
     <!-- Instagram Content -->
     <section id="ws-instagram-section">
@@ -762,21 +796,21 @@
                 <!-- Instagram Item -->
                 <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.1s, ease-in 20px'>
                     <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
-                        <img src="assets/img/journal/1.jpg" alt="Instagram Krvinka" class="img-responsive">
+                        <img src="assets/img/about/ig1.jpg" alt="Instagram Krvinka" class="img-responsive">
                     </a>
                 </div>
 
                 <!-- Instagram Item -->
                 <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.3s, ease-in 20px'>
                     <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
-                        <img src="assets/img/journal/4.jpg" alt="Instagram Krvinka" class="img-responsive">
+                        <img src="assets/img/about/ig2.jpg" alt="Instagram Krvinka" class="img-responsive">
                     </a>
                 </div>
 
                 <!-- Instagram Item -->
                 <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.5s, ease-in 20px'>
                     <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
-                        <img src="assets/img/journal/8.jpg" alt="Instagram Krvinka" class="img-responsive">
+                        <img src="assets/img/about/ig3.jpg" alt="Instagram Krvinka" class="img-responsive">
                     </a>
                 </div>
             </div>
@@ -788,20 +822,11 @@
     <section class="ws-subscribe-section">
         <div class="container">
             <div class="row">
-                <!-- Subscribe Content -->
                 <div class="ws-subscribe-content text-center clearfix">
                     <div class="col-sm-8 col-sm-offset-2">
                         <h3>Zůstaňte s Krvinkou v kontaktu</h3>
                         <div class="ws-separator"></div>
-                        <p>Přihlaste se k odběru novinek a nezmeškejte žádný nový článek!</p>
-                        <!-- Form -->
-                        <form class="form-inline">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Zadejte váš email">
-                            </div>
-                            <!-- Button -->
-                            <a class="btn ws-btn-subscribe">Odebírat</a>
-                        </form>
+                        <div id="f-4-f67e22c6c3dacfc9b77b6b40399abc16"></div>
                     </div>
                 </div>
             </div>
@@ -828,10 +853,10 @@
                     <h3>Podpora</h3>
                     <div class="ws-footer-separator"></div>
                     <ul class="ws-footer-list">
-                        <li><a href="#">Jak nakupovat</a></li>
-                        <li><a href="#">Časté dotazy (FAQ)</a></li>
-                        <li><a href="#">Podmínky používání</a></li>
+                        <li><a href="reklamace-vraceni.html">Reklamace a vrácení</a></li>
                         <li><a href="ochrana-soukromi.html">Ochrana soukromí</a></li>
+                        <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+                        <li><a href="pristupnost.html">Prohlášení o přístupnosti</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
                 </div>
@@ -841,20 +866,20 @@
                     <div class="ws-footer-separator"></div>
                     <ul class="ws-footer-list">
                         <li><a href="https://www.instagram.com/krvinkabyterka" target="_blank">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61580981084071" target="_blank">Facebook</a></li>
+                        <li><a href="https://cz.pinterest.com/kidventurecz/" target="_blank">Pinterest</a></li>
                     </ul>
                 </div>
 
                 <div class="col-md-3 col-sm-6">
-                    <h3>Obchod</h3>
+                    <h3>Navigace</h3>
                     <div class="ws-footer-separator"></div>
                     <ul class="ws-footer-list">
-                        <li><a href="index.html#digital">Digitální produkty</a></li>
-                        <li><a href="index.html#books">Knihy</a></li>
-                        <li><a href="index.html#apps">Aplikace</a></li>
-                        <li><a href="index.html#bundles">Balíčky</a></li>
+                        <li><a href="index.html">O Krvince</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="o-autorce.html">O autorce</a></li>
+                        <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
                     </ul>
                 </div>
 
@@ -882,5 +907,20 @@
     <script src="assets/js/plugins/scrollReveal.min.js"></script>
     <script src="assets/js/plugins/bootstrap-dropdownhover.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- ECOMAIL WIDGET LOADER -->
+    <script>
+        (function (w,d,s,o,f,js,fjs) {
+            w["ecm-widget"]=o;w[o]=w[o]||function(){
+                (w[o].q=w[o].q||[]).push(arguments)
+            };
+            js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];
+            js.id="4-f67e22c6c3dacfc9b77b6b40399abc16";
+            js.dataset.a="kidventurecz";
+            js.src=f;
+            js.async=1;
+            fjs.parentNode.insertBefore(js,fjs);
+        }(window,document,"script","ecmwidget","https://d70shl7vidtft.cloudfront.net/widget.js"));
+    </script>
     </body>
 </html>
