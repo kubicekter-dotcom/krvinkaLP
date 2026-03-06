@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/about.html",
+      "destination": "/o-autorce.html",
+      "permanent": true
+    }
+  ]
+}
