@@ -261,6 +261,39 @@
             background: #ffa1c2;
             margin: 15px 0;
           }
+
+          /* Category Navigation */
+          .krvinka-category-nav {
+            border-bottom: 2px solid #eee;
+            margin-bottom: 40px;
+            margin-top: 10px;
+          }
+
+          .krvinka-category-nav > li > a {
+            color: #555;
+            font-weight: 500;
+            border: none;
+            border-bottom: 3px solid transparent;
+            border-radius: 0;
+            padding: 10px 18px;
+            margin-right: 5px;
+            background: transparent;
+          }
+
+          .krvinka-category-nav > li > a:hover {
+            color: #b8457d;
+            background: transparent;
+            border-bottom: 3px solid #b8457d;
+          }
+
+          .krvinka-category-nav > li.active > a,
+          .krvinka-category-nav > li.active > a:focus,
+          .krvinka-category-nav > li.active > a:hover {
+            color: #b8457d;
+            border: none;
+            border-bottom: 3px solid #b8457d;
+            background: transparent;
+          }
         </style>
     
     <script src="assets/js/cookie-consent.js"></script>
@@ -360,6 +393,16 @@
     <div class="container ws-page-container">
         <div class="row">
             <div class="ws-journal-page">
+
+                <!-- Category Navigation -->
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs krvinka-category-nav">
+                        <li class="active"><a href="blog.html">Vše</a></li>
+                        <li><a href="blog-pohadky.html">Pohádky z lidského těla</a></li>
+                        <li><a href="blog-kalkulacky.html">Veselé biologické kalkulačky</a></li>
+                        <li><a href="blog-lab.html">Krvinka Lab</a></li>
+                    </ul>
+                </div>
 
                         <!-- Item - Kalkulačka červených krvinek -->
                         <div class="col-sm-6 ws-journal-item">
