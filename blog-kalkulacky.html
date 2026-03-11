@@ -102,6 +102,13 @@
             .ws-parallax-header .ws-parallax-holder h1:before,
             .ws-parallax-header .ws-parallax-holder h1:after { display: none; }
           }
+
+          @media (max-width: 768px) {
+            .krvinka-category-nav { display: flex; flex-direction: column; border-bottom: none; }
+            .krvinka-category-nav > li { width: 100%; border-bottom: 1px solid #eee; }
+            .krvinka-category-nav > li > a { display: block; border-bottom: none !important; padding: 12px 15px; }
+            .krvinka-category-nav > li.active > a { border-bottom: none !important; border-left: 3px solid #b8457d; padding-left: 12px; }
+          }
         </style>
 
     <script src="assets/js/cookie-consent.js"></script>

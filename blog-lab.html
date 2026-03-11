@@ -95,6 +95,13 @@
           .krvinka-category-nav > li > a { color: #555; font-weight: 500; border: none; border-bottom: 3px solid transparent; border-radius: 0; padding: 10px 18px; margin-right: 5px; background: transparent; }
           .krvinka-category-nav > li > a:hover { color: #b8457d; background: transparent; border-bottom: 3px solid #b8457d; }
           .krvinka-category-nav > li.active > a, .krvinka-category-nav > li.active > a:focus, .krvinka-category-nav > li.active > a:hover { color: #b8457d; border: none; border-bottom: 3px solid #b8457d; background: transparent; }
+
+          @media (max-width: 768px) {
+            .krvinka-category-nav { display: flex; flex-direction: column; border-bottom: none; }
+            .krvinka-category-nav > li { width: 100%; border-bottom: 1px solid #eee; }
+            .krvinka-category-nav > li > a { display: block; border-bottom: none !important; padding: 12px 15px; }
+            .krvinka-category-nav > li.active > a { border-bottom: none !important; border-left: 3px solid #b8457d; padding-left: 12px; }
+          }
         </style>
 
     <script src="assets/js/cookie-consent.js"></script>
