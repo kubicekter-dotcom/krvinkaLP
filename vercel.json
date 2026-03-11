@@ -1,6 +1,12 @@
 {
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "krvinka.cz" }],
+      "destination": "https://www.krvinka.cz/$1",
+      "permanent": true
+    },
+    {
       "source": "/about.html",
       "destination": "/o-autorce.html",
       "permanent": true
