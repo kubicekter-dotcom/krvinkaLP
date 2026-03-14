@@ -28,8 +28,14 @@
 
   function grantPixel() {
     if (typeof fbq === 'function') {
-      fbq('init', '2142732609873674');
+      fbq('consent', 'grant');
       fbq('track', 'PageView');
+    }
+  }
+
+  function revokePixel() {
+    if (typeof fbq === 'function') {
+      fbq('consent', 'revoke');
     }
   }
 
@@ -116,7 +122,10 @@
     if (consent === 'granted') {
       grantAnalytics();
       grantPixel();
-    } else if (consent !== 'denied') {
+    } else {
+      revokePixel();
+    }
+    if (consent !== 'granted' && consent !== 'denied') {
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', showPopup);
       } else {
