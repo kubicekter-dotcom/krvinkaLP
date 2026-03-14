@@ -1,0 +1,972 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="cs"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="cs"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="cs"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="cs"> <!--<![endif]-->
+    <head>
+    <!-- Google tag (gtag.js) - Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R512VVXLSY"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-R512VVXLSY');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');</script>
+    <!-- End Meta Pixel Code -->
+    
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <title>Kolik kyseliny už vyrobil tvůj žaludek? - Krvinka</title>
+        <meta name="description" content="Spočítejte si, kolik žaludeční šťávy váš žaludek za život vyrobil. Zábavná vzdělávací kalkulačka pro děti i rodiče.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Tereza Kubíčková">
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Kolik kyseliny už vyrobil tvůj žaludek?">
+        <meta property="og:description" content="Spočítejte si, kolik žaludeční šťávy váš žaludek za život vyrobil. Zábavná vzdělávací kalkulačka pro děti i rodiče.">
+        <meta property="og:site_name" content="Krvinka">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://www.krvinka.cz/kalkulacka-zaludecni-stava.html">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+        <!-- CSS Styles -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">
+
+        <!-- Google Web Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900' rel='stylesheet' type='text/css'>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!-- Schema.org markup -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Kolik kyseliny už vyrobil tvůj žaludek?",
+          "applicationCategory": "EducationalApplication",
+          "author": {
+            "@type": "Person",
+            "name": "Tereza Kubíčková",
+            "url": "https://www.krvinka.cz/o-autorce.html"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Krvinka"
+          },
+          "description": "Kalkulačka žaludeční šťávy – spočítejte si, kolik žaludeční šťávy váš žaludek za život vyrobil."
+        }
+        </script>
+
+        <style>
+          /* === HEADER === */
+          .ws-header-krvinka {
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            padding: 0;
+          }
+
+          .ws-header-krvinka .navbar {
+            margin-bottom: 0;
+            border: none;
+            background: transparent;
+          }
+
+          .krvinka-nav-desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-desktop .nav-left,
+          .krvinka-nav-desktop .nav-right {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+          }
+
+          .krvinka-nav-desktop .nav-left {
+            flex: 1;
+            justify-content: flex-end;
+            margin-right: 50px;
+          }
+
+          .krvinka-nav-desktop .nav-right {
+            flex: 1;
+            justify-content: flex-start;
+            margin-left: 50px;
+          }
+
+          .krvinka-nav-desktop .logo-center {
+            flex: 0 0 auto;
+            text-align: center;
+          }
+
+          .logo-link { display: inline-block; text-decoration: none; }
+          .logo-link:hover { text-decoration: none; }
+          .logo-img { max-height: 40px; width: auto; transition: opacity 0.3s ease; }
+          .logo-link:hover .logo-img { opacity: 0.8; }
+
+          .krvinka-nav-desktop a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-desktop a:hover { color: #b8457d; text-decoration: none; }
+
+          .krvinka-nav-mobile {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+          }
+
+          .krvinka-nav-mobile .logo-mobile { margin-bottom: 20px; }
+
+          .krvinka-nav-mobile .nav-mobile {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          .krvinka-nav-mobile .nav-mobile li { margin-bottom: 15px; }
+
+          .krvinka-nav-mobile .nav-mobile a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            transition: color 0.3s ease;
+          }
+
+          .krvinka-nav-mobile .nav-mobile a:hover { color: #b8457d; text-decoration: none; }
+
+          @media (max-width: 768px) {
+            .krvinka-nav-desktop { display: none; }
+            .navbar-collapse.in .krvinka-nav-mobile { display: block; }
+            .navbar-toggle { border: 1px solid #333; margin-top: 15px; margin-bottom: 15px; }
+            .navbar-toggle .icon-bar { background-color: #333; }
+          }
+
+          .navbar-collapse { border: none; box-shadow: none; }
+
+          /* === FOOTER === */
+          .ws-footer { background-color: #b8457d !important; }
+          .ws-footer h3, .ws-footer p, .ws-footer li a { color: #fff !important; }
+          .ws-footer-bar { background-color: #a03d70 !important; }
+          .ws-footer-bar p { color: #fff !important; }
+          .ws-footer-list { list-style: none; padding: 0; margin: 0; }
+          .ws-footer-list li { margin-bottom: 8px; }
+          .ws-footer-list li a { color: #fff !important; text-decoration: none; }
+          .ws-footer-list li a:hover { color: #ffa1c2 !important; text-decoration: none; }
+          .ws-footer-separator { width: 30px; height: 2px; background: #ffa1c2; margin: 15px 0; }
+
+          /* === ARTICLE === */
+          .blog-article-meta { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+          .blog-article-meta .meta-item { display: inline-block; margin-right: 20px; color: #888; font-size: 14px; }
+          .blog-article-meta .meta-item i { margin-right: 5px; color: #b8457d; }
+
+          .blog-content {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+          }
+
+          .blog-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #2a2a2a;
+          }
+
+          .blog-content p { margin-bottom: 20px; }
+
+          .blog-tags { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; }
+          .blog-tags h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 15px; }
+
+          .blog-tag {
+            display: inline-block;
+            padding: 6px 14px;
+            margin: 0 5px 10px 0;
+            background: rgba(184, 69, 125, 0.1);
+            color: #b8457d;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+          }
+
+          .blog-tag:hover { background: #b8457d; color: #fff; text-decoration: none; }
+
+          /* === CALCULATOR === */
+          .calculator-wrapper {
+            background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 4px 20px rgba(184, 69, 125, 0.1);
+            border: 1px solid rgba(184, 69, 125, 0.1);
+          }
+
+          .calculator-intro {
+            text-align: center;
+            margin-bottom: 30px;
+          }
+
+          .calc-icon {
+            display: block;
+            margin: 0 auto 12px;
+          }
+
+          .calculator-intro p {
+            color: #666;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+          }
+
+          .calculator-form {
+            max-width: 440px;
+            margin: 0 auto;
+          }
+
+          .form-group-calc { margin-bottom: 24px; }
+
+          .form-group-calc label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 15px;
+          }
+
+          .form-group-calc .hint {
+            display: block;
+            font-size: 13px;
+            color: #888;
+            font-weight: 400;
+            margin-top: 2px;
+          }
+
+          .form-group-calc input[type="number"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Nunito Sans', sans-serif;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+            -webkit-appearance: none;
+            appearance: none;
+          }
+
+          .form-group-calc input[type="number"]:focus {
+            outline: none;
+            border-color: #b8457d;
+            box-shadow: 0 0 0 3px rgba(184, 69, 125, 0.15);
+          }
+
+          .btn-calculate {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #b8457d 0%, #d4699b 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+
+          .btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 69, 125, 0.3);
+          }
+
+          .btn-calculate:active { transform: translateY(0); }
+
+          .btn-calculate:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(184, 69, 125, 0.3);
+          }
+
+          /* Error */
+          .error-message {
+            background: #fff5f5;
+            border: 1px solid #ffcdd2;
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 20px;
+            color: #c62828;
+            font-size: 15px;
+            display: none;
+          }
+
+          .error-message.visible { display: block; }
+
+          /* Results */
+          .calculator-results {
+            display: none;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(184, 69, 125, 0.2);
+          }
+
+          .calculator-results.visible { display: block; }
+
+          /* Main result box */
+          .result-time-box {
+            background: linear-gradient(135deg, #b8457d 0%, #d4699b 100%);
+            border-radius: 16px;
+            padding: 30px;
+            color: #fff;
+            margin-bottom: 24px;
+            text-align: center;
+          }
+
+          .result-time-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+          }
+
+          .result-time-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 8px;
+          }
+
+          .result-time-sub {
+            font-size: 16px;
+            opacity: 0.9;
+          }
+
+          /* Stats grid */
+          .result-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+          }
+
+          .stat-box {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+          }
+
+          .stat-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #b8457d;
+            margin-bottom: 4px;
+          }
+
+          .stat-label { font-size: 13px; color: #888; }
+
+          /* Bathtub comparison */
+          .comparison-box {
+            background: #fff;
+            border: 2px solid #b8457d;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          .comparison-text {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+          }
+
+          .comparison-highlight {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #b8457d;
+            display: block;
+            margin: 6px 0;
+          }
+
+          /* Disclaimer note */
+          .result-note {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #888;
+            line-height: 1.6;
+          }
+
+          /* How it works toggle */
+          .how-it-works-toggle {
+            background: none;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 14px 20px;
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .how-it-works-toggle:hover { border-color: #b8457d; }
+
+          .how-it-works-toggle .toggle-arrow {
+            transition: transform 0.3s ease;
+            font-size: 12px;
+          }
+
+          .how-it-works-toggle.open .toggle-arrow { transform: rotate(180deg); }
+
+          .how-it-works-content {
+            display: none;
+            padding: 20px;
+            margin-top: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666;
+          }
+
+          .how-it-works-content.visible { display: block; }
+          .how-it-works-content ul { margin: 10px 0; padding-left: 20px; }
+          .how-it-works-content li { margin-bottom: 6px; }
+
+          /* Responsive */
+          @media (max-width: 576px) {
+            .calculator-wrapper {
+              padding: 24px 20px;
+              margin: 20px -15px;
+              border-radius: 0;
+            }
+
+            .result-time-main { font-size: 26px; }
+            .result-stats { grid-template-columns: 1fr; }
+          }
+        </style>
+
+    <script src="assets/js/cookie-consent.js"></script>
+    </head>
+    <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Loader Start -->
+    <div id="preloader">
+        <div class="preloader-container">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Loader -->
+
+    <!-- Header Start -->
+    <header class="ws-header-krvinka">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="krvinka-nav-desktop">
+                    <ul class="nav-left">
+                        <li><a href="index.html">Domů</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
+                    </ul>
+                    <div class="logo-center">
+                        <a href="index.html" class="logo-link">
+                            <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                        </a>
+                    </div>
+                    <ul class="nav-right">
+                        <li><a href="o-autorce.html">O autorce</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <div class="krvinka-nav-mobile">
+                        <div class="logo-mobile">
+                            <a href="index.html" class="logo-link">
+                                <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
+                            </a>
+                        </div>
+                        <ul class="nav-mobile">
+                            <li><a href="index.html">Domů</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
+                            <li><a href="o-autorce.html">O autorce</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+
+    <!-- Breadcrumb -->
+    <div class="ws-breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#">Kalkulačky</a></li>
+                <li class="active">Kolik kyseliny už vyrobil tvůj žaludek?</li>
+            </ol>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <!-- Article Content -->
+    <div class="container ws-page-container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+
+                <div class="ws-product-content">
+                    <header>
+                        <div class="ws-item-category">Kalkulačky</div>
+                        <h1 class="ws-item-title">Kolik kyseliny už vyrobil tvůj žaludek?</h1>
+                        <div class="ws-separator"></div>
+                        <div class="blog-article-meta">
+                            <span class="meta-item">
+                                <i class="fa fa-user"></i>
+                                <a href="o-autorce.html">Tereza Kubíčková</a>
+                            </span>
+                            <span class="meta-item">
+                                <i class="fa fa-calendar"></i>
+                                2026
+                            </span>
+                        </div>
+                    </header>
+
+                    <div class="blog-content">
+
+                        <p>Tvůj žaludek každý den vyrábí žaludeční šťávu, která pomáhá trávit potravu. Zadej svůj věk a zjisti, kolik jí už asi vytvořil.</p>
+
+                        <!-- Calculator -->
+                        <div class="calculator-wrapper">
+
+                            <div class="calculator-intro">
+                                <!-- Stomach SVG icon -->
+                                <svg class="calc-icon" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <ellipse cx="28" cy="32" rx="19" ry="17" fill="rgba(184,69,125,0.12)" stroke="#b8457d" stroke-width="2.2"/>
+                                    <path d="M20 20 C15 15 15 10 20 10 C25 10 25 15 28 16" stroke="#b8457d" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                                    <ellipse cx="24" cy="34" rx="5" ry="3.5" fill="rgba(184,69,125,0.18)"/>
+                                    <ellipse cx="33" cy="31" rx="3" ry="2" fill="rgba(184,69,125,0.13)"/>
+                                </svg>
+                                <p>Zadej svůj věk a zjisti, kolik žaludeční šťávy tvůj žaludek za život vyrobil.</p>
+                            </div>
+
+                            <form class="calculator-form" id="stomachCalc" novalidate>
+                                <div class="form-group-calc">
+                                    <label for="userAge">
+                                        Kolik je ti let?
+                                        <span class="hint">Zadej celé číslo od 1 do 120</span>
+                                    </label>
+                                    <input
+                                        type="number"
+                                        id="userAge"
+                                        min="1"
+                                        max="120"
+                                        step="1"
+                                        placeholder="Např. 8"
+                                        autocomplete="off"
+                                    >
+                                </div>
+
+                                <button type="submit" class="btn-calculate">
+                                    Spočítat
+                                </button>
+
+                                <div class="error-message" id="errorMessage" role="alert" aria-live="polite"></div>
+                            </form>
+
+                            <!-- Results -->
+                            <div class="calculator-results" id="results" aria-live="polite">
+
+                                <div class="result-time-box">
+                                    <div class="result-time-label">Tvůj žaludek už vyrobil asi</div>
+                                    <div class="result-time-main" id="resultLiters"></div>
+                                    <div class="result-time-sub">žaludeční šťávy</div>
+                                </div>
+
+                                <div class="result-stats">
+                                    <div class="stat-box">
+                                        <div class="stat-value" id="statMin"></div>
+                                        <div class="stat-label">Minimální odhad</div>
+                                    </div>
+                                    <div class="stat-box">
+                                        <div class="stat-value" id="statMax"></div>
+                                        <div class="stat-label">Maximální odhad</div>
+                                    </div>
+                                </div>
+
+                                <div class="comparison-box">
+                                    <p class="comparison-text">
+                                        To je přibližně jako
+                                        <span class="comparison-highlight" id="resultBathtubs"></span>
+                                        běžných van
+                                    </p>
+                                </div>
+
+                                <div class="result-note">
+                                    Skutečné množství se může lišit. Jde o orientační odhad založený na běžné produkci 2 až 3 litry žaludeční šťávy denně.
+                                </div>
+
+                            </div>
+                            <!-- End Results -->
+
+                            <!-- How it works toggle -->
+                            <button type="button" class="how-it-works-toggle" id="howToggle" aria-expanded="false" aria-controls="howContent">
+                                <span>Jak to počítáme?</span>
+                                <span class="toggle-arrow" aria-hidden="true">&#9660;</span>
+                            </button>
+                            <div class="how-it-works-content" id="howContent">
+                                <p><strong>Vzorec</strong> je založený na průměrném odhadu produkce žaludeční šťávy:</p>
+                                <ul>
+                                    <li><strong>Střední odhad:</strong> věk &times; 365 &times; 2,5 litrů</li>
+                                    <li><strong>Minimální odhad:</strong> věk &times; 365 &times; 2 litry</li>
+                                    <li><strong>Maximální odhad:</strong> věk &times; 365 &times; 3 litry</li>
+                                    <li>1 vana = 160 litrů</li>
+                                </ul>
+                                <p>Skutečná denní produkce žaludeční šťávy se liší podle stravy, zdravotního stavu a individuality každého člověka. Jde o zábavný a vzdělávací odhad, ne o medicínský údaj.</p>
+                            </div>
+
+                        </div>
+                        <!-- End Calculator -->
+
+                        <h2>Co je žaludeční šťáva a proč ji potřebujeme?</h2>
+
+                        <p>Žaludeční šťáva je kyselá tekutina, kterou žaludek vyrábí každý den. Obsahuje hlavně kyselinu chlorovodíkovou (HCl) a enzymy, které rozkládají bílkoviny z jídla. Díky ní může tělo zpracovat to, co sní, a vstřebat důležité látky jako vitamíny a minerály.</p>
+
+                        <p>Kyselost žaludeční šťávy je velmi vysoká – pH se pohybuje mezi 1,5 a 3,5. To je kyselejší než ocet. Žaludek sám sebe chrání vrstvou hlenové vazby, která brání kyselině v poškození jeho stěn. Je to skvělý příklad toho, jak tělo udržuje v rovnováze velmi ostrý nástroj.</p>
+
+                        <p>Denní produkce se pohybuje přibližně mezi 2 a 3 litry. Tělo ji vyrábí průběžně, nejen při trávení. U dětských žaludků je princip stejný, jen celý systém je menší. Tento výpočet je orientační odhad založený na průměrných hodnotách z biologické literatury.</p>
+
+                        <h2>Proč je toho tak hodně?</h2>
+
+                        <p>Žaludek pracuje každý den bez přestávky. I když nejíš, vyrábí určité množství žaludeční šťávy. Když jíš, produkce se zvýší, aby tělo zvládlo potravu rozložit. Celá ta tekutina se pak znovu vstřebává ve střevech – tělo ji tedy neztratí, ale recykluje. Za život to dává dohromady ohromující množství.</p>
+
+                    </div>
+                    <!-- End blog-content -->
+
+                    <!-- Tags -->
+                    <div class="blog-tags">
+                        <h4>Štítky:</h4>
+                        <a href="#" class="blog-tag">Kalkulačka</a>
+                        <a href="#" class="blog-tag">Žaludek</a>
+                        <a href="#" class="blog-tag">Trávení</a>
+                        <a href="#" class="blog-tag">Biologie</a>
+                        <a href="#" class="blog-tag">Lidské tělo</a>
+                        <a href="#" class="blog-tag">Zábavná věda</a>
+                    </div>
+
+                    <!-- Social Share -->
+                    <div class="ws-product-description text-center" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
+                        <h3>Sdílejte tuto kalkulačku</h3>
+                        <div class="ws-product-social-icon">
+                            <a href="#" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-twitter"></i></a>
+                            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-facebook"></i></a>
+                            <a href="#" onclick="window.open('https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&description=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Article Content -->
+
+    <!-- Instagram Content -->
+    <section id="ws-instagram-section">
+        <div class="container">
+            <div class="row vertical-align">
+                <div class="col-sm-3">
+                    <div class="ws-instagram-header">
+                        <h3>Instagram</h3>
+                        <br>
+                        <a href="https://www.instagram.com/krvinkabyterka" target="_blank" class="ws-instagram-link">@krvinkabyterka</a>
+                        <p>Sledujte Krvinku a vydejte se na výpravu do lidského těla.</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.1s, ease-in 20px'>
+                    <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
+                        <img src="assets/img/about/ig1.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.3s, ease-in 20px'>
+                    <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
+                        <img src="assets/img/about/ig2.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.5s, ease-in 20px'>
+                    <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
+                        <img src="assets/img/about/ig3.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Instagram Content -->
+
+    <!-- Subscribe Section -->
+    <section class="ws-subscribe-section">
+        <div class="container">
+            <div class="row">
+                <div class="ws-subscribe-content text-center clearfix">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <h3>Zůstaňte s Krvinkou v kontaktu</h3>
+                        <div class="ws-separator"></div>
+                        <div id="f-4-f67e22c6c3dacfc9b77b6b40399abc16"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Subscribe Section -->
+
+    <!-- Footer Start -->
+    <footer class="ws-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h3>O projektu</h3>
+                    <div class="ws-footer-separator"></div>
+                    <p>Krvinka je hravý způsob, jak dětem přiblížit lidské tělo – formou gamebooku, aplikace a pracovních materiálů. Autorka: Tereza Kubíčková.</p>
+                    <p>Kontakt: <a href="mailto:info@kidventure.cz">info@kidventure.cz</a></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3>Podpora</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="reklamace-vraceni.html">Reklamace a vrácení</a></li>
+                        <li><a href="ochrana-soukromi.html">Ochrana soukromí</a></li>
+                        <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+                        <li><a href="pristupnost.html">Prohlášení o přístupnosti</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3>Sociální sítě</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="https://www.instagram.com/krvinkabyterka" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61580981084071" target="_blank">Facebook</a></li>
+                        <li><a href="https://cz.pinterest.com/kidventurecz/" target="_blank">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3>Navigace</h3>
+                    <div class="ws-footer-separator"></div>
+                    <ul class="ws-footer-list">
+                        <li><a href="index.html">O Krvince</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="o-autorce.html">O autorce</a></li>
+                        <li><a href="https://www.kidventure.cz/krvinka/">Obchod</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ws-footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12" style="text-align:center;">
+                        &copy; 2025 Krvinka &bull; Vytvořeno s radostí pro zvídavé děti
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Scripts -->
+    <script src="assets/js/plugins/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/plugins/parallax.min.js"></script>
+    <script src="assets/js/plugins/scrollReveal.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-dropdownhover.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Stomach Acid Calculator Script -->
+    <script>
+    /**
+     * Stomach Acid Calculator
+     *
+     * Assumptions:
+     * - Average daily gastric juice: 2-3 litres (middle estimate: 2.5 L)
+     * - Year = 365 days
+     * - 1 bathtub = 160 litres
+     */
+    (function () {
+        'use strict';
+
+        var LITRES_MIN       = 2;
+        var LITRES_MID       = 2.5;
+        var LITRES_MAX       = 3;
+        var DAYS_PER_YEAR    = 365;
+        var LITRES_BATHTUB   = 160;
+
+        /* --- helpers --- */
+
+        // Thousands separator (narrow no-break space)
+        function fmt(n) {
+            return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '\u202f');
+        }
+
+        function fmtBathtubs(n) {
+            if (n >= 10) return fmt(Math.round(n));
+            var r = Math.round(n * 10) / 10;
+            return (r % 1 === 0) ? r.toFixed(0) : r.toFixed(1).replace('.', ',');
+        }
+
+        /* --- core calculation --- */
+
+        function calculate(age) {
+            var days = age * DAYS_PER_YEAR;
+            return {
+                mid: Math.round(days * LITRES_MID),
+                min: Math.round(days * LITRES_MIN),
+                max: Math.round(days * LITRES_MAX)
+            };
+        }
+
+        /* --- DOM --- */
+
+        function el(id) { return document.getElementById(id); }
+
+        function showError(msg) {
+            var box = el('errorMessage');
+            box.textContent = msg;
+            box.classList.add('visible');
+        }
+
+        function hideError() {
+            el('errorMessage').classList.remove('visible');
+        }
+
+        function renderResults(result) {
+            el('resultLiters').textContent   = fmt(result.mid) + '\u202flitrů';
+            el('statMin').textContent        = fmt(result.min) + '\u202fl';
+            el('statMax').textContent        = fmt(result.max) + '\u202fl';
+            el('resultBathtubs').textContent = fmtBathtubs(result.mid / LITRES_BATHTUB);
+
+            var box = el('results');
+            box.classList.add('visible');
+            box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        /* --- form submit --- */
+
+        el('stomachCalc').addEventListener('submit', function (e) {
+            e.preventDefault();
+            hideError();
+
+            var raw = el('userAge').value.trim();
+
+            if (raw === '') {
+                showError('Prosím zadej svůj věk.');
+                return;
+            }
+
+            var age = parseInt(raw, 10);
+
+            if (isNaN(age) || age < 1 || age > 120 || String(age) !== raw) {
+                showError('Zadej celé číslo od 1 do 120.');
+                return;
+            }
+
+            renderResults(calculate(age));
+        });
+
+        /* --- how it works toggle --- */
+
+        el('howToggle').addEventListener('click', function () {
+            var content = el('howContent');
+            var open    = content.classList.toggle('visible');
+            this.classList.toggle('open', open);
+            this.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+
+    }());
+    </script>
+
+    <!-- ECOMAIL WIDGET LOADER -->
+    <script>
+        (function (w,d,s,o,f,js,fjs) {
+            w["ecm-widget"]=o;w[o]=w[o]||function(){
+                (w[o].q=w[o].q||[]).push(arguments)
+            };
+            js=d.createElement(s),fjs=d.getElementsByTagName(s)[0];
+            js.id="4-f67e22c6c3dacfc9b77b6b40399abc16";
+            js.dataset.a="kidventurecz";
+            js.src=f;
+            js.async=1;
+            fjs.parentNode.insertBefore(js,fjs);
+        }(window,document,"script","ecmwidget","https://d70shl7vidtft.cloudfront.net/widget.js"));
+    </script>
+    </body>
+</html>

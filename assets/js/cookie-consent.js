@@ -26,6 +26,13 @@
     }
   }
 
+  function grantPixel() {
+    if (typeof fbq === 'function') {
+      fbq('init', '2142732609873674');
+      fbq('track', 'PageView');
+    }
+  }
+
   function showPopup() {
     var popup = document.createElement('div');
     popup.id = 'cc-popup';
@@ -85,6 +92,7 @@
     btnAccept.addEventListener('click', function () {
       setConsent('granted');
       grantAnalytics();
+      grantPixel();
       hidePopup(popup);
     });
 
@@ -107,6 +115,7 @@
     var consent = getConsent();
     if (consent === 'granted') {
       grantAnalytics();
+      grantPixel();
     } else if (consent !== 'denied') {
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', showPopup);
