@@ -2310,7 +2310,7 @@ ul.ws-footer-payments li{
   background: #fff;
   border: 2px solid #ddd;
   border-radius: 12px;
-  padding: 30px 25px;
+  padding: 20px 20px;
   margin-bottom: 30px;
   height: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -2325,7 +2325,7 @@ ul.ws-footer-payments li{
 }
 
 .review-header {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   flex-shrink: 0;
 }
 
@@ -2380,7 +2380,7 @@ ul.ws-footer-payments li{
 /* Ensure equal height cards */
 @media (min-width: 992px) {
   .review-card {
-    min-height: 450px;
+    min-height: auto;
   }
 }
 
