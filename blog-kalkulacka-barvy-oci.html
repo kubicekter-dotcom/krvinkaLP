@@ -151,12 +151,29 @@
           .tree-section { margin-bottom: 10px; }
           .tree-label {
             text-align: center;
-            font-size: 10px;
+            font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: .08em;
+            letter-spacing: .10em;
             color: #b8457d;
             margin-bottom: 10px;
+            padding: 4px 14px;
+            background: rgba(184,69,125,.08);
+            border-radius: 20px;
+            display: inline-block;
+          }
+          .tree-label-main {
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .10em;
+            color: #fff;
+            margin-bottom: 12px;
+            padding: 6px 22px;
+            background: #b8457d;
+            border-radius: 20px;
+            display: inline-block;
           }
           .grandparents-row {
             display: flex;
@@ -582,7 +599,7 @@
                             <div class="tree-section">
                                 <div class="grandparents-row">
                                     <!-- Paternal grandparents -->
-                                    <div>
+                                    <div style="text-align:center">
                                         <div class="tree-label">Otcova strana</div>
                                         <div class="gp-pair">
                                             <div class="person-card small" id="card-pgf">
@@ -600,7 +617,7 @@
                                         </div>
                                     </div>
                                     <!-- Maternal grandparents -->
-                                    <div>
+                                    <div style="text-align:center">
                                         <div class="tree-label">Matčina strana</div>
                                         <div class="gp-pair">
                                             <div class="person-card small" id="card-mgf">
@@ -627,27 +644,22 @@
                             </div>
 
                             <!-- Parents -->
-                            <div class="tree-section">
-                                <div class="tree-label">Rodiče</div>
-                                <div class="parents-row">
+                            <div class="tree-section" style="text-align:center">
+                                <div class="tree-label-main">Rodiče</div>
+                                <div class="gp-pair parents-pair">
                                     <div class="person-card" id="card-fa">
                                         <div class="person-role">♂ Rodič</div>
                                         <div class="person-name">Otec</div>
                                         <div class="eye-display" id="disp-fa"><span class="eye-placeholder">?</span></div>
                                         <div class="color-selector" id="sel-fa"></div>
-                                        <div style="font-size:10px;color:#e05090;margin-top:2px;display:none" id="hint-fa">← vyberte barvu</div>
-                                    </div>
-                                    <div class="parents-divider">
-                                        <div class="h-dash"></div>
-                                        <div class="heart" id="couple-heart">💍</div>
-                                        <div class="h-dash"></div>
+                                        <div style="font-size:10px;color:#e05090;margin-top:2px;display:none" id="hint-fa">vyberte barvu</div>
                                     </div>
                                     <div class="person-card" id="card-mo">
                                         <div class="person-role">♀ Rodič</div>
                                         <div class="person-name">Matka</div>
                                         <div class="eye-display" id="disp-mo"><span class="eye-placeholder">?</span></div>
                                         <div class="color-selector" id="sel-mo"></div>
-                                        <div style="font-size:10px;color:#e05090;margin-top:2px;display:none" id="hint-mo">vyberte barvu →</div>
+                                        <div style="font-size:10px;color:#e05090;margin-top:2px;display:none" id="hint-mo">vyberte barvu</div>
                                     </div>
                                 </div>
                             </div>
@@ -1014,7 +1026,6 @@
         // Show/hide hints
         document.getElementById("hint-fa").style.display = faSet ? "none" : "block";
         document.getElementById("hint-mo").style.display = moSet ? "none" : "block";
-        document.getElementById("couple-heart").textContent = (faSet && moSet) ? "❤️" : "💍";
 
         if (!faSet || !moSet) {
           document.getElementById("child-connector").style.display = "none";
