@@ -246,11 +246,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
-            min-width: 90px;
-            max-width: 120px;
+            gap: 8px;
+            min-width: 130px;
+            max-width: 160px;
           }
-          .person-card.small { min-width: 72px; max-width: 96px; }
+          .person-card.small { min-width: 96px; max-width: 130px; }
           .person-role {
             font-size: 9px;
             font-weight: 700;
@@ -260,17 +260,17 @@
           }
           .person-name {
             font-family: 'Merriweather', serif;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 700;
             color: #2a2a2a;
             text-align: center;
           }
-          .person-card.small .person-name { font-size: 11px; }
+          .person-card.small .person-name { font-size: 12px; }
           .eye-display {
-            width: 72px;
-            height: 72px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
-            border: 2.5px solid rgba(184,69,125,.20);
+            border: 3px solid rgba(184,69,125,.20);
             overflow: hidden;
             background: #f5f0ec;
             transition: border-color .25s, box-shadow .25s;
@@ -278,28 +278,28 @@
             align-items: center;
             justify-content: center;
           }
-          .person-card.small .eye-display { width: 54px; height: 54px; }
-          .eye-display.selected { border-color: #b8457d; box-shadow: 0 0 0 3px rgba(184,69,125,.15); }
+          .person-card.small .eye-display { width: 84px; height: 84px; }
+          .eye-display.selected { border-color: #b8457d; box-shadow: 0 0 0 4px rgba(184,69,125,.15); }
           .eye-display img { width: 100%; height: 100%; object-fit: cover; display: block; }
           .eye-display .eye-placeholder {
-            font-size: 28px;
+            font-size: 44px;
             color: #ccc;
             user-select: none;
           }
-          .person-card.small .eye-display .eye-placeholder { font-size: 22px; }
+          .person-card.small .eye-display .eye-placeholder { font-size: 32px; }
 
           /* ── Color selector dots ── */
           .color-selector {
             display: flex;
             flex-wrap: wrap;
-            gap: 4px;
+            gap: 5px;
             justify-content: center;
-            max-width: 120px;
+            max-width: 160px;
           }
-          .person-card.small .color-selector { max-width: 96px; gap: 3px; }
+          .person-card.small .color-selector { max-width: 130px; gap: 4px; }
           .eye-btn {
-            width: 22px;
-            height: 22px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             border: 2px solid transparent;
             cursor: pointer;
@@ -309,7 +309,7 @@
             transition: transform .15s, border-color .15s;
             flex-shrink: 0;
           }
-          .person-card.small .eye-btn { width: 18px; height: 18px; }
+          .person-card.small .eye-btn { width: 26px; height: 26px; }
           .eye-btn img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
           .eye-btn:hover { transform: scale(1.18); }
           .eye-btn.active { border-color: #b8457d; box-shadow: 0 0 0 2px rgba(184,69,125,.25); }
@@ -324,8 +324,8 @@
             gap: 8px;
           }
           .bar-eye {
-            width: 28px;
-            height: 28px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             overflow: hidden;
             flex-shrink: 0;
@@ -333,10 +333,10 @@
           }
           .bar-eye img { width: 100%; height: 100%; object-fit: cover; display: block; }
           .bar-label {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 600;
             color: #4a3c2e;
-            width: 72px;
+            width: 80px;
             flex-shrink: 0;
           }
           .bar-track {
@@ -454,8 +454,12 @@
             .calc-wrapper { padding: 20px 12px; }
             .grandparents-row { flex-direction: column; align-items: center; }
             .gp-pair { max-width: 100%; width: 100%; }
-            .person-card { min-width: 60px; }
-            .bar-label { width: 60px; font-size: 11px; }
+            .person-card { min-width: 90px; }
+            .person-card.small { min-width: 70px; }
+            .eye-display { width: 90px; height: 90px; }
+            .person-card.small .eye-display { width: 64px; height: 64px; }
+            .bar-eye { width: 36px; height: 36px; }
+            .bar-label { width: 64px; font-size: 12px; }
           }
         </style>
 
