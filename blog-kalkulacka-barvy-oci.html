@@ -261,16 +261,26 @@
           }
           .result-card-title span { font-size: 22px; display: block; margin-bottom: 4px; }
 
+          /* ── Pair divider (dashed pink line between grandpa/grandma) ── */
+          .pair-divider {
+            width: 2px;
+            border-left: 2px dashed rgba(184,69,125,0.40);
+            align-self: center;
+            height: 90px;
+            margin: 0 4px;
+          }
+          .parents-pair .pair-divider { height: 120px; }
+
           /* ── Person card ── */
           .person-card {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 8px;
-            min-width: 320px;
-            max-width: 360px;
+            min-width: 160px;
+            max-width: 220px;
           }
-          .person-card.small { min-width: 240px; max-width: 280px; }
+          .person-card.small { min-width: 160px; max-width: 200px; }
           .person-role {
             font-size: 9px;
             font-weight: 700;
@@ -314,9 +324,9 @@
             flex-wrap: wrap;
             gap: 8px;
             justify-content: center;
-            max-width: 340px;
+            max-width: 220px;
           }
-          .person-card.small .color-selector { max-width: 260px; gap: 6px; }
+          .person-card.small .color-selector { max-width: 200px; gap: 6px; }
           .eye-btn {
             width: 104px;
             height: 104px;
@@ -608,6 +618,7 @@
                                                 <div class="eye-display" id="disp-pgf"><span class="eye-placeholder">?</span></div>
                                                 <div class="color-selector" id="sel-pgf"></div>
                                             </div>
+                                            <div class="pair-divider"></div>
                                             <div class="person-card small" id="card-pgm">
                                                 <div class="person-role">♀</div>
                                                 <div class="person-name">Babička</div>
@@ -626,6 +637,7 @@
                                                 <div class="eye-display" id="disp-mgf"><span class="eye-placeholder">?</span></div>
                                                 <div class="color-selector" id="sel-mgf"></div>
                                             </div>
+                                            <div class="pair-divider"></div>
                                             <div class="person-card small" id="card-mgm">
                                                 <div class="person-role">♀</div>
                                                 <div class="person-name">Babička</div>
@@ -654,6 +666,7 @@
                                         <div class="color-selector" id="sel-fa"></div>
                                         <div style="font-size:10px;color:#e05090;margin-top:2px;display:none" id="hint-fa">vyberte barvu</div>
                                     </div>
+                                    <div class="pair-divider"></div>
                                     <div class="person-card" id="card-mo">
                                         <div class="person-role">♀ Rodič</div>
                                         <div class="person-name">Matka</div>
