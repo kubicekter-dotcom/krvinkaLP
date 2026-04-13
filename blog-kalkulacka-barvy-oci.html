@@ -318,6 +318,22 @@
           .eye-btn.active { border-color: #b8457d; box-shadow: 0 0 0 2px rgba(184,69,125,.25); }
           .eye-btn.unk { border-color: #ddd; background: #f0ede9; }
           .eye-btn.unk img { opacity: .6; }
+          .eye-btn-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+          }
+          .eye-btn-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: #aaa;
+            text-align: center;
+            transition: color .15s;
+            font-family: 'Nunito Sans', sans-serif;
+            white-space: nowrap;
+          }
+          .eye-btn-label.active { color: #b8457d; font-weight: 700; }
           /* Green eye image has more whitespace — zoom in to match others */
           img[src*="zelene"] { transform: scale(1.35); }
 
@@ -946,6 +962,8 @@
         const selEl = document.getElementById(p.sel);
         const opts = p.withUnk ? [...COLORS, "unknown"] : COLORS;
         opts.forEach(col => {
+          const wrap = document.createElement("div");
+          wrap.className = "eye-btn-wrap";
           const btn = document.createElement("button");
           btn.className = "eye-btn" + (col==="unknown" ? " unk" : "");
           btn.title = COLOR_META[col].name;
@@ -955,19 +973,28 @@
           img.src = imgSrc(col);
           img.alt = COLOR_META[col].name;
           btn.appendChild(img);
+          const lbl = document.createElement("div");
+          lbl.className = "eye-btn-label";
+          lbl.textContent = COLOR_META[col].name;
+          wrap.appendChild(btn);
+          wrap.appendChild(lbl);
           btn.addEventListener("click", function() {
             state[p.id] = col;
             updateDisplay(p.id, col);
             selEl.querySelectorAll(".eye-btn").forEach(b => b.classList.remove("active"));
+            selEl.querySelectorAll(".eye-btn-label").forEach(l => l.classList.remove("active"));
             btn.classList.add("active");
+            lbl.classList.add("active");
             compute();
           });
-          selEl.appendChild(btn);
+          selEl.appendChild(wrap);
         });
         // Set initial unknown state for grandparents
         if (p.withUnk) {
           updateDisplay(p.id, "unknown");
-          selEl.querySelector('[data-color="unknown"]').classList.add("active");
+          const unkBtn = selEl.querySelector('[data-color="unknown"]');
+          unkBtn.classList.add("active");
+          unkBtn.closest(".eye-btn-wrap").querySelector(".eye-btn-label").classList.add("active");
         }
       });
 
