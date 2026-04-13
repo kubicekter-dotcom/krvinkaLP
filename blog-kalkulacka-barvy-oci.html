@@ -315,6 +315,8 @@
           .eye-btn.active { border-color: #b8457d; box-shadow: 0 0 0 2px rgba(184,69,125,.25); }
           .eye-btn.unk { border-color: #ddd; background: #f0ede9; }
           .eye-btn.unk img { opacity: .6; }
+          /* Green eye image has more whitespace — zoom in to match others */
+          img[src*="zelene"] { transform: scale(1.35); }
 
           /* ── Result bars ── */
           .result-bars { display: flex; flex-direction: column; gap: 8px; }
