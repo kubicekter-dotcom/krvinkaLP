@@ -1,6 +1,9 @@
 *.bak
 *.bak*
 *.backup*
+*_backup*
+*backup-*.html
 *.afpub
 *.afdesign
 *.afphoto
+tmpclaude-*
