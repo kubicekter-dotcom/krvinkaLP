@@ -237,7 +237,12 @@
         gap: .6rem;
         margin-bottom: 1.2rem;
       }
-      @media(max-width: 480px) { .pex-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media(max-width: 480px) {
+        .pex-grid { grid-template-columns: repeat(3, 1fr); gap: .4rem; }
+        .pcard-b .cn { font-size: .72rem; }
+        .pcard-b img { width: 65%; }
+        .pcard-b img.img-scale-up { width: 82%; }
+      }
 
       /* Card */
       .pcard { aspect-ratio: 3/4; cursor: pointer; perspective: 1000px; }
