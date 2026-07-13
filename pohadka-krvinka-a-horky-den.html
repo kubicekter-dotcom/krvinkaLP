@@ -525,6 +525,115 @@
             background: #a03d70;
           }
 
+          /* Mini Sweat Calculator */
+          .mini-calc-scenarios {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+          }
+
+          .scenario-card {
+            flex: 1 1 150px;
+            max-width: 200px;
+            padding: 16px 12px;
+            border: 2px solid #b8457d;
+            background: #fff;
+            color: #333;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: 'Nunito Sans', sans-serif;
+            text-align: center;
+            transition: all 0.2s ease;
+          }
+
+          .scenario-card:hover {
+            background: rgba(184, 69, 125, 0.1);
+          }
+
+          .scenario-card.selected {
+            background: #b8457d;
+            color: #fff;
+          }
+
+          .mini-calc-form {
+            max-width: 380px;
+            margin: 0 auto;
+            display: none;
+          }
+
+          .mini-calc-form.visible {
+            display: block;
+          }
+
+          .mini-calc-form .form-group-calc {
+            margin-bottom: 18px;
+          }
+
+          .mini-calc-form label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+            font-size: 14px;
+          }
+
+          .mini-calc-form input[type="number"],
+          .mini-calc-form select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: 'Nunito Sans', sans-serif;
+            background: #fff;
+          }
+
+          .mini-calc-form input[type="number"]:focus,
+          .mini-calc-form select:focus {
+            outline: none;
+            border-color: #b8457d;
+          }
+
+          .mini-calc-button {
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, #b8457d 0%, #d4699b 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+          }
+
+          .mini-calc-button:hover {
+            box-shadow: 0 4px 14px rgba(184, 69, 125, 0.3);
+          }
+
+          .mini-calc-result {
+            display: none;
+            margin-top: 24px;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #b8457d;
+            border-radius: 8px;
+            text-align: center;
+          }
+
+          .mini-calc-result.visible {
+            display: block;
+          }
+
+          .mini-calc-link {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 15px;
+          }
+
           /* Story Navigation */
           .story-navigation {
             margin-top: 50px;
@@ -889,6 +998,48 @@
                             </div>
                         </div>
 
+                        <div class="quiz-section" id="mini-sweat-calc">
+                            <h2>Kolik bys se zapotil/a ty?</h2>
+                            <p class="quiz-intro">Představ si horký den. Vyber si, jak horko by bylo, a zjisti odhad.</p>
+
+                            <div class="mini-calc-scenarios">
+                                <button type="button" class="scenario-card" data-temp="24" data-humidity="sucho">☀️ Mírně teplé odpoledne</button>
+                                <button type="button" class="scenario-card" data-temp="30" data-humidity="normalni">🔥 Pořádné letní vedro</button>
+                                <button type="button" class="scenario-card" data-temp="35" data-humidity="dusno">🏜️ Jako v peci</button>
+                            </div>
+
+                            <div class="mini-calc-form" id="miniCalcForm">
+                                <div class="form-group-calc">
+                                    <label for="miniWeight">Tvoje hmotnost (kg)</label>
+                                    <input type="number" id="miniWeight" min="10" max="200" placeholder="např. 35">
+                                </div>
+                                <div class="form-group-calc">
+                                    <label for="miniAge">Věk</label>
+                                    <select id="miniAge">
+                                        <option value="dite">Dítě (6 až 12 let)</option>
+                                        <option value="teenager">Teenager (13 až 17 let)</option>
+                                        <option value="dospely">Dospělý (18 let a víc)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-calc">
+                                    <label for="miniActivity">Co budeš dělat?</label>
+                                    <select id="miniActivity">
+                                        <option value="klid">Klid, odpočinek ve stínu</option>
+                                        <option value="lehka">Hra, procházka</option>
+                                        <option value="stredni" selected>Kolo, honičky</option>
+                                        <option value="vysoka">Běh, sport</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="mini-calc-button" id="miniCalcButton">Spočítat za hodinu</button>
+                            </div>
+
+                            <div class="mini-calc-result" id="miniCalcResult">
+                                <p class="quiz-result-text" id="miniCalcResultText"></p>
+                            </div>
+
+                            <p class="mini-calc-link"><a href="blog-kalkulacka-poceni.html">Chceš si pohrát s teplotou, vlhkostí i délkou zvlášť? Zkus celou kalkulačku pocení →</a></p>
+                        </div>
+
                         <h2>Zdroje</h2>
 
                         <ul>
@@ -1168,6 +1319,96 @@
                 document.addEventListener('DOMContentLoaded', initQuiz);
             } else {
                 initQuiz();
+            }
+        })();
+    </script>
+
+    <!-- Mini Sweat Calculator -->
+    <script>
+        (function () {
+            // Stejné biologické konstanty jako plná kalkulačka pocení (blog-kalkulacka-poceni.html)
+            var CONFIG = {
+                ACTIVITY_RATES: { klid: 0.1, lehka: 0.3, stredni: 0.5, vysoka: 0.8 },
+                REFERENCE_WEIGHT_KG: 70,
+                AGE_MULTIPLIERS: { dite: 0.7, teenager: 0.85, dospely: 1.0 },
+                TEMPERATURE_BANDS: [
+                    { max: 22, mult: 0.8 },
+                    { max: 28, mult: 1.0 },
+                    { max: 33, mult: 1.4 },
+                    { max: Infinity, mult: 1.8 }
+                ],
+                HUMIDITY_MULTIPLIERS: { sucho: 0.9, normalni: 1.0, dusno: 1.3, mlha: 1.5 },
+                RANGE_PERCENT: 0.15
+            };
+
+            function getTemperatureMultiplier(tempC) {
+                for (var i = 0; i < CONFIG.TEMPERATURE_BANDS.length; i++) {
+                    if (tempC <= CONFIG.TEMPERATURE_BANDS[i].max) return CONFIG.TEMPERATURE_BANDS[i].mult;
+                }
+                return CONFIG.TEMPERATURE_BANDS[CONFIG.TEMPERATURE_BANDS.length - 1].mult;
+            }
+
+            function formatCzech(num, decimals) {
+                return num.toFixed(decimals).replace('.', ',');
+            }
+
+            function initMiniCalc() {
+                var section = document.getElementById('mini-sweat-calc');
+                if (!section) return;
+
+                var scenarioCards = section.querySelectorAll('.scenario-card');
+                var form = document.getElementById('miniCalcForm');
+                var resultBox = document.getElementById('miniCalcResult');
+                var resultText = document.getElementById('miniCalcResultText');
+                var calcButton = document.getElementById('miniCalcButton');
+                var selectedTemp = null;
+                var selectedHumidity = null;
+
+                scenarioCards.forEach(function (card) {
+                    card.addEventListener('click', function () {
+                        scenarioCards.forEach(function (c) { c.classList.remove('selected'); });
+                        card.classList.add('selected');
+                        selectedTemp = parseFloat(card.dataset.temp);
+                        selectedHumidity = card.dataset.humidity;
+                        form.classList.add('visible');
+                        resultBox.classList.remove('visible');
+                    });
+                });
+
+                calcButton.addEventListener('click', function () {
+                    var weight = parseFloat(document.getElementById('miniWeight').value);
+                    if (isNaN(weight) || weight < 10 || weight > 200) {
+                        resultText.textContent = 'Zadej prosím hmotnost mezi 10 a 200 kg.';
+                        resultBox.classList.add('visible');
+                        return;
+                    }
+
+                    var ageCategory = document.getElementById('miniAge').value;
+                    var activity = document.getElementById('miniActivity').value;
+
+                    var baseRate = CONFIG.ACTIVITY_RATES[activity];
+                    var weightFactor = weight / CONFIG.REFERENCE_WEIGHT_KG;
+                    var ageMult = CONFIG.AGE_MULTIPLIERS[ageCategory];
+                    var tempMult = getTemperatureMultiplier(selectedTemp);
+                    var humidityMult = CONFIG.HUMIDITY_MULTIPLIERS[selectedHumidity];
+
+                    var ratePerHour = baseRate * weightFactor * ageMult * tempMult * humidityMult;
+                    var low = ratePerHour * (1 - CONFIG.RANGE_PERCENT);
+                    var high = ratePerHour * (1 + CONFIG.RANGE_PERCENT);
+                    var glasses = Math.max(1, Math.round((ratePerHour * 1000) / 200));
+
+                    resultText.textContent =
+                        'Za hodinu bys mohl/a ztratit přibližně ' + formatCzech(low, 1) + ' až ' + formatCzech(high, 1) +
+                        ' litru tekutin, to je zhruba ' + glasses + ' sklenic vody na doplnění.';
+                    resultBox.classList.add('visible');
+                    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMiniCalc);
+            } else {
+                initMiniCalc();
             }
         })();
     </script>
