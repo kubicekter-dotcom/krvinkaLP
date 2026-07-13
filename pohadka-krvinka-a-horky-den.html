@@ -940,7 +940,7 @@
 
                         <div class="quiz-section" id="krvinka-quiz">
                             <h2>Kvíz: Vzpomínáš si?</h2>
-                            <p class="quiz-intro">Zkus odpovědět na otázky a ověř si, jak dobře sis pohádku zapamatoval/a!</p>
+                            <p class="quiz-intro">Zkus odpovědět na otázky a ověř si, jak dobře si pohádku pamatuješ!</p>
 
                             <div class="quiz-question">
                                 <p class="quiz-question-text">1. Jakou teplotu má lidské tělo nejraději?</p>
@@ -999,7 +999,7 @@
                         </div>
 
                         <div class="quiz-section" id="mini-sweat-calc">
-                            <h2>Kolik bys se zapotil/a ty?</h2>
+                            <h2>A kolik by to bylo u tebe?</h2>
                             <p class="quiz-intro">Představ si horký den. Vyber si, jak horko by bylo, a zjisti odhad.</p>
 
                             <div class="mini-calc-scenarios">
@@ -1290,9 +1290,9 @@
                     if (score === total) {
                         message = 'Bezchybný výkon! (' + score + '/' + total + ') Jsi opravdový expert na horké dny v těle!';
                     } else if (score >= total / 2) {
-                        message = 'Pěkně! (' + score + '/' + total + ') Pohádku sis zapamatoval/a moc dobře.';
+                        message = 'Pěkně! (' + score + '/' + total + ') Tuhle pohádku máš pěkně v hlavě.';
                     } else {
-                        message = 'Získal/a jsi ' + score + '/' + total + '. Možná si pohádku přečti ještě jednou, ať ti nic neuteče!';
+                        message = 'Máš ' + score + '/' + total + '. Možná si pohádku přečti ještě jednou, ať ti nic neuteče!';
                     }
                     resultText.textContent = message;
                     resultBox.style.display = 'block';
@@ -1398,7 +1398,7 @@
                     var glasses = Math.max(1, Math.round((ratePerHour * 1000) / 200));
 
                     resultText.textContent =
-                        'Za hodinu bys mohl/a ztratit přibližně ' + formatCzech(low, 1) + ' až ' + formatCzech(high, 1) +
+                        'Za hodinu ztratíš přibližně ' + formatCzech(low, 1) + ' až ' + formatCzech(high, 1) +
                         ' litru tekutin, to je zhruba ' + glasses + ' sklenic vody na doplnění.';
                     resultBox.classList.add('visible');
                     resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
