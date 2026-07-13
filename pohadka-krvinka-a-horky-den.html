@@ -415,6 +415,116 @@
             text-decoration: none;
           }
 
+          /* Quiz Section */
+          .quiz-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+          }
+
+          .quiz-section h2 {
+            margin-top: 0;
+          }
+
+          .quiz-intro {
+            color: #666;
+            margin-bottom: 30px;
+          }
+
+          .quiz-question {
+            margin-bottom: 28px;
+          }
+
+          .quiz-question:last-of-type {
+            margin-bottom: 0;
+          }
+
+          .quiz-question-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #2a2a2a;
+            margin-bottom: 14px;
+          }
+
+          .quiz-answers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+          }
+
+          .quiz-answer {
+            padding: 10px 18px;
+            border: 2px solid #b8457d;
+            background: #fff;
+            color: #b8457d;
+            border-radius: 20px;
+            font-size: 15px;
+            font-family: 'Nunito Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+          }
+
+          .quiz-answer:hover:not(:disabled) {
+            background: rgba(184, 69, 125, 0.1);
+          }
+
+          .quiz-answer:disabled {
+            cursor: default;
+          }
+
+          .quiz-answer.correct {
+            background: #4caf50;
+            border-color: #4caf50;
+            color: #fff;
+          }
+
+          .quiz-answer.incorrect {
+            background: #e57373;
+            border-color: #e57373;
+            color: #fff;
+          }
+
+          .quiz-feedback {
+            margin: 10px 0 0;
+            font-size: 14px;
+            font-style: italic;
+            color: #666;
+            min-height: 20px;
+          }
+
+          .quiz-result {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #b8457d;
+            border-radius: 8px;
+            text-align: center;
+          }
+
+          .quiz-result-text {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: #2a2a2a;
+          }
+
+          .quiz-retry {
+            margin-top: 15px;
+            padding: 8px 20px;
+            border: none;
+            background: #b8457d;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+          }
+
+          .quiz-retry:hover {
+            background: #a03d70;
+          }
+
           /* Story Navigation */
           .story-navigation {
             margin-top: 50px;
@@ -719,6 +829,66 @@
                             <li>Za horka můžeme vypotit až <strong>3 litry tekutin za hodinu</strong> (v opravdu extrémním případě až 4 litry za hodinu).</li>
                         </ul>
 
+                        <div class="quiz-section" id="krvinka-quiz">
+                            <h2>Kvíz: Vzpomínáš si?</h2>
+                            <p class="quiz-intro">Zkus odpovědět na otázky a ověř si, jak dobře sis pohádku zapamatoval/a!</p>
+
+                            <div class="quiz-question">
+                                <p class="quiz-question-text">1. Jakou teplotu má lidské tělo nejraději?</p>
+                                <div class="quiz-answers">
+                                    <button class="quiz-answer" data-correct="false">35 °C</button>
+                                    <button class="quiz-answer" data-correct="true">37 °C</button>
+                                    <button class="quiz-answer" data-correct="false">40 °C</button>
+                                </div>
+                                <p class="quiz-feedback"></p>
+                            </div>
+
+                            <div class="quiz-question">
+                                <p class="quiz-question-text">2. Kdo v mozku funguje jako „živý teploměr" a řídí pocení?</p>
+                                <div class="quiz-answers">
+                                    <button class="quiz-answer" data-correct="false">mozeček</button>
+                                    <button class="quiz-answer" data-correct="true">hypotalamus</button>
+                                    <button class="quiz-answer" data-correct="false">mícha</button>
+                                </div>
+                                <p class="quiz-feedback"></p>
+                            </div>
+
+                            <div class="quiz-question">
+                                <p class="quiz-question-text">3. Co dělá tělo v horku kromě pocení, aby se ochladilo?</p>
+                                <div class="quiz-answers">
+                                    <button class="quiz-answer" data-correct="false">zúží cévy v kůži</button>
+                                    <button class="quiz-answer" data-correct="true">rozšíří cévy v kůži</button>
+                                    <button class="quiz-answer" data-correct="false">zpomalí srdce</button>
+                                </div>
+                                <p class="quiz-feedback"></p>
+                            </div>
+
+                            <div class="quiz-question">
+                                <p class="quiz-question-text">4. Proč nás odpařující se pot ochlazuje?</p>
+                                <div class="quiz-answers">
+                                    <button class="quiz-answer" data-correct="false">protože je studený jako led</button>
+                                    <button class="quiz-answer" data-correct="true">odpařením si odnáší kus tepla</button>
+                                    <button class="quiz-answer" data-correct="false">protože zastaví pocení</button>
+                                </div>
+                                <p class="quiz-feedback"></p>
+                            </div>
+
+                            <div class="quiz-question">
+                                <p class="quiz-question-text">5. Kolik potu můžeme za velkého horka vypotit až za hodinu?</p>
+                                <div class="quiz-answers">
+                                    <button class="quiz-answer" data-correct="false">pár kapek</button>
+                                    <button class="quiz-answer" data-correct="true">2 až 3 litry</button>
+                                    <button class="quiz-answer" data-correct="false">10 litrů</button>
+                                </div>
+                                <p class="quiz-feedback"></p>
+                            </div>
+
+                            <div class="quiz-result" id="quiz-result">
+                                <p class="quiz-result-text"></p>
+                                <button class="quiz-retry" id="quiz-retry">Zkusit znovu</button>
+                            </div>
+                        </div>
+
                         <h2>Zdroje</h2>
 
                         <ul>
@@ -918,6 +1088,89 @@
     <script src="assets/js/plugins/scrollReveal.min.js"></script>
     <script src="assets/js/plugins/bootstrap-dropdownhover.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Fairy Tale Quiz -->
+    <script>
+        (function () {
+            function initQuiz() {
+                var quizSection = document.getElementById('krvinka-quiz');
+                if (!quizSection) return;
+
+                var questions = quizSection.querySelectorAll('.quiz-question');
+                var resultBox = document.getElementById('quiz-result');
+                var resultText = resultBox.querySelector('.quiz-result-text');
+                var retryButton = document.getElementById('quiz-retry');
+                var score = 0;
+                var answered = 0;
+                var total = questions.length;
+
+                questions.forEach(function (question) {
+                    var buttons = question.querySelectorAll('.quiz-answer');
+                    var feedback = question.querySelector('.quiz-feedback');
+
+                    buttons.forEach(function (button) {
+                        button.addEventListener('click', function () {
+                            if (question.classList.contains('answered')) return;
+                            question.classList.add('answered');
+                            answered++;
+
+                            var isCorrect = button.dataset.correct === 'true';
+                            if (isCorrect) {
+                                button.classList.add('correct');
+                                feedback.textContent = 'Přesně tak!';
+                                score++;
+                            } else {
+                                button.classList.add('incorrect');
+                                feedback.textContent = 'Skoro! Správná odpověď je zvýrazněná zeleně.';
+                                buttons.forEach(function (b) {
+                                    if (b.dataset.correct === 'true') b.classList.add('correct');
+                                });
+                            }
+
+                            buttons.forEach(function (b) { b.disabled = true; });
+
+                            if (answered === total) showResult();
+                        });
+                    });
+                });
+
+                function showResult() {
+                    var message;
+                    if (score === total) {
+                        message = 'Bezchybný výkon! (' + score + '/' + total + ') Jsi opravdový expert na horké dny v těle!';
+                    } else if (score >= total / 2) {
+                        message = 'Pěkně! (' + score + '/' + total + ') Pohádku sis zapamatoval/a moc dobře.';
+                    } else {
+                        message = 'Získal/a jsi ' + score + '/' + total + '. Možná si pohádku přečti ještě jednou, ať ti nic neuteče!';
+                    }
+                    resultText.textContent = message;
+                    resultBox.style.display = 'block';
+                    resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+
+                retryButton.addEventListener('click', function () {
+                    score = 0;
+                    answered = 0;
+                    resultBox.style.display = 'none';
+                    questions.forEach(function (question) {
+                        question.classList.remove('answered');
+                        question.querySelector('.quiz-feedback').textContent = '';
+                        question.querySelectorAll('.quiz-answer').forEach(function (b) {
+                            b.disabled = false;
+                            b.classList.remove('correct', 'incorrect');
+                        });
+                    });
+                    quizSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initQuiz);
+            } else {
+                initQuiz();
+            }
+        })();
+    </script>
 
     <!-- ECOMAIL WIDGET LOADER -->
     <script>
