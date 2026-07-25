@@ -170,11 +170,13 @@
             .ns-final-cta p { font-size:17px; line-height:1.6; opacity:0.92; margin-bottom:32px; }
             .ns-final-cta .ns-cta-btn { background:#fff; color:#b8457d !important; }
             .ns-final-cta .ns-cta-btn:hover { background:#ffe3ee; color:#a03d70 !important; }
+            .ns-final-cta-btns { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
+            .ns-final-cta-btns .ns-cta-btn { margin:0; }
             @media (max-width:767px) {
                 .ns-section { padding:40px 0; }
                 .ns-side-image { margin-bottom:24px; }
-                .ns-final-cta .ns-cta-btn { display:block; margin:12px auto 0; max-width:280px; }
-                .ns-final-cta .ns-cta-btn + .ns-cta-btn { margin-left:0; }
+                .ns-final-cta-btns { flex-direction:column; align-items:center; }
+                .ns-final-cta .ns-cta-btn { display:block; margin:0 auto; max-width:280px; }
             }
             .ws-accordion .accordion-group { border:1px solid #eee; border-top:1px solid #eee; border-radius:8px; margin-top:14px; padding:0; overflow:hidden; transition:border-color 0.2s ease; }
             .ws-accordion .accordion-group:hover { border-color:#f3c8dc; }
@@ -251,6 +253,7 @@
                         </a>
                     </div>
                     <ul class="nav-right">
+                        <li><a href="krvinka-leti-do-skol.html">Krvinka pro školy</a></li>
                         <li><a href="o-autorce.html">O autorce</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                     </ul>
@@ -266,6 +269,7 @@
                             <li><a href="index.html">Domů</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky-gamebook--kniha-/">Obchod</a></li>
+                            <li><a href="krvinka-leti-do-skol.html">Krvinka pro školy</a></li>
                             <li><a href="o-autorce.html">O autorce</a></li>
                             <li><a href="kontakt.html">Kontakt</a></li>
                         </ul>
@@ -463,7 +467,7 @@
                         <li>digitální materiály</li>
                         <li>licence pro jednu školu</li>
                     </ul>
-                    <p style="margin-top:auto;"><a href="kontakt.html" class="ns-cta-btn ns-cta-btn-block">Chci startovací sadu</a></p>
+                    <p style="margin-top:auto;"><a href="kontakt.html" class="ns-cta-btn ns-cta-btn-block">Předobjednat startovací sadu</a></p>
                 </div>
 
                 <div class="ns-pricing-card ns-pricing-card-featured" id="tymova-sada">
@@ -482,7 +486,7 @@
                         <li>nástroje pro reflexi a ověřování porozumění</li>
                         <li>licence pro jednu školu</li>
                     </ul>
-                    <p style="margin-top:auto;"><a href="kontakt.html" class="ns-cta-btn ns-cta-btn-block">Chci týmovou sadu</a></p>
+                    <p style="margin-top:auto;"><a href="kontakt.html" class="ns-cta-btn ns-cta-btn-block">Předobjednat týmovou sadu</a></p>
                 </div>
 
                 <div class="ns-pricing-card" id="individualni-sada">
@@ -501,7 +505,7 @@
                         <li>podklady pro reflexi a sebehodnocení žáků</li>
                         <li>licence pro jednu školu</li>
                     </ul>
-                    <p style="margin-top:auto;"><a href="kontakt.html" class="ns-cta-btn ns-cta-btn-block">Chci gamebook pro každého</a></p>
+                    <p style="margin-top:auto;"><a href="kontakt.html" class="ns-cta-btn ns-cta-btn-block">Předobjednat gamebook pro každého</a></p>
                 </div>
 
             </div>
@@ -666,7 +670,11 @@
                 <p>Je to dokonale propojený celek, ve kterém každá soustava ovlivňuje všechny ostatní. Dobrodružství červené krvinky pomáhá žákům tyto vztahy skutečně pochopit.</p>
                 <p>Škole přináší opakovaně využitelnou pomůcku. Učiteli hotové metodické zázemí. Žákům výuku, ve které musejí číst, přemýšlet, spolupracovat a hledat souvislosti.</p>
                 <p style="font-weight:700; margin-bottom:20px;">Vyberte sadu, která odpovídá způsobu práce ve vaší škole</p>
-                <a href="#startovaci-sada" class="ns-cta-btn">Prohlédnout startovací sadu</a><a href="#tymova-sada" class="ns-cta-btn">Prohlédnout týmovou sadu</a><a href="#individualni-sada" class="ns-cta-btn">Prohlédnout sadu pro každého</a>
+                <div class="ns-final-cta-btns">
+                    <a href="#startovaci-sada" class="ns-cta-btn">Prohlédnout startovací sadu</a>
+                    <a href="#tymova-sada" class="ns-cta-btn">Prohlédnout týmovou sadu</a>
+                    <a href="#individualni-sada" class="ns-cta-btn">Prohlédnout sadu pro každého</a>
+                </div>
             </div>
         </div>
     </section>
