@@ -49,6 +49,34 @@
         <!-- Canonical URL -->
         <link rel="canonical" href="https://www.krvinka.cz/pohadka-krvinka-a-husi-kuze.html">
 
+        <!-- Schema.org BreadcrumbList Markup -->
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Blog",
+      "item": "https://www.krvinka.cz/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pohádky",
+      "item": "https://www.krvinka.cz/blog-pohadky.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Krvinka a tajemství husí kůže",
+      "item": "https://www.krvinka.cz/pohadka-krvinka-a-husi-kuze.html"
+    }
+  ]
+}
+        </script>
+
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
@@ -491,14 +519,14 @@
                 <div class="krvinka-nav-desktop">
                     <!-- Left Menu -->
                     <ul class="nav-left">
-                        <li><a href="index.html">Domů</a></li>
+                        <li><a href="/">Domů</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky-gamebook--kniha-/">Obchod</a></li>
                     </ul>
 
                     <!-- Logo -->
                     <div class="logo-center">
-                        <a href="index.html" class="logo-link">
+                        <a href="/" class="logo-link">
                             <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
                         </a>
                     </div>
@@ -516,13 +544,13 @@
                     <div class="krvinka-nav-mobile">
                         <!-- Logo first on mobile -->
                         <div class="logo-mobile">
-                            <a href="index.html" class="logo-link">
+                            <a href="/" class="logo-link">
                                 <img src="assets/img/logo-black.png" alt="Krvinka" class="img-responsive logo-img">
                             </a>
                         </div>
                         <!-- Menu items below logo -->
                         <ul class="nav-mobile">
-                            <li><a href="index.html">Domů</a></li>
+                            <li><a href="/">Domů</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="https://www.kidventure.cz/dobrodruzstvi-cervene-krvinky-gamebook--kniha-/">Obchod</a></li>
                             <li><a href="krvinka-leti-do-skol.html">Krvinka pro školy</a></li>
@@ -541,7 +569,7 @@
         <div class="container">
             <ol class="breadcrumb">
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="#">Pohádky</a></li>
+                <li><a href="blog-pohadky.html">Pohádky</a></li>
                 <li class="active">Krvinka a tajemství husí kůže</li>
             </ol>
         </div>
@@ -652,12 +680,12 @@
                     <!-- Tags -->
                     <div class="blog-tags">
                         <h4>Štítky:</h4>
-                        <a href="#" class="blog-tag">Pohádky</a>
-                        <a href="#" class="blog-tag">Husí kůže</a>
-                        <a href="#" class="blog-tag">Kůže</a>
-                        <a href="#" class="blog-tag">Nervová soustava</a>
-                        <a href="#" class="blog-tag">Vzdělávání</a>
-                        <a href="#" class="blog-tag">Pro děti</a>
+                        <a href="stitek-pohadky.html" class="blog-tag">Pohádky</a>
+                        <a href="stitek-husi-kuze.html" class="blog-tag">Husí kůže</a>
+                        <a href="stitek-kuze.html" class="blog-tag">Kůže</a>
+                        <a href="stitek-nervova-soustava.html" class="blog-tag">Nervová soustava</a>
+                        <a href="stitek-vzdelavani.html" class="blog-tag">Vzdělávání</a>
+                        <a href="stitek-pro-deti.html" class="blog-tag">Pro děti</a>
                     </div>
 
                     <!-- Story Navigation -->
@@ -694,10 +722,35 @@
                     <div class="ws-product-description text-center" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
                         <h3>Sdílejte tento článek</h3>
                         <div class="ws-product-social-icon">
-                            <a href="#" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-twitter"></i></a>
-                            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-facebook"></i></a>
-                            <a href="#" onclick="window.open('https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&description=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.krvinka.cz%2Fpohadka-krvinka-a-husi-kuze.html" target="_blank" rel="noopener" aria-label="Sdílet na Facebooku"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.krvinka.cz%2Fpohadka-krvinka-a-husi-kuze.html&media=https%3A%2F%2Fwww.krvinka.cz%2Fassets%2Fimg%2FPoh%25C3%25A1dky%2520z%2520krevn%25C3%25ADho%2520%25C5%2599e%25C4%258Di%25C5%25A1t%25C4%259B%2F07_hus%25C3%25AD%2520k%25C5%25AF%25C5%25BEe%2F1000x1000%2520poh%25C3%25A1dky.jpg&description=Krvinka%20a%20tajemstv%C3%AD%20hus%C3%AD%20k%C5%AF%C5%BEe" target="_blank" rel="noopener" aria-label="Připnout na Pinterest"><i class="fa fa-pinterest"></i></a>
+                            <a href="mailto:?subject=Krvinka%20a%20tajemstv%C3%AD%20hus%C3%AD%20k%C5%AF%C5%BEe&body=Pod%C3%ADvej%20se%20na%20tento%20%C4%8Dl%C3%A1nek%3A%20https%3A%2F%2Fwww.krvinka.cz%2Fpohadka-krvinka-a-husi-kuze.html" aria-label="Sdílet e-mailem"><i class="fa fa-envelope"></i></a>
+                            <button type="button" class="blog-share-copy" onclick="krvinkaCopyLink(this, 'https://www.krvinka.cz/pohadka-krvinka-a-husi-kuze.html')" aria-label="Kopírovat odkaz na článek"><i class="fa fa-link"></i></button>
                         </div>
+                        <script>
+                        function krvinkaCopyLink(btn, url) {
+                            function done(ok) {
+                                var label = ok ? 'Odkaz zkop\u00edrov\u00e1n' : 'Kop\u00edrov\u00e1n\u00ed se nezda\u0159ilo';
+                                btn.setAttribute('aria-label', label);
+                                setTimeout(function () { btn.setAttribute('aria-label', 'Kop\u00edrovat odkaz na \u010dl\u00e1nek'); }, 2000);
+                            }
+                            if (navigator.clipboard && window.isSecureContext) {
+                                navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+                            } else {
+                                var ta = document.createElement('textarea');
+                                ta.value = url;
+                                ta.style.position = 'fixed';
+                                ta.style.opacity = '0';
+                                document.body.appendChild(ta);
+                                ta.focus();
+                                ta.select();
+                                var ok = false;
+                                try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+                                document.body.removeChild(ta);
+                                done(ok);
+                            }
+                        }
+                        </script>
                     </div>
 
                 </div>
@@ -806,7 +859,7 @@
                     <h3>Navigace</h3>
                     <div class="ws-footer-separator"></div>
                     <ul class="ws-footer-list">
-                        <li><a href="index.html">O Krvince</a></li>
+                        <li><a href="/">O Krvince</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="kontakt.html">Kontakt</a></li>
                         <li><a href="o-autorce.html">O autorce</a></li>
