@@ -98,14 +98,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Support Pages -->
-  <url>
-    <loc>https://www.krvinka.cz/faq.html</loc>
-    <lastmod>2026-01-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <!-- Legal Pages -->
   <url>
     <loc>https://www.krvinka.cz/obchodni-podminky.html</loc>
