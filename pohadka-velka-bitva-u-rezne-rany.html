@@ -401,10 +401,35 @@
                     <div class="ws-product-description text-center" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
                         <h3>Sdílejte tento článek</h3>
                         <div class="ws-product-social-icon">
-                            <a href="#" onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-twitter"></i></a>
-                            <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-facebook"></i></a>
-                            <a href="#" onclick="window.open('https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&description=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400'); return false;"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.krvinka.cz%2Fpohadka-velka-bitva-u-rezne-rany.html" target="_blank" rel="noopener" aria-label="Sdílet na Facebooku"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.krvinka.cz%2Fpohadka-velka-bitva-u-rezne-rany.html&media=https%3A%2F%2Fwww.krvinka.cz%2Fassets%2Fimg%2FPoh%25C3%25A1dky%2520z%2520krevn%25C3%25ADho%2520%25C5%2599e%25C4%258Di%25C5%25A1t%25C4%259B%2F06_velk%25C3%25A1%2520bitva%2520u%2520%25C5%2599ezn%25C3%25A9%2520r%25C3%25A1ny%2F1000x1000%2520poh%25C3%25A1dky%2520titulka.jpg&description=Krvinka%20a%20velk%C3%A1%20bitva%20u%20%C5%99ezn%C3%A9%20r%C3%A1ny" target="_blank" rel="noopener" aria-label="Připnout na Pinterest"><i class="fa fa-pinterest"></i></a>
+                            <a href="mailto:?subject=Krvinka%20a%20velk%C3%A1%20bitva%20u%20%C5%99ezn%C3%A9%20r%C3%A1ny&body=Pod%C3%ADvej%20se%20na%20tento%20%C4%8Dl%C3%A1nek%3A%20https%3A%2F%2Fwww.krvinka.cz%2Fpohadka-velka-bitva-u-rezne-rany.html" aria-label="Sdílet e-mailem"><i class="fa fa-envelope"></i></a>
+                            <button type="button" class="blog-share-copy" onclick="krvinkaCopyLink(this, 'https://www.krvinka.cz/pohadka-velka-bitva-u-rezne-rany.html')" aria-label="Kopírovat odkaz na článek"><i class="fa fa-link"></i></button>
                         </div>
+                        <script>
+                        function krvinkaCopyLink(btn, url) {
+                            function done(ok) {
+                                var label = ok ? 'Odkaz zkop\u00edrov\u00e1n' : 'Kop\u00edrov\u00e1n\u00ed se nezda\u0159ilo';
+                                btn.setAttribute('aria-label', label);
+                                setTimeout(function () { btn.setAttribute('aria-label', 'Kop\u00edrovat odkaz na \u010dl\u00e1nek'); }, 2000);
+                            }
+                            if (navigator.clipboard && window.isSecureContext) {
+                                navigator.clipboard.writeText(url).then(function () { done(true); }, function () { done(false); });
+                            } else {
+                                var ta = document.createElement('textarea');
+                                ta.value = url;
+                                ta.style.position = 'fixed';
+                                ta.style.opacity = '0';
+                                document.body.appendChild(ta);
+                                ta.focus();
+                                ta.select();
+                                var ok = false;
+                                try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+                                document.body.removeChild(ta);
+                                done(ok);
+                            }
+                        }
+                        </script>
                     </div>
 
                 </div>
