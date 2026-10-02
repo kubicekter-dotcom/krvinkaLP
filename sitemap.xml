@@ -57,6 +57,13 @@
 
   <!-- Blog Articles / Stories -->
   <url>
+    <loc>https://www.krvinka.cz/pohadka-krvinka-a-velke-kychnuti.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.krvinka.cz/pohadka-krvinka-tajemstvi-piskotoveho-tvaru.html</loc>
     <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
