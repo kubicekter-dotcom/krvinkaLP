@@ -212,8 +212,11 @@
             .gallery-slider .owl-pagination { display: none !important; }
 
             /* Listování metodikou */
-            .ns-flipbook-hint { text-align: center; color: #888; margin-bottom: 30px; }
-            .flipbook-wrap { max-width: 1000px; margin: 0 auto; overflow: hidden; }
+            .ns-flipbook-hint { text-align: center; color: #888; margin-bottom: 24px; }
+            #ukazka-metodiky { padding: 40px 0; }
+            #ukazka-metodiky h2 { margin-bottom: 8px; }
+            #ukazka-metodiky .flipbook-controls { margin-top: 16px; }
+            .flipbook-wrap { max-width: 600px; margin: 0 auto; overflow: hidden; }
             .flipbook { margin: 0 auto; }
             .flipbook .page { background: #fff; }
             .flipbook .page img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -401,6 +404,33 @@
     </section>
     <!-- End Co škola nákupem získá Section -->
 
+    <!-- Listování metodikou Section -->
+    <section class="ns-section" id="ukazka-metodiky">
+        <div class="container">
+            <div class="ns-narrow text-center">
+                <h2>Nahlédněte do metodiky</h2>
+                <p class="ns-flipbook-hint">Ukázka z kapitoly Nervová soustava. Listujte šipkami nebo kliknutím na roh stránky.</p>
+            </div>
+            <div class="flipbook-wrap">
+                <div class="flipbook" id="flipbook">
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-1.jpg" alt="Ukázka z metodiky Nervová soustava, strana 1"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-2.jpg" alt="Ukázka z metodiky Nervová soustava, strana 2"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-7.jpg" alt="Ukázka z metodiky Nervová soustava, strana 7"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-8.jpg" alt="Ukázka z metodiky Nervová soustava, strana 8"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-9.jpg" alt="Ukázka z metodiky Nervová soustava, strana 9"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-10.jpg" alt="Ukázka z metodiky Nervová soustava, strana 10"></div>
+                </div>
+            </div>
+            <div class="flipbook-controls">
+                <button type="button" id="flip-prev" aria-label="Předchozí stránka">&#10094;</button>
+                <span class="flipbook-counter" id="flip-counter"></span>
+                <button type="button" id="flip-next" aria-label="Další stránka">&#10095;</button>
+            </div>
+            <p class="text-center" style="margin:20px 0 0;"><a href="nervova-soustava-pro-skoly.html#registrace" class="ns-cta-btn">Stáhnout celou lekci zdarma</a></p>
+        </div>
+    </section>
+    <!-- End Listování metodikou Section -->
+
     <!-- Co sada přinese žákům Section -->
     <section class="ns-section">
         <div class="container">
@@ -474,32 +504,6 @@
     </section>
     <!-- End Co sada přinese učitelům Section -->
 
-    <!-- Listování metodikou Section -->
-    <section class="ns-section" id="ukazka-metodiky">
-        <div class="container">
-            <div class="ns-narrow text-center">
-                <h2>Nahlédněte do metodiky</h2>
-                <p class="ns-flipbook-hint">Ukázka z kapitoly Nervová soustava. Listujte šipkami nebo kliknutím na roh stránky.</p>
-            </div>
-            <div class="flipbook-wrap">
-                <div class="flipbook" id="flipbook">
-                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-1.jpg" alt="Ukázka z metodiky Nervová soustava, strana 1"></div>
-                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-2.jpg" alt="Ukázka z metodiky Nervová soustava, strana 2"></div>
-                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-7.jpg" alt="Ukázka z metodiky Nervová soustava, strana 7"></div>
-                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-8.jpg" alt="Ukázka z metodiky Nervová soustava, strana 8"></div>
-                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-9.jpg" alt="Ukázka z metodiky Nervová soustava, strana 9"></div>
-                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-10.jpg" alt="Ukázka z metodiky Nervová soustava, strana 10"></div>
-                </div>
-            </div>
-            <div class="flipbook-controls">
-                <button type="button" id="flip-prev" aria-label="Předchozí stránka">&#10094;</button>
-                <span class="flipbook-counter" id="flip-counter"></span>
-                <button type="button" id="flip-next" aria-label="Další stránka">&#10095;</button>
-            </div>
-            <p class="text-center" style="margin-top:30px;"><a href="nervova-soustava-pro-skoly.html#registrace" class="ns-cta-btn">Stáhnout celou lekci zdarma</a></p>
-        </div>
-    </section>
-    <!-- End Listování metodikou Section -->
 
     <!-- Varianty Section -->
     <section class="ns-section" id="varianty">
@@ -825,13 +829,13 @@
         (function () {
             var el = document.getElementById('flipbook');
             var pageFlip = new St.PageFlip(el, {
-                width: 500,
-                height: 709,
+                width: 300,
+                height: 426,
                 size: 'stretch',
-                minWidth: 280,
-                maxWidth: 500,
-                minHeight: 397,
-                maxHeight: 709,
+                minWidth: 260,
+                maxWidth: 300,
+                minHeight: 369,
+                maxHeight: 426,
                 showCover: false,
                 usePortrait: true,
                 mobileScrollSupport: true,
