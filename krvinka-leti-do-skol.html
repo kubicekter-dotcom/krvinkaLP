@@ -210,6 +210,18 @@
             .gallery-slider .owl-next:hover { background: #a03d70 !important; }
             /* Skrýt tečky */
             .gallery-slider .owl-pagination { display: none !important; }
+
+            /* Listování metodikou */
+            .ns-flipbook-hint { text-align: center; color: #888; margin-bottom: 30px; }
+            .flipbook-wrap { max-width: 1000px; margin: 0 auto; overflow: hidden; }
+            .flipbook { margin: 0 auto; }
+            .flipbook .page { background: #fff; }
+            .flipbook .page img { width: 100%; height: 100%; object-fit: cover; display: block; }
+            .flipbook-controls { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 24px; }
+            .flipbook-controls button { width: 50px; height: 50px; background: #b8457d; color: #fff; border: none; border-radius: 50%; font-size: 22px; line-height: 50px; cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.25); transition: background 0.2s; }
+            .flipbook-controls button:hover { background: #a03d70; }
+            .flipbook-controls button:disabled { opacity: 0.35; cursor: default; }
+            .flipbook-counter { min-width: 110px; text-align: center; color: #555; font-size: 14px; letter-spacing: 1px; }
         </style>
 
     <script src="assets/js/cookie-consent.js"></script>
@@ -461,6 +473,33 @@
         </div>
     </section>
     <!-- End Co sada přinese učitelům Section -->
+
+    <!-- Listování metodikou Section -->
+    <section class="ns-section" id="ukazka-metodiky">
+        <div class="container">
+            <div class="ns-narrow text-center">
+                <h2>Nahlédněte do metodiky</h2>
+                <p class="ns-flipbook-hint">Ukázka z kapitoly Nervová soustava. Listujte šipkami nebo kliknutím na roh stránky.</p>
+            </div>
+            <div class="flipbook-wrap">
+                <div class="flipbook" id="flipbook">
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-1.jpg" alt="Ukázka z metodiky Nervová soustava, strana 1"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-2.jpg" alt="Ukázka z metodiky Nervová soustava, strana 2"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-7.jpg" alt="Ukázka z metodiky Nervová soustava, strana 7"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-8.jpg" alt="Ukázka z metodiky Nervová soustava, strana 8"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-9.jpg" alt="Ukázka z metodiky Nervová soustava, strana 9"></div>
+                    <div class="page"><img data-src="assets/img/metodika-ukazka/strana-10.jpg" alt="Ukázka z metodiky Nervová soustava, strana 10"></div>
+                </div>
+            </div>
+            <div class="flipbook-controls">
+                <button type="button" id="flip-prev" aria-label="Předchozí stránka">&#10094;</button>
+                <span class="flipbook-counter" id="flip-counter"></span>
+                <button type="button" id="flip-next" aria-label="Další stránka">&#10095;</button>
+            </div>
+            <p class="text-center" style="margin-top:30px;"><a href="nervova-soustava-pro-skoly.html#registrace" class="ns-cta-btn">Stáhnout celou lekci zdarma</a></p>
+        </div>
+    </section>
+    <!-- End Listování metodikou Section -->
 
     <!-- Varianty Section -->
     <section class="ns-section" id="varianty">
@@ -781,6 +820,51 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script>GLightbox({ selector: '.glightbox' });</script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+    <script>
+        (function () {
+            var el = document.getElementById('flipbook');
+            var pageFlip = new St.PageFlip(el, {
+                width: 500,
+                height: 709,
+                size: 'stretch',
+                minWidth: 280,
+                maxWidth: 500,
+                minHeight: 397,
+                maxHeight: 709,
+                showCover: false,
+                usePortrait: true,
+                mobileScrollSupport: true,
+                maxShadowOpacity: 0.4
+            });
+            pageFlip.loadFromHTML(el.querySelectorAll('.page'));
+            // obrázky stránek načíst až při přiblížení k listování
+            var imgs = el.querySelectorAll('img[data-src]');
+            function loadImgs() { for (var k = 0; k < imgs.length; k++) { imgs[k].src = imgs[k].getAttribute('data-src'); } }
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    if (entries[0].isIntersecting) { loadImgs(); io.disconnect(); }
+                }, { rootMargin: '600px 0px' });
+                io.observe(el.parentNode);
+            } else { loadImgs(); }
+            var prev = document.getElementById('flip-prev');
+            var next = document.getElementById('flip-next');
+            var counter = document.getElementById('flip-counter');
+            function update() {
+                var i = pageFlip.getCurrentPageIndex();
+                var total = pageFlip.getPageCount();
+                var portrait = pageFlip.getOrientation() === 'portrait';
+                counter.textContent = portrait ? (i + 1) + ' / ' + total : (i + 1) + '–' + (i + 2) + ' / ' + total;
+                prev.disabled = i === 0;
+                next.disabled = i >= total - (portrait ? 1 : 2);
+            }
+            prev.addEventListener('click', function () { pageFlip.flipPrev(); });
+            next.addEventListener('click', function () { pageFlip.flipNext(); });
+            pageFlip.on('flip', update);
+            pageFlip.on('changeOrientation', update);
+            update();
+        })();
+    </script>
     <script>
         jQuery('.gallery-slider').owlCarousel({
             items: 3,

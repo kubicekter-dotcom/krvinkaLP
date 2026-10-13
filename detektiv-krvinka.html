@@ -275,12 +275,12 @@
             <p class="flipbook-hint">Listujte šipkami nebo kliknutím na roh stránky.</p>
             <div class="flipbook-wrap">
                 <div class="flipbook" id="flipbook">
-                    <div class="page"><img src="assets/img/knihy/detektiv/strana-14.jpg" alt="Detektiv Krvinka – ukázka, strana 14" loading="lazy"></div>
-                    <div class="page"><img src="assets/img/knihy/detektiv/strana-15.jpg" alt="Detektiv Krvinka – ukázka, strana 15" loading="lazy"></div>
-                    <div class="page"><img src="assets/img/knihy/detektiv/strana-16.jpg" alt="Detektiv Krvinka – ukázka, strana 16" loading="lazy"></div>
-                    <div class="page"><img src="assets/img/knihy/detektiv/strana-17.jpg" alt="Detektiv Krvinka – ukázka, strana 17" loading="lazy"></div>
-                    <div class="page"><img src="assets/img/knihy/detektiv/strana-26.jpg" alt="Detektiv Krvinka – ukázka, strana 26" loading="lazy"></div>
-                    <div class="page"><img src="assets/img/knihy/detektiv/strana-27.jpg" alt="Detektiv Krvinka – ukázka, strana 27" loading="lazy"></div>
+                    <div class="page"><img data-src="assets/img/knihy/detektiv/strana-14.jpg" alt="Detektiv Krvinka – ukázka, strana 14"></div>
+                    <div class="page"><img data-src="assets/img/knihy/detektiv/strana-15.jpg" alt="Detektiv Krvinka – ukázka, strana 15"></div>
+                    <div class="page"><img data-src="assets/img/knihy/detektiv/strana-16.jpg" alt="Detektiv Krvinka – ukázka, strana 16"></div>
+                    <div class="page"><img data-src="assets/img/knihy/detektiv/strana-17.jpg" alt="Detektiv Krvinka – ukázka, strana 17"></div>
+                    <div class="page"><img data-src="assets/img/knihy/detektiv/strana-26.jpg" alt="Detektiv Krvinka – ukázka, strana 26"></div>
+                    <div class="page"><img data-src="assets/img/knihy/detektiv/strana-27.jpg" alt="Detektiv Krvinka – ukázka, strana 27"></div>
                 </div>
             </div>
             <div class="flipbook-controls">
@@ -456,6 +456,15 @@
                 maxShadowOpacity: 0.4
             });
             pageFlip.loadFromHTML(el.querySelectorAll('.page'));
+            // obrázky stránek načíst až při přiblížení k listování
+            var imgs = el.querySelectorAll('img[data-src]');
+            function loadImgs() { for (var k = 0; k < imgs.length; k++) { imgs[k].src = imgs[k].getAttribute('data-src'); } }
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    if (entries[0].isIntersecting) { loadImgs(); io.disconnect(); }
+                }, { rootMargin: '600px 0px' });
+                io.observe(el.parentNode);
+            } else { loadImgs(); }
             var prev = document.getElementById('flip-prev');
             var next = document.getElementById('flip-next');
             var counter = document.getElementById('flip-counter');
