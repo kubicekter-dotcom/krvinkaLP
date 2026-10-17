@@ -584,6 +584,35 @@
   display: none !important;
 }
 
+/* Kde jste mě a Krvinku mohli potkat */
+.krvinka-events {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+.krvinka-events li {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(184, 69, 125, 0.2);
+}
+.krvinka-events li:first-child {
+  border-top: 1px solid rgba(184, 69, 125, 0.2);
+}
+.krvinka-event-date {
+  flex: 0 0 110px;
+  font-weight: 700;
+  color: #b8457d;
+}
+.krvinka-event-info strong {
+  color: #333;
+}
+@media (max-width: 480px) {
+  .krvinka-events li { flex-direction: column; gap: 4px; }
+  .krvinka-event-date { flex-basis: auto; }
+}
+
 </style>
     
     <script src="assets/js/cookie-consent.js"></script>
@@ -743,6 +772,22 @@
                     <img src="assets/img/about/vznik-gamebooku.jpg" alt="Jak Krvinka vznikala" class="img-responsive" style="border-radius:6px;max-width:100%;">
                     </div>
                 </div>
+
+                <!-- Space Helper Class -->
+                <div class="padding-top-x70"></div>
+
+                <!-- Events -->
+                <h3>Kde jste mě a Krvinku mohli potkat</h3>
+<div class="ws-footer-separator"></div>
+                <ul class="krvinka-events">
+                    <li>
+                        <span class="krvinka-event-date">1. 10. 2026</span>
+                        <span class="krvinka-event-info">
+                            <strong>Edufórum v Praze 2026</strong><br>
+                            Zážitkové vzdělávání a gamifikace (EDUtrh)
+                        </span>
+                    </li>
+                </ul>
 
                 <!-- Space Helper Class -->
                 <div class="padding-top-x70"></div>
