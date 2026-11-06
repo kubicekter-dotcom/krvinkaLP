@@ -2,7 +2,12 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "krvinka.cz" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "krvinka.cz"
+        }
+      ],
       "destination": "https://www.krvinka.cz/$1",
       "permanent": true
     },
@@ -19,6 +24,51 @@
     {
       "source": "/faq.html",
       "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/checkout.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/my-account.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/shopping-cart.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/single-product.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/slider-fullscreen.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/slider-fullwidth.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/3d-parallax.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/second-header.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/third-header.html",
+      "destination": "/",
       "permanent": true
     }
   ]

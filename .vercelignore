@@ -1,0 +1,14 @@
+# Soubory a složky, které se nenasazují na web (zůstávají v repozitáři)
+/PSD
+/HTML
+/Documentation
+/Plugins
+/themeforest-ywduLQK6-artday-creative-shop-template
+/*.mp4
+/12 (2).png
+/CLAUDE.md
+/FORMSPREE_SETUP.txt
+*.afpub
+*.afpub~lock~
+.DS_Store
+Thumbs.db
