@@ -22,7 +22,7 @@ Allow: /assets/js/
 Allow: /assets/img/
 
 # Sitemap location
-Sitemap: https://krvinka.cz/sitemap.xml
+Sitemap: https://www.krvinka.cz/sitemap.xml
 
 # Crawl-delay (optional - removes this if causing issues)
 # Crawl-delay: 1
