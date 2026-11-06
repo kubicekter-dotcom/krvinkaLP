@@ -60,7 +60,7 @@
         'Pomáhají nám zjistit, co vás na dobrodružství s Krvinkou baví nejvíc.' +
         '<br><br>' +
         'Dáte jim svolení plout dál? ' +
-        '<a href="ochrana-soukromi.html" style="color:#FF2A8B;text-decoration:underline;">Více informací.</a>' +
+        '<a href="ochrana-soukromi.html" style="color:#D1006B;text-decoration:underline;">Více informací.</a>' +
       '</p>' +
       '<div style="display:flex;flex-direction:column;gap:8px;">' +
         '<button id="cc-btn-accept" style="' +
@@ -70,7 +70,7 @@
           'Ano, svolení dávám!' +
         '</button>' +
         '<button id="cc-btn-decline" style="' +
-          'background:transparent;color:#B39AA7;border:none;' +
+          'background:transparent;color:#7E5F6F;border:none;' +
           'padding:6px;font-size:12px;font-weight:600;cursor:pointer;' +
           'text-decoration:underline;transition:color .2s;">' +
           'Ne, raději odmítám' +
@@ -93,7 +93,7 @@
 
     var btnDecline = popup.querySelector('#cc-btn-decline');
     btnDecline.onmouseover = function () { this.style.color = '#2A2A2A'; };
-    btnDecline.onmouseout  = function () { this.style.color = '#B39AA7'; };
+    btnDecline.onmouseout  = function () { this.style.color = '#7E5F6F'; };
 
     btnAccept.addEventListener('click', function () {
       setConsent('granted');

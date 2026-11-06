@@ -2081,13 +2081,14 @@ span.ws-journal-category{
     background-color: #3D3D3D;
 }
 .ws-footer a{	
-	color: #676767;
+	color: #ffffff;
 	-ms-transition: .3s ease-in-out;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 }
 .ws-footer a:hover{	
-	color: #7E6238;		
+	color: #ffffff;
+	text-decoration: underline;		
 }
 .ws-footer h3{
 	color: #fff;
