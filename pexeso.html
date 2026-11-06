@@ -531,17 +531,17 @@
             </div>
             <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.1s, ease-in 20px'>
                 <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
-                    <img src="assets/img/about/ig1.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    <img loading="lazy" decoding="async" src="assets/img/about/ig1.jpg" alt="Instagram Krvinka" class="img-responsive">
                 </a>
             </div>
             <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.3s, ease-in 20px'>
                 <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
-                    <img src="assets/img/about/ig2.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    <img loading="lazy" decoding="async" src="assets/img/about/ig2.jpg" alt="Instagram Krvinka" class="img-responsive">
                 </a>
             </div>
             <div class="col-sm-3 ws-instagram-item" data-sr='wait 0.5s, ease-in 20px'>
                 <a href="https://www.instagram.com/krvinkabyterka" target="_blank">
-                    <img src="assets/img/about/ig3.jpg" alt="Instagram Krvinka" class="img-responsive">
+                    <img loading="lazy" decoding="async" src="assets/img/about/ig3.jpg" alt="Instagram Krvinka" class="img-responsive">
                 </a>
             </div>
         </div>
@@ -739,7 +739,7 @@ function initPexeso(numPairs) {
     card.className = 'pcard';
     const scaleUp = c.id === 'cervena-krvinka-b' ? ' class="img-scale-up"' : '';
     card.innerHTML = '<div class="pcard-inner">'
-      + '<div class="pcard-f"><img src="assets/img/Hry/pexeso-zadni-strana.jpg" alt="Krvinka pexeso"></div>'
+      + '<div class="pcard-f"><img loading="lazy" decoding="async" src="assets/img/Hry/pexeso-zadni-strana.jpg" alt="Krvinka pexeso"></div>'
       + '<div class="pcard-b"><img src="' + c.img + '" alt="' + c.name + '"' + scaleUp + ' loading="lazy"><div class="cn">' + c.name + '</div></div>'
       + '</div>';
     card.addEventListener('click', (function(idx){ return function(){ flipCard(idx); }; })(i));
