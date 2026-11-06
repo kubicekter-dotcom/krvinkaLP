@@ -34,13 +34,13 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Pexeso: Buňky krevního řečiště">
     <meta property="og:description" content="">
-    <meta property="og:image" content="https://www.krvinka.cz/assets/img/Hry/1000x1000%20nahled%20stranky.png">
+    <meta property="og:image" content="https://www.krvinka.cz/assets/img/Hry/1000x1000%20nahled%20stranky.jpg">
     <meta property="og:url" content="https://www.krvinka.cz/pexeso.html">
     <meta property="og:site_name" content="Krvinka">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pexeso: Buňky krevního řečiště">
     <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="https://www.krvinka.cz/assets/img/Hry/1000x1000%20nahled%20stranky.png">
+    <meta name="twitter:image" content="https://www.krvinka.cz/assets/img/Hry/1000x1000%20nahled%20stranky.jpg">
     <link rel="canonical" href="https://www.krvinka.cz/pexeso.html">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
@@ -51,9 +51,11 @@
     <link rel="stylesheet" href="assets/js/plugins/owl-carousel/owl.carousel.css">
 
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <style>
@@ -439,7 +441,7 @@
 <div class="container" style="padding:24px 15px 0;">
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-            <img src="assets/img/Hry/1000x1000%20nahled%20stranky.png"
+            <img src="assets/img/Hry/1000x1000%20nahled%20stranky.jpg"
                  alt="Pexeso: Buňky krevního řečiště"
                  class="img-responsive"
                  style="border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,.08); width:100%;">
@@ -737,7 +739,7 @@ function initPexeso(numPairs) {
     card.className = 'pcard';
     const scaleUp = c.id === 'cervena-krvinka-b' ? ' class="img-scale-up"' : '';
     card.innerHTML = '<div class="pcard-inner">'
-      + '<div class="pcard-f"><img src="assets/img/Hry/pexeso-zadni-strana.png" alt="Krvinka pexeso"></div>'
+      + '<div class="pcard-f"><img src="assets/img/Hry/pexeso-zadni-strana.jpg" alt="Krvinka pexeso"></div>'
       + '<div class="pcard-b"><img src="' + c.img + '" alt="' + c.name + '"' + scaleUp + ' loading="lazy"><div class="cn">' + c.name + '</div></div>'
       + '</div>';
     card.addEventListener('click', (function(idx){ return function(){ flipCard(idx); }; })(i));
