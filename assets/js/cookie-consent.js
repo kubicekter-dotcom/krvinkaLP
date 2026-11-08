@@ -105,6 +105,7 @@
     btnDecline.addEventListener('click', function () {
       setConsent('denied');
       denyAnalytics();
+      revokePixel();
       hidePopup(popup);
     });
   }
@@ -133,6 +134,13 @@
       }
     }
   }
+
+  // Umožní znovu otevřít lištu (odkaz "Změnit nastavení cookies" v zásadách)
+  window.krvinkaCookieSettings = function () {
+    var old = document.getElementById('cc-popup');
+    if (old && old.parentNode) old.parentNode.removeChild(old);
+    showPopup();
+  };
 
   init();
 })();
