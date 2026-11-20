@@ -145,6 +145,12 @@
 
   <!-- Kalkulačky, laboratoř a články -->
   <url>
+    <loc>https://www.krvinka.cz/blog-lab-tests-online.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.krvinka.cz/blog-net-konference-brno-2026.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
