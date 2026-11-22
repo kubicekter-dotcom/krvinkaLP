@@ -5,8 +5,9 @@
 **Nové příspěvky se vždy vkládají jako PRVNÍ** ve všech relevantních listingových stránkách.
 
 Při přidávání nového článku, pohádky nebo kalkulačky je povinné vložit kartu na začátek seznamu v:
-- `blog.html` — první karta hned za `<ul class="nav nav-tabs krvinka-category-nav">`
-- příslušné kategoriové stránce (`blog-pohadky.html`, `blog-kalkulacky.html`, `blog-lab.html`) — první karta hned za navigací
+- `blog.html` (kromě pohádek) — první karta hned za `<ul class="nav nav-tabs krvinka-category-nav">`
+- příslušné kategoriové stránce (`blog-kalkulacky.html`, `blog-lab.html`, `blog-hry.html`) — první karta hned za navigací
+- **pohádky** mají od 22. 11. 2026 samostatnou stránku `pohadky.html` (v menu „Pohádky“, `blog-pohadky.html` přesměrováno 301). Novou pohádku dávej jen do `pohadky.html` jako první kartu, do `blog.html` ne. Drobečková navigace pohádky: Pohádky > název.
 
 Nikdy nepřidávej nový obsah na konec seznamu.
 

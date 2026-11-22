@@ -12,6 +12,11 @@
       "permanent": true
     },
     {
+      "source": "/blog-pohadky.html",
+      "destination": "/pohadky.html",
+      "permanent": true
+    },
+    {
       "source": "/about.html",
       "destination": "/o-autorce.html",
       "permanent": true
