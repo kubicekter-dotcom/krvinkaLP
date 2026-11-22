@@ -10,6 +10,8 @@ Při přidávání nového článku, pohádky nebo kalkulačky je povinné vlož
 
 Nikdy nepřidávej nový obsah na konec seznamu.
 
+**Výjimka:** pokud uživatelka u konkrétního článku řekne, že ho chce zařadit níž, vlož kartu tam, kam určí (např. článek Gamebook pro děti je v `blog.html` na 5. místě). Když pozici neupřesní, navrhni ji a zeptej se.
+
 ## Deployment
 
 Web je hostován na Vercel, repozitář: `kubicekter-dotcom/krvinkaLP` (branch `main`).  
