@@ -118,12 +118,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+  <!-- DOČASNĚ SKRYTO studene-ruce <url>
     <loc>https://www.krvinka.cz/pohadka-proc-mam-v-zime-ledove-ruce.html</loc>
     <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://www.krvinka.cz/pohadka-velka-bitva-u-rezne-rany.html</loc>
     <lastmod>2026-09-16</lastmod>
